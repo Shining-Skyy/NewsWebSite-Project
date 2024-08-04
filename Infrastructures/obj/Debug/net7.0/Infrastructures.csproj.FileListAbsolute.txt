@@ -1,0 +1,12 @@
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Infrastructures.deps.json
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Infrastructures.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Infrastructures.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.csproj.AssemblyReference.cache
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.GeneratedMSBuildEditorConfig.editorconfig
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.AssemblyInfoInputs.cache
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.AssemblyInfo.cs
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.csproj.CoreCompileInputs.cache
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\refint\Infrastructures.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\ref\Infrastructures.dll

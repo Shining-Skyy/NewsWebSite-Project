@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "/ZHp9cZH+rRGjGNlTbBld6kK9Iimm+nUmN9y8+yYBQDM/gD3AUeURcKZr8TTA2nlbst0/1bVzRmHnJj4dxRAWA==",
+  "success": true,
+  "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.20\\microsoft.aspnetcore.cryptography.internal.7.0.20.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.20\\microsoft.aspnetcore.cryptography.keyderivation.7.0.20.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.20\\microsoft.extensions.identity.core.7.0.20.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.20\\microsoft.extensions.identity.stores.7.0.20.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

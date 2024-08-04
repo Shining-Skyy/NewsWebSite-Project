@@ -1,0 +1,12 @@
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\bin\Debug\net7.0\Domain.deps.json
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\bin\Debug\net7.0\Domain.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\bin\Debug\net7.0\Domain.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\Domain.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\refint\Domain.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\Domain.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Domain\obj\Debug\net7.0\ref\Domain.dll
