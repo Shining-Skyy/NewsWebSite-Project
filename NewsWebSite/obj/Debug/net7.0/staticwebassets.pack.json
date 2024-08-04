@@ -5,6 +5,1062 @@
       "PackagePath": "staticwebassets\\NewsWebSite.bundle.scp.css"
     },
     {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\about.html",
+      "PackagePath": "staticwebassets\\Theme\\about.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\animate.min.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\flaticon.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\gijgo.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\gijgo.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\main.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\main.map",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\main.map"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\nice-select.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\slicknav.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\slicknav.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\style.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\style.map",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\style.map"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\themify-icons.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\css\\ticker-style.css",
+      "PackagePath": "staticwebassets\\Theme\\assets\\css\\ticker-style.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\_flaticon.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\_flaticon.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\flaticon.html",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\flaticon.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\themify.eot"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\themify.svg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\Theme\\assets\\fonts\\themify.woff"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\about\\about_lft.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\about\\about_lft.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\about\\about_right.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\about\\about_right.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\about\\pet_care.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\about\\pet_care.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\adapt_icon\\1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\adapt_icon\\1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\adapt_icon\\1.svg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\adapt_icon\\1.svg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\adapt_icon\\2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\adapt_icon\\2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\adapt_icon\\3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\adapt_icon\\3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\banner\\dog.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\banner\\dog.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\banner\\img.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\banner\\img.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\author.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\author.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\blog_4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\blog_4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\learn_about_bg.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\learn_about_bg.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\single_blog_1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\single_blog_1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\single_blog_2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\single_blog_2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\single_blog_3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\single_blog_3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\single_blog_4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\single_blog_4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\single_blog_5.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\single_blog_5.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\blog\\slide_thumb_1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\blog\\slide_thumb_1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\comment\\comment_1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\comment_1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\comment\\comment_2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\comment_2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\comment\\comment_3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\comment_3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\a.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\a.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\a2.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\a2.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\d.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\d.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\disabled-check.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\disabled-check.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\disabled-radio.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\disabled-radio.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\f1.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\f1.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\f2.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\f2.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\f3.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\f3.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\f4.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\f4.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\f5.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\f5.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\f6.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\f6.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\f7.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\f7.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\f8.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\f8.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\g1.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\g1.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\g2.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\g2.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\g3.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\g3.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\g4.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\g4.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\g5.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\g5.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\g6.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\g6.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\g7.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\g7.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\g8.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\g8.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\primary-check.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\primary-check.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\primary-radio.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\primary-radio.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\success-check.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\success-check.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\success-radio.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\success-radio.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\_team.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\_team.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\about.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\about.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\body_card1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\body_card1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\body_card2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\body_card2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\body_card3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\body_card3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\body_card4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\body_card4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\footer_post1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\footer_post1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\footer_post2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\footer_post2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\footer_post3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\footer_post3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\header_card.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\header_card.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\most_recent.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\most_recent.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\most_recent1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\most_recent1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\most_recent2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\most_recent2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\section_bg02.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\section_bg02.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\team1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\team1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\team2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\team2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\team3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\team3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\tranding1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\tranding1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\tranding2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\tranding2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\weekly2News1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\weekly2News1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\weekly2News2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\weekly2News2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\weekly2News3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\weekly2News3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\weekly2News4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\weekly2News4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\weeklyNews1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\weeklyNews1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\weeklyNews2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\weeklyNews2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\weeklyNews3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\weeklyNews3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_news_details1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_news_details1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_news_details2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_news_details2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_news_details3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_news_details3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_news_details4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_news_details4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_news_details5.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_news_details5.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_news_details6.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_news_details6.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_right_img1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_right_img1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_right_img2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_right_img2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_right_img3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_right_img3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\gallery\\whats_right_img4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\gallery\\whats_right_img4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\logo\\logo.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\logo\\logo2_footer.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\logo\\logo2_footer.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\news\\icon-fb.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\news\\icon-fb.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\news\\icon-ins.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\news\\icon-ins.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\news\\icon-tw.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\news\\icon-tw.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\news\\icon-yo.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\news\\icon-yo.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\news\\news_card.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\news\\news_card.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\offers\\1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\offers\\1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\offers\\2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\offers\\2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\offers\\3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\offers\\3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\our_blog\\blog-img1.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\our_blog\\blog-img1.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\next.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\next.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_10.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_10.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_5.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_5.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_6.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_6.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_7.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_7.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_8.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_8.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\post_9.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\post_9.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\post\\preview.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\post\\preview.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\10.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\10.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\5.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\5.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\6.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\6.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\7.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\7.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\8.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\8.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\prising\\9.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\prising\\9.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\service\\1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\service\\1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\service\\2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\service\\2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\service\\3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\service\\3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\service\\service_icon_1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\service\\service_icon_1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\service\\service_icon_2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\service\\service_icon_2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\service\\service_icon_3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\service\\service_icon_3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\service\\service_icon_bg_1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\service\\service_icon_bg_1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\team\\1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\team\\1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\team\\2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\team\\2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\team\\3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\team\\3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\right1.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\right1.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\right2.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\right2.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\right3.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\right3.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\right4.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\right4.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\right5.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\right5.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_bottom1.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_bottom1.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_bottom2.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_bottom2.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_bottom3.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_bottom3.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_top.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_top.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_top02.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_top02.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_top03.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_top03.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_top2.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_top2.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_top3.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_top3.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\trending\\trending_top4.jpg",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\trending\\trending_top4.jpg"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\animated.headline.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\animated.headline.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\contact.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\contact.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\gijgo.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\gijgo.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.form.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.form.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.magnific-popup.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.magnific-popup.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.paroller.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.paroller.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.scrollUp.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.scrollUp.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.slicknav.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.slicknav.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.sticky.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.sticky.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.ticker.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.ticker.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\mail-script.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\mail-script.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\main.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\one-page-nav-min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\one-page-nav-min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\plugins.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\popper.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\site.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\vendor\\jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\vendor\\jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\vendor\\modernizr-3.5.0.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\vendor\\modernizr-3.5.0.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\Theme\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_about-page.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_about-page.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_blog.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_blog.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_blog_page.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_blog_page.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_bradcam.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_bradcam.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_color.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_color.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_common.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_common.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_completed-cases.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_completed-cases.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_contact.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_contact.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_elements.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_elements.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_extend.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_extend.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_footer.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_headerMenu.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_headerMenu.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_overlay.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_overlay.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_recent-articles.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_recent-articles.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_services.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_services.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_services_section.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_services_section.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_team.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_team.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_testimonial.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_testimonial.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_trending.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_trending.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_variables.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_wecky2-new.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_wecky2-new.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_wecky3-new.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_wecky3-new.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_whats-new.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_whats-new.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\_youtube.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\_youtube.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\Theme\\assets\\scss\\style.scss"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\video\\news1.mp4",
+      "PackagePath": "staticwebassets\\Theme\\assets\\video\\news1.mp4"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\video\\news2.mp4",
+      "PackagePath": "staticwebassets\\Theme\\assets\\video\\news2.mp4"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\video\\news3.mp4",
+      "PackagePath": "staticwebassets\\Theme\\assets\\video\\news3.mp4"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\blog.html",
+      "PackagePath": "staticwebassets\\Theme\\blog.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\blog_details.html",
+      "PackagePath": "staticwebassets\\Theme\\blog_details.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\categori.html",
+      "PackagePath": "staticwebassets\\Theme\\categori.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\contact.html",
+      "PackagePath": "staticwebassets\\Theme\\contact.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\elements.html",
+      "PackagePath": "staticwebassets\\Theme\\elements.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\index.html",
+      "PackagePath": "staticwebassets\\Theme\\index.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\latest_news.html",
+      "PackagePath": "staticwebassets\\Theme\\latest_news.html"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\bower.json",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\bower.json"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap-theme.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\jquery\\MIT-LICENSE.txt",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\jquery\\MIT-LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\jquery\\bower.json",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\jquery\\bower.json"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\mocha\\bower.json",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\mocha\\bower.json"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\mocha\\mocha.css",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\mocha\\mocha.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\sinonjs\\bower.json",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\sinonjs\\bower.json"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\uwidget\\bower.json",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\uwidget\\bower.json"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\uwidget\\uwidget.css",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\uwidget\\uwidget.css"
+    },
+    {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

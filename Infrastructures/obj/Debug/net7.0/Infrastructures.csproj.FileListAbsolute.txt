@@ -10,3 +10,10 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\D
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\refint\Infrastructures.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.pdb
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\ref\Infrastructures.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Application.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Domain.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Persistence.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Persistence.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Application.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Domain.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.csproj.CopyComplete
