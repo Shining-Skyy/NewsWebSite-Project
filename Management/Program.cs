@@ -18,8 +18,8 @@ builder.Services.AddAuthorization();
 builder.Services.ConfigureApplicationCookie(option =>
 {
     option.ExpireTimeSpan = TimeSpan.FromMinutes(10);
-    option.LoginPath = "/accoun/login";
-    option.AccessDeniedPath = "/account/AccesDenied";
+    option.LoginPath = "/Account/Login";
+    option.AccessDeniedPath = "/Account/AccesDenied";
     option.SlidingExpiration = true;
 });
 
@@ -42,5 +42,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

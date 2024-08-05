@@ -13,17 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructures", "Infrastr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{0C763B21-D0AB-4CD5-81BB-F23B4AD6334F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{BF80C343-AF9B-49CD-8E6C-19ED7C89DBC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{BF80C343-AF9B-49CD-8E6C-19ED7C89DBC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{04DFC528-9581-4A9E-990B-3E54EFD3E530}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{04DFC528-9581-4A9E-990B-3E54EFD3E530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructures", "Infrastructures\Infrastructures.csproj", "{5046856D-E38C-4443-8F5B-8B549A4A321F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructures", "Infrastructures\Infrastructures.csproj", "{5046856D-E38C-4443-8F5B-8B549A4A321F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{19BC4A73-6182-4DFF-8513-6D9A34F13B66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{19BC4A73-6182-4DFF-8513-6D9A34F13B66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsWebSite", "NewsWebSite\NewsWebSite.csproj", "{13975C8D-D71F-4897-AA24-FEB0C21EE872}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsWebSite", "NewsWebSite\NewsWebSite.csproj", "{13975C8D-D71F-4897-AA24-FEB0C21EE872}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Management", "Management\Management.csproj", "{A8138A10-1369-4EF1-BF27-CE87D47F28F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Management", "Management\Management.csproj", "{A8138A10-1369-4EF1-BF27-CE87D47F28F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

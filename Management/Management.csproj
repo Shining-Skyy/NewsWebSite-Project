@@ -8,12 +8,25 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Controllers\AccountController.cs~RF6c36c126.TMP" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\Infrastructures\Infrastructures.csproj" />
 		<ProjectReference Include="..\Persistence\Persistence.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="wwwroot\Theme\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.20">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.12" />
 	</ItemGroup>
 
 </Project>

@@ -1001,66 +1001,6 @@
       "PackagePath": "staticwebassets\\Theme\\latest_news.html"
     },
     {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\bower.json",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\bower.json"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap-theme.css",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap-theme.css"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap.css"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\css\\bootstrap.min.css"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.eot",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.eot"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.ttf",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.ttf"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.woff",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.woff"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\jquery\\MIT-LICENSE.txt",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\jquery\\MIT-LICENSE.txt"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\jquery\\bower.json",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\jquery\\bower.json"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\mocha\\bower.json",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\mocha\\bower.json"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\mocha\\mocha.css",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\mocha\\mocha.css"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\sinonjs\\bower.json",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\sinonjs\\bower.json"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\uwidget\\bower.json",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\uwidget\\bower.json"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\vendors\\parsleyjs\\bower_components\\uwidget\\uwidget.css",
-      "PackagePath": "staticwebassets\\Theme\\vendors\\parsleyjs\\bower_components\\uwidget\\uwidget.css"
-    },
-    {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
