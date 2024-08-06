@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CXUlEMKbIXYCWU8Igwwj4P5enEQOSRDaTwRYTgauweb2qD6eqY2CuPI/CiMbyR+ed4HrF2p8+5vMFK2ZJoRKTA==",
+  "dgSpecHash": "mBpmKLAYJK/w+idV3g0dAix21VOluV+eFhBtNVN0y1nb8khYs20MxmFbuSvuUTqk9hc6OMhA/ZINQngkMq79Rw==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.20\\microsoft.entityframeworkcore.analyzers.7.0.20.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.20\\microsoft.extensions.identity.core.7.0.20.nupkg.sha512",

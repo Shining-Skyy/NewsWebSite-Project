@@ -1,3 +1,4 @@
+using Application.Services.Email;
 using Infrastructures.IdentityConfigs;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
@@ -22,6 +23,8 @@ builder.Services.ConfigureApplicationCookie(option =>
     option.AccessDeniedPath = "/Account/AccesDenied";
     option.SlidingExpiration = true;
 });
+
+builder.Services.AddTransient<EmailService>();
 
 var app = builder.Build();
 
