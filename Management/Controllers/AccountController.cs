@@ -1,8 +1,12 @@
 ﻿using Application.Services.Email;
 using Domain.Users;
 using Management.ViewModels.Account;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.SqlServer.Server;
+using NuGet.Common;
+using System.Security.Policy;
 
 namespace Management.Controllers
 {
@@ -36,28 +40,23 @@ namespace Management.Controllers
                     UserName = model.Email,
                     PhoneNumber = model.PhoneNumber,
                 };
-
                 var result = await _userManager.CreateAsync(newUser, model.Password);
                 if (result.Succeeded)
                 {
                     var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
-
                     string callbackUrl = Url.Action("ConfirmEmail", "Account", new { UserId = newUser.Id, token = token }, protocol: Request.Scheme);
                     string body = $"<h1>♦</h1><br/><h3>Please click on the link below to activate your account! ✨</h3> <br/> <h2><a href={callbackUrl}> Account Verification ✔</a></h2>";
-
-                    await _emailService.Execute(newUser.Email, body, "News site: User account activation👋");
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                    try
                     {
-                        return RedirectToAction("DisplayEmail");
+                        await _emailService.Execute(newUser.Email, body, "News site: User account activation👋");
+                        ViewBag.message = "Email confirmation has been sent to you";
                     }
-                    else
+                    catch (Exception)
                     {
-                        await _signInManager.SignInAsync(newUser, isPersistent: false);
-                        return LocalRedirect("~");
+                        ModelState.AddModelError("", "If it was not sent, it is not a problem, your account has been created!");
                     }
+                    return View();
                 }
-
                 foreach (var item in result.Errors)
                 {
                     ModelState.AddModelError(item.Code, item.Description);
@@ -66,27 +65,21 @@ namespace Management.Controllers
             return View(model);
         }
 
-        public IActionResult DisplayEmail()
-        {
-            return View();
-        }
-
-        public IActionResult ConfirmEmail(string UserId, string Token)
+        public async Task<IActionResult> ConfirmEmail(string UserId, string Token)
         {
             if (UserId == null || Token == null)
             {
                 return BadRequest();
             }
-            var user = _userManager.FindByIdAsync(UserId).Result;
+            var user = await _userManager.FindByIdAsync(UserId);
             if (user == null)
             {
                 return BadRequest();
             }
-
-            var result = _userManager.ConfirmEmailAsync(user, Token).Result;
+            var result = await _userManager.ConfirmEmailAsync(user, Token);
             if (result.Succeeded)
             {
-                _signInManager.SignInAsync(user, true).Wait();
+                _signInManager.SignInAsync(user, true);
                 return LocalRedirect("~/Index");
             }
             else
@@ -130,6 +123,87 @@ namespace Management.Controllers
                 }
             }
             return View(model);
+        }
+
+        public IActionResult ForgetPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(ForgotPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user == null)
+                {
+                    ModelState.AddModelError("", "The email entered is not valid!");
+                    return View();
+                }
+                if (await _userManager.IsEmailConfirmedAsync(user) == false)
+                {
+                    ModelState.AddModelError("", "You must confirm your email to change your password!");
+                    return View();
+                }
+                string token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                string callbackUrl = Url.Action("ResetPassword", "Account", new { UserId = user.Id, Token = token }, protocol: Request.Scheme);
+                string body = $"<h1>♦</h1><br/><h3>Click the link below to reset your password! ✨</h3> <br/> <h2><a href={callbackUrl}> Set password ✔</a></h2>";
+                try
+                {
+                    await _emailService.Execute(user.Email, body, "News site: forget password👋");
+                    ViewBag.message = "Password reset link has been sent to your email";
+                }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("", "Failed to send email, please try again");
+                }
+                return View();
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+
+        public IActionResult ResetPassword(string UserId, string Token)
+        {
+            return View(new ResetPasswordViewModel
+            {
+                Token = Token,
+                UserId = UserId,
+            });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (model.UserId == null || model.Token == null)
+                {
+                    return BadRequest();
+                }
+                var user = await _userManager.FindByIdAsync(model.UserId);
+                if (user == null)
+                {
+                    return BadRequest();
+                }
+                var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+                if (result.Succeeded)
+                {
+                    return LocalRedirect(nameof(Login));
+                }
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.Code, item.Description);
+                }
+                return View(model);
+            }
+            else
+            {
+                return View(model);
+            }
         }
 
         public IActionResult LogOut()

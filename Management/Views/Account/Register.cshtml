@@ -35,6 +35,12 @@
                     <form asp-action="Register">
                         <h1>Register Form</h1>
                         @Html.ValidationSummary()
+                        @if (ViewBag.message != null)
+                        {
+                            <div class="alert alert-info">
+                                @ViewBag.message
+                            </div>
+                        }
                         <div>
                             <input asp-for="FullName" type="text" class="form-control" placeholder="Username" required="" />
                             <span asp-validation-for="FullName" class="text-danger"></span>
@@ -49,7 +55,7 @@
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
                         <div>
-                            <input asp-for="RePassword" type="password" class="form-control" placeholder="Password" required="" />
+                            <input asp-for="RePassword" type="password" class="form-control" placeholder="Repeat password" required="" />
                             <span asp-validation-for="RePassword" class="text-danger"></span>
                         </div>
                         <div>
