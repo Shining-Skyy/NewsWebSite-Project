@@ -1,4 +1,5 @@
 using Application.Services.Email;
+using Application.Services.Sms;
 using Infrastructures.IdentityConfigs;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
@@ -25,6 +26,7 @@ builder.Services.ConfigureApplicationCookie(option =>
 });
 
 builder.Services.AddTransient<EmailService>();
+builder.Services.AddTransient<SmsService>();
 
 var app = builder.Build();
 

@@ -9,6 +9,7 @@
 
 	<ItemGroup>
 	  <None Remove="Controllers\AccountController.cs~RF6c36c126.TMP" />
+	  <None Remove="Pages\Index.cshtml~RF7b630289.TMP" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -4,7 +4,168 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>User Profile</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <div class="x_content">
+                            <div class="col-md-3 col-sm-3  profile_left">
+                                <div class="profile_img">
+                                    <div id="crop-avatar">
+                                        <!-- Current avatar -->
+                                        <img class="img-responsive avatar-view" src="~/theme/production/images/picture.jpg" alt="Avatar" title="Change the avatar">
+                                    </div>
+                                </div>
+                                <h3>Author</h3>
+
+                                <ul class="list-unstyled user_data">
+                                    <li>
+                                        <i class="fa fa-map-marker user-profile-icon"></i> San Francisco, California, USA
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-briefcase user-profile-icon"></i> Software Engineer
+                                    </li>
+
+                                    <li class="m-top-xs">
+                                        <i class="fa fa-external-link user-profile-icon"></i>
+                                        <a href="http://www.kimlabs.com/profile/" target="_blank">www.kimlabs.com</a>
+                                    </li>
+                                </ul>
+
+                                <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+                            </div>
+
+                            <div class="col-md-9 col-sm-9 ">
+
+                                <div class="profile_title">
+                                    <div class="col-md-6">
+                                        <h2>Details of Information</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-6">
+                                    <div class="x_panel">
+                                        <div class="x_title">
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li>
+                                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <table class="table table-striped">
+                                                <tbody>
+                                                    @foreach (var item in Model.model)
+                                                    {
+                                                        <tr>
+                                                            <td>@item.FullName</td>
+                                                            <td>@item.Email</td>
+                                                            <td>@item.PhoneNumber</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Email Confirmation Status:</td>
+                                                            <td>@item.EmailConfirmed</td>
+                                                            @if (!item.EmailConfirmed)
+                                                            {
+                                                                <td><a asp-controller="Account" asp-action="EmailConfirmationAfterLogin">Send Email confirmation</a></td>
+                                                            }
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Phone Confirmation Status:</td>
+                                                            <td>@item.PhoneNumberConfirmed</td>
+                                                            @if (!item.PhoneNumberConfirmed)
+                                                            {
+                                                                <td><a asp-controller="Account" asp-action="PhoneNumberConfirmationAfterLogin">Send Phone-Number confirmation</a></td>
+                                                            }
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Two-Factor Login status:<br />
+                                                                ♦To enable Two-Factor Login You must confirm your email or mobile number!
+                                                            </td>
+                                                            <td>@item.TwoFactorEnabled</td>
+                                                            <td><a asp-controller="Account" asp-action="TwoFactorEnabled">Change Status</a></td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                                    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                                        <li role="presentation" class="active">
+                                            <a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Your news</a>
+                                        </li>
+                                        <li role="presentation" class="">
+                                            <a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">About Me</a>
+                                        </li>
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active " id="tab_content1" aria-labelledby="home-tab">
+                                            <!-- start recent activity -->
+                                            <ul class="messages">
+                                                <li>
+                                                    <img src="~/theme/production/images/img.jpg" class="avatar" alt="Avatar">
+                                                    <div class="message_date">
+                                                        <h3 class="date text-info">24</h3>
+                                                        <p class="month">May</p>
+                                                    </div>
+                                                    <div class="message_wrapper">
+                                                        <h4 class="heading">Desmond Davison</h4>
+                                                        <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
+                                                        <br />
+                                                        <p class="url">
+                                                            <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
+                                                            <a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!-- end recent activity -->
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
+                                            <p>
+                                                Hello, I am Ali Abdullahi I have been working as a journalist for five years And I love to write
+                                            </p>
+                                            <button type="button" class="btn btn-round btn-warning">Edit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,6 +1,8 @@
 ﻿using Application.Services.Email;
+using Application.Services.Sms;
 using Domain.Users;
 using Management.ViewModels.Account;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,12 +17,14 @@ namespace Management.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly EmailService _emailService;
+        private readonly SmsService _smsService;
         public AccountController(UserManager<User> userManager, SignInManager<User> signInManager,
-            EmailService emailService)
+            EmailService emailService, SmsService smsService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailService = emailService;
+            _smsService = smsService;
         }
 
         public IActionResult Register()
@@ -43,18 +47,7 @@ namespace Management.Controllers
                 var result = await _userManager.CreateAsync(newUser, model.Password);
                 if (result.Succeeded)
                 {
-                    var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
-                    string callbackUrl = Url.Action("ConfirmEmail", "Account", new { UserId = newUser.Id, token = token }, protocol: Request.Scheme);
-                    string body = $"<h1>♦</h1><br/><h3>Please click on the link below to activate your account! ✨</h3> <br/> <h2><a href={callbackUrl}> Account Verification ✔</a></h2>";
-                    try
-                    {
-                        await _emailService.Execute(newUser.Email, body, "News site: User account activation👋");
-                        ViewBag.message = "Email confirmation has been sent to you";
-                    }
-                    catch (Exception)
-                    {
-                        ModelState.AddModelError("", "If it was not sent, it is not a problem, your account has been created!");
-                    }
+                    await SendEmailConfirmationToken(newUser);
                     return View();
                 }
                 foreach (var item in result.Errors)
@@ -79,13 +72,20 @@ namespace Management.Controllers
             var result = await _userManager.ConfirmEmailAsync(user, Token);
             if (result.Succeeded)
             {
-                _signInManager.SignInAsync(user, true);
+                await _signInManager.SignInAsync(user, true);
                 return LocalRedirect("~/Index");
             }
             else
             {
                 return BadRequest();
             }
+        }
+
+        [Authorize]
+        public async void EmailConfirmationAfterLogin()
+        {
+            var user = _userManager.FindByNameAsync(User.Identity.Name).Result;
+            await SendEmailConfirmationToken(user);
         }
 
         public IActionResult Login(string returnUtl = "/")
@@ -101,7 +101,7 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.IsPersistent, true);
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.IsPersistent, lockoutOnFailure: true);
 
                 if (result.Succeeded)
                 {
@@ -112,10 +112,10 @@ namespace Management.Controllers
                     ModelState.AddModelError("", "User account locked out!");
                     return View(model);
                 }
-                //if (result.RequiresTwoFactor)
-                //{
-                //
-                //}
+                if (result.RequiresTwoFactor)
+                {
+                    return RedirectToAction("ToFactorLogin", new { model.Email, model.IsPersistent });
+                }
                 else
                 {
                     ModelState.AddModelError("", "Invalid login attempt!");
@@ -141,29 +141,13 @@ namespace Management.Controllers
                     ModelState.AddModelError("", "The email entered is not valid!");
                     return View();
                 }
-                if (await _userManager.IsEmailConfirmedAsync(user) == false)
+                else
                 {
-                    ModelState.AddModelError("", "You must confirm your email to change your password!");
+                    await SendPasswordResetToken(user);
                     return View();
                 }
-                string token = await _userManager.GeneratePasswordResetTokenAsync(user);
-                string callbackUrl = Url.Action("ResetPassword", "Account", new { UserId = user.Id, Token = token }, protocol: Request.Scheme);
-                string body = $"<h1>♦</h1><br/><h3>Click the link below to reset your password! ✨</h3> <br/> <h2><a href={callbackUrl}> Set password ✔</a></h2>";
-                try
-                {
-                    await _emailService.Execute(user.Email, body, "News site: forget password👋");
-                    ViewBag.message = "Password reset link has been sent to your email";
-                }
-                catch (Exception)
-                {
-                    ModelState.AddModelError("", "Failed to send email, please try again");
-                }
-                return View();
             }
-            else
-            {
-                return View(model);
-            }
+            return View(model);
         }
 
         public IActionResult ResetPassword(string UserId, string Token)
@@ -192,7 +176,7 @@ namespace Management.Controllers
                 var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
                 if (result.Succeeded)
                 {
-                    return LocalRedirect(nameof(Login));
+                    return LocalRedirect("~/Index");
                 }
                 foreach (var item in result.Errors)
                 {
@@ -206,10 +190,175 @@ namespace Management.Controllers
             }
         }
 
-        public IActionResult LogOut()
+        [Authorize]
+        public async Task<IActionResult> PhoneNumberConfirmationAfterLogin()
         {
-            _signInManager.SignOutAsync();
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            string token = await _userManager.GenerateChangePhoneNumberTokenAsync(user, user.PhoneNumber);
+            try
+            {
+                //await _smsService.Send(user.PhoneNumber, token);
+                return RedirectToAction("VerifyPhoneNumber");
+            }
+            catch (Exception)
+            {
+                return LocalRedirect("~/Index");
+            }
+        }
+
+        [Authorize]
+        public IActionResult VerifyPhoneNumber()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> VerifyPhoneNumber(VerifyPhoneNumberViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(User.Identity.Name);
+                var result = await _userManager.VerifyChangePhoneNumberTokenAsync(user, model.Token, user.PhoneNumber);
+                if (result)
+                {
+                    user.PhoneNumberConfirmed = true;
+                    await _userManager.UpdateAsync(user);
+                    return LocalRedirect("~/Index");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "User account locked out!");
+                    return View();
+                }
+            }
+            return View(model);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> ToFactorLogin(string email, bool isPersistent)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return BadRequest();
+            }
+
+            var providers = await _userManager.GetValidTwoFactorProvidersAsync(user);
+            TwoFactorLoginViewModel model = new TwoFactorLoginViewModel();
+            if (providers.Contains("Email"))
+            {
+                await SendTwoFactorToken(user);
+                model.Provider = "Email";
+                model.IsPersistent = isPersistent;
+            }
+            else if (providers.Contains("Phone"))
+            {
+                string smsCode = await _userManager.GenerateTwoFactorTokenAsync(user, "Phone");
+                //await _smsService.Send(user.PhoneNumber, smsCode);
+                model.Provider = "Phone";
+                model.IsPersistent = isPersistent;
+            }
+            return View(model);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> ToFactorLogin(TwoFactorLoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
+                if (user == null)
+                {
+                    ModelState.AddModelError("", "The email entered is not valid!");
+                    return View();
+                }
+                var result = await _signInManager.TwoFactorSignInAsync(model.Provider, model.Code, model.IsPersistent, true);
+                if (result.Succeeded)
+                {
+                    return LocalRedirect("~/Index");
+                }
+                else if (result.IsLockedOut)
+                {
+                    ModelState.AddModelError("", "User account locked out!");
+                    return View();
+                }
+                else
+                {
+                    ModelState.AddModelError("", "The entered Code is not correct");
+                    return View();
+                }
+            }
+            return View(model);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> TwoFactorEnabled()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (user.EmailConfirmed || user.PhoneNumberConfirmed)
+            {
+                var result = await _userManager.SetTwoFactorEnabledAsync(user, !user.TwoFactorEnabled);
+                return LocalRedirect("~/Index");
+            }
+            else
+            {
+                ModelState.AddModelError("", "You must confirm your email or mobile number");
+                return LocalRedirect("~/Index");
+            }
+        }
+
+        [Authorize]
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
             return LocalRedirect("~/Index");
+        }
+
+        private async Task SendEmailConfirmationToken(User newUser)
+        {
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+            string callbackUrl = Url.Action("ConfirmEmail", "Account", new { UserId = newUser.Id, token = token }, protocol: Request.Scheme);
+            string body = $"<h1>♦</h1><br/><h3>Please click on the link below to activate your account! ✨</h3><br/><h2><a href={callbackUrl}> Account Verification ✔</a></h2>";
+            try
+            {
+                await _emailService.Execute(newUser.Email, body, "News site: User account activation👋");
+                ViewBag.message = "Email confirmation has been sent to you";
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "If it was not sent, it is not a problem, your account has been created!");
+            }
+        }
+        private async Task SendPasswordResetToken(User? user)
+        {
+            string token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            string callbackUrl = Url.Action("ResetPassword", "Account", new { UserId = user.Id, Token = token }, protocol: Request.Scheme);
+            string body = $"<h1>♦</h1><br/><h3>Click the link below to reset your password! ✨</h3> <br/> <h2><a href={callbackUrl}> Set password ✔</a></h2>";
+            try
+            {
+                await _emailService.Execute(user.Email, body, "News site: forget password👋");
+                ViewBag.message = "Password reset link has been sent to your email";
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "Failed to send email, please try again");
+            }
+        }
+        private async Task SendTwoFactorToken(User? user)
+        {
+            string emailCode = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
+            string body = $"<h1>♦</h1><br/><h3>Your two-step login is done using the code below! ✨</h3><br/><h2>Two Factor Code:{emailCode} ✔</a></h2>";
+            try
+            {
+                await _emailService.Execute(user.Email, body, "News site: User account activation👋");
+                ViewBag.message = "Email confirmation has been sent to you";
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "If it was not sent, it is not a problem, your account has been created!");
+            }
         }
     }
 }
