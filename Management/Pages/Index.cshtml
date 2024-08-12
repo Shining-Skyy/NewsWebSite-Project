@@ -98,14 +98,17 @@
                                                                 <td><a asp-controller="Account" asp-action="EmailConfirmationAfterLogin">Send Email confirmation</a></td>
                                                             }
                                                         </tr>
-                                                        <tr>
-                                                            <td>Phone Confirmation Status:</td>
-                                                            <td>@item.PhoneNumberConfirmed</td>
-                                                            @if (!item.PhoneNumberConfirmed)
-                                                            {
-                                                                <td><a asp-controller="Account" asp-action="PhoneNumberConfirmationAfterLogin">Send Phone-Number confirmation</a></td>
-                                                            }
-                                                        </tr>
+                                                        @if (item.PhoneNumber != null)
+                                                        {
+                                                            <tr>
+                                                                <td>Phone Confirmation Status:</td>
+                                                                <td>@item.PhoneNumberConfirmed</td>
+                                                                @if (!item.PhoneNumberConfirmed)
+                                                                {
+                                                                    <td><a asp-controller="Account" asp-action="PhoneNumberConfirmationAfterLogin">Send Phone-Number confirmation</a></td>
+                                                                }
+                                                            </tr>
+                                                        }
                                                         <tr>
                                                             <td>
                                                                 Two-Factor Login status:<br />

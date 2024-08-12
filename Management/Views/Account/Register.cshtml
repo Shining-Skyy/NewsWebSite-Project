@@ -62,6 +62,7 @@
                             <input asp-for="PhoneNumber" type="number" class="form-control" placeholder="PhoneNumber" required="" />
                             <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6Lcb5oMpAAAAAHX5dl8GjMO7D5AMTvdsqs0-iecY"></div>
                         <div class="btn btn-default submit">
                             <input type="submit" value="Create" class="btn btn-primary" />
                         </div>
@@ -84,5 +85,6 @@
             </div>
         </div>
     </div>
+    <script src="https://google.com/recaptcha/api.js"></script>
 </body>
 </html>

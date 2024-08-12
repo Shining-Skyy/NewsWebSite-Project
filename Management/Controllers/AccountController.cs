@@ -1,4 +1,5 @@
 ﻿using Application.Services.Email;
+using Application.Services.Google;
 using Application.Services.Sms;
 using Domain.Users;
 using Management.ViewModels.Account;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.SqlServer.Server;
 using NuGet.Common;
+using System.Security.Claims;
 using System.Security.Policy;
 
 namespace Management.Controllers
@@ -18,13 +20,15 @@ namespace Management.Controllers
         private readonly SignInManager<User> _signInManager;
         private readonly EmailService _emailService;
         private readonly SmsService _smsService;
+        private readonly GoogleRecaptcha _googleRecaptcha;
         public AccountController(UserManager<User> userManager, SignInManager<User> signInManager,
-            EmailService emailService, SmsService smsService)
+            EmailService emailService, SmsService smsService, GoogleRecaptcha googleRecaptcha)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailService = emailService;
             _smsService = smsService;
+            _googleRecaptcha = googleRecaptcha;
         }
 
         public IActionResult Register()
@@ -37,6 +41,13 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
+                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
+                if (await _googleRecaptcha.Verify(googleResponse) == false)
+                {
+                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                    return View(model);
+                }
+
                 User newUser = new User()
                 {
                     FullName = model.FullName,
@@ -101,6 +112,13 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
+                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
+                if (await _googleRecaptcha.Verify(googleResponse) == false)
+                {
+                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                    return View(model);
+                }
+
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.IsPersistent, lockoutOnFailure: true);
 
                 if (result.Succeeded)
@@ -125,6 +143,79 @@ namespace Management.Controllers
             return View(model);
         }
 
+        public IActionResult ExternalLogin(string ReturnUrl)
+        {
+            string url = Url.Action(nameof(CallBack), "Account", new
+            {
+                ReturnUrl
+            });
+
+            var propertis = _signInManager.ConfigureExternalAuthenticationProperties("Google", url);
+
+            return new ChallengeResult("Google", propertis);
+        }
+
+        public async Task<IActionResult> CallBack(string ReturnUrl)
+        {
+            try
+            {
+                var loginInfo = await _signInManager.GetExternalLoginInfoAsync();
+
+                string email = loginInfo.Principal.FindFirst(ClaimTypes.Email)?.Value ?? null;
+                if (email == null)
+                {
+                    return BadRequest();
+                }
+                string FirstName = loginInfo.Principal.FindFirst(ClaimTypes.GivenName)?.Value ?? null;
+                string LastName = loginInfo.Principal.FindFirst(ClaimTypes.Surname)?.Value ?? null;
+                string FullName = FirstName + LastName;
+
+                var signin = await _signInManager.ExternalLoginSignInAsync("Google", loginInfo.ProviderKey, false, true);
+                if (signin.Succeeded)
+                {
+                    if (Url.IsLocalUrl(ReturnUrl))
+                    {
+                        return Redirect("~/Index");
+                    }
+                    return RedirectToAction("~/Index");
+                }
+                else if (signin.IsNotAllowed)
+                {
+                    ModelState.AddModelError("", "Your login failed!");
+                    return Redirect("~/Index");
+                }
+                else if (signin.IsLockedOut)
+                {
+                    ModelState.AddModelError("", "User account locked out!");
+                    return Redirect("~/Index");
+                }
+                else if (signin.RequiresTwoFactor)
+                {
+                    return RedirectToAction("TowFactorLogin");
+                }
+                var user = await _userManager.FindByEmailAsync(email);
+                if (user == null)
+                {
+                    User newUser = new User()
+                    {
+                        UserName = email,
+                        Email = email,
+                        FullName = FullName,
+                        EmailConfirmed = true,
+                    };
+                    var resultAdduser = _userManager.CreateAsync(newUser).Result;
+                    user = newUser;
+                }
+                var resultAddlogin = await _userManager.AddLoginAsync(user, loginInfo);
+                await _signInManager.SignInAsync(user, false);
+                return RedirectToAction("~/Index");
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
         public IActionResult ForgetPassword()
         {
             return View();
@@ -135,6 +226,13 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
+                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
+                if (await _googleRecaptcha.Verify(googleResponse) == false)
+                {
+                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                    return View(model);
+                }
+
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 if (user == null)
                 {
@@ -164,6 +262,13 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
+                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
+                if (await _googleRecaptcha.Verify(googleResponse) == false)
+                {
+                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                    return View(model);
+                }
+
                 if (model.UserId == null || model.Token == null)
                 {
                     return BadRequest();
@@ -218,6 +323,13 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
+                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
+                if (await _googleRecaptcha.Verify(googleResponse) == false)
+                {
+                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                    return View(model);
+                }
+
                 var user = await _userManager.FindByNameAsync(User.Identity.Name);
                 var result = await _userManager.VerifyChangePhoneNumberTokenAsync(user, model.Token, user.PhoneNumber);
                 if (result)
@@ -236,7 +348,7 @@ namespace Management.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> ToFactorLogin(string email, bool isPersistent)
+        public async Task<IActionResult> TowFactorLogin(string email, bool isPersistent)
         {
             var user = await _userManager.FindByEmailAsync(email);
             if (user == null)
@@ -264,7 +376,7 @@ namespace Management.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> ToFactorLogin(TwoFactorLoginViewModel model)
+        public async Task<IActionResult> TowFactorLogin(TwoFactorLoginViewModel model)
         {
             if (ModelState.IsValid)
             {

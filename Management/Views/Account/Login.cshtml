@@ -35,6 +35,10 @@
                     <form asp-action="Login">
                         <h1>LogIn Form</h1>
                         @Html.ValidationSummary()
+                        <a asp-controller="Account" asp-action="ExternalLogin" class="buttonNext btn btn-success">
+                            <i class="fa fa-google-plus"></i> Login in Whit Google
+                        </a>
+                        <br />
                         <div>
                             <input asp-for="Email" type="email" class="form-control" placeholder="Email" required="" />
                             <span asp-validation-for="Email" class="text-danger"></span>
@@ -44,6 +48,7 @@
                             <input asp-for="Password" type="password" class="form-control" placeholder="Password" required="" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6Lcb5oMpAAAAAHX5dl8GjMO7D5AMTvdsqs0-iecY"></div>
                         <div class="form-group form-check">
                             <label class="form-check-label">
                                 <input class="form-check-input" asp-for="IsPersistent" /> @Html.DisplayNameFor(model => model.IsPersistent)
@@ -54,7 +59,6 @@
                         <div class="btn btn-default submit">
                             <input type="submit" value="Submit" class="btn btn-primary" />
                         </div>
-
                         <div class="separator">
                             <p class="change_link">
                                 Already a member ?
@@ -73,5 +77,6 @@
             </div>
         </div>
     </div>
+    <script src="https://google.com/recaptcha/api.js"></script>
 </body>
 </html>

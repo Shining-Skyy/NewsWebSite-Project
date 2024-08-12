@@ -1,4 +1,5 @@
 using Application.Services.Email;
+using Application.Services.Google;
 using Application.Services.Sms;
 using Infrastructures.IdentityConfigs;
 using Microsoft.EntityFrameworkCore;
@@ -25,8 +26,16 @@ builder.Services.ConfigureApplicationCookie(option =>
     option.SlidingExpiration = true;
 });
 
+builder.Services.AddAuthentication()
+    .AddGoogle(options =>
+    {
+        options.ClientId = builder.Configuration["AuthenticationGoogle:ClientId"];
+        options.ClientSecret = builder.Configuration["AuthenticationGoogle:ClientSecret"];
+    });
+
 builder.Services.AddTransient<EmailService>();
 builder.Services.AddTransient<SmsService>();
+builder.Services.AddTransient<GoogleRecaptcha>();
 
 var app = builder.Build();
 

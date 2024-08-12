@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+Yn1EHJ5GNULGryH1xS+R13AmPuMvu9O7k9D2JiOc2/fYG7SI1+dIp7BVAxl5K0JqHmyu/zMj9/5R0302BQ6WQ==",
+  "dgSpecHash": "+5vJ7K+wxTF8Rd18AjWBndqxOWC/B4l/JBqctKki+XGJiQnixluag6Kv+9EgcbTWCvqUsHsq5691qxuMVer/RA==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\Management.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\Ebrahim\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\7.0.20\\microsoft.aspnetcore.authentication.google.7.0.20.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.20\\microsoft.aspnetcore.cryptography.internal.7.0.20.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.20\\microsoft.aspnetcore.cryptography.keyderivation.7.0.20.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.20\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.20.nupkg.sha512",

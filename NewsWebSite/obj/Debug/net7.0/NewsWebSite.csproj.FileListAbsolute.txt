@@ -96,3 +96,4 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\Newtonsoft.Json.dll

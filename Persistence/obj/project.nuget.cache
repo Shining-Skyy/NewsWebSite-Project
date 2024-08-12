@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7/E/sP6auBT6o8eBboZf6uUqfJ5A8279W6GC3ADAMv03/kSkLTBDbS6YRefaJFr0qW0piu92xaK5T7S/VkWM9g==",
+  "dgSpecHash": "8l3ZkJfLGe17F3o+SqwRrXBJ8372lLwYeO8jsGsZcPdJG9Zi/Cef6o/Z3CP9xBrRvoZ1/9Qyr/T1d7bNdkxXJQ==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
