@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/ZHp9cZH+rRGjGNlTbBld6kK9Iimm+nUmN9y8+yYBQDM/gD3AUeURcKZr8TTA2nlbst0/1bVzRmHnJj4dxRAWA==",
+  "dgSpecHash": "4kU43CgmPgbpvhqIzmYj3gDaexxWf5VVrf+8RQ/rEqEvL1xeqR/XJgRiQkKsDJsQ9GNrirR4GO11Nq9inI5zDg==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,10 @@
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
-    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\mongodb.bson\\2.28.0\\mongodb.bson.2.28.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

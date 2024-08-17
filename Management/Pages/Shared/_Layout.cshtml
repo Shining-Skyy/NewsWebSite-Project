@@ -162,5 +162,11 @@
 
     <!-- Custom Theme Scripts -->
     <script src="~/theme/build/js/custom.min.js"></script>
+
+    <!-- SignalR js files -->
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/signalronlinevisitorservice.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

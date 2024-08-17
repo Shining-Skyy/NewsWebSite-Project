@@ -41,12 +41,8 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
-                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
-                if (await _googleRecaptcha.Verify(googleResponse) == false)
-                {
-                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                if (!await VerifyGoogleRecaptcha())
                     return View(model);
-                }
 
                 User newUser = new User()
                 {
@@ -95,7 +91,7 @@ namespace Management.Controllers
         [Authorize]
         public async void EmailConfirmationAfterLogin()
         {
-            var user = _userManager.FindByNameAsync(User.Identity.Name).Result;
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
             await SendEmailConfirmationToken(user);
         }
 
@@ -112,12 +108,8 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
-                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
-                if (await _googleRecaptcha.Verify(googleResponse) == false)
-                {
-                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                if(!await VerifyGoogleRecaptcha())
                     return View(model);
-                }
 
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.IsPersistent, lockoutOnFailure: true);
 
@@ -226,12 +218,8 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
-                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
-                if (await _googleRecaptcha.Verify(googleResponse) == false)
-                {
-                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                if (!await VerifyGoogleRecaptcha())
                     return View(model);
-                }
 
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 if (user == null)
@@ -262,12 +250,8 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
-                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
-                if (await _googleRecaptcha.Verify(googleResponse) == false)
-                {
-                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                if (!await VerifyGoogleRecaptcha())
                     return View(model);
-                }
 
                 if (model.UserId == null || model.Token == null)
                 {
@@ -323,12 +307,8 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
-                string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
-                if (await _googleRecaptcha.Verify(googleResponse) == false)
-                {
-                    ModelState.AddModelError("", "Confirm you are not a robot!");
+                if (!await VerifyGoogleRecaptcha())
                     return View(model);
-                }
 
                 var user = await _userManager.FindByNameAsync(User.Identity.Name);
                 var result = await _userManager.VerifyChangePhoneNumberTokenAsync(user, model.Token, user.PhoneNumber);
@@ -470,6 +450,19 @@ namespace Management.Controllers
             catch (Exception)
             {
                 ModelState.AddModelError("", "If it was not sent, it is not a problem, your account has been created!");
+            }
+        }
+        private async Task<bool> VerifyGoogleRecaptcha()
+        {
+            string googleResponse = HttpContext.Request.Form["g-Recaptcha-Response"];
+            if (await _googleRecaptcha.Verify(googleResponse) == false)
+            {
+                ModelState.AddModelError("", "Confirm you are not a robot!");
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }

@@ -281,3 +281,17 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\obj\Debug\net7.0\Management.MvcApplicationPartsAssemblyInfo.cs
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\libman.json
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\AWSSDK.Core.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\AWSSDK.SecurityToken.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\DnsClient.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\MongoDB.Bson.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\MongoDB.Driver.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\SharpCompress.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\Snappier.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\ZstdSharp.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
