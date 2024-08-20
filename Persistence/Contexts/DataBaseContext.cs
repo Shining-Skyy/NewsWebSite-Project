@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces.Contexts;
 using Domain.Attributes;
+using Domain.Categorys;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,6 +18,8 @@ namespace Persistence.Contexts
         {
         }
 
+        public DbSet<CategoryType> CategoryTypes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
@@ -29,6 +32,7 @@ namespace Persistence.Contexts
                     modelBuilder.Entity(entityType.Name).Property<bool>("IsRemove").HasDefaultValue(false);
                 }
             }
+            modelBuilder.Entity<CategoryType>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
         }
 
         public override int SaveChanges()
@@ -60,6 +64,7 @@ namespace Persistence.Contexts
                     {
                         item.Property("RemoveTime").CurrentValue = DateTime.Now;
                         item.Property("IsRemove").CurrentValue = true;
+                        item.State = EntityState.Modified;
                     }
                 }
             }

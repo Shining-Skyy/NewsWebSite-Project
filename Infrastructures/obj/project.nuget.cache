@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WIv2/rg53Juw9xIhhk0k5NFOUqMxdlCB4r8mUXXqvQL5TrTCOGVH7hlfofr33sIEDge4DMSadpOROhAGi0s4Hw==",
+  "dgSpecHash": "waniTSGN0rww/Top32lvkkMnZp7ferxma90Ssc0bACGMtp1/fnQWULPL4gd8zt5WmQwwx5phc79Cvi64FYEu9g==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Infrastructures\\Infrastructures.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

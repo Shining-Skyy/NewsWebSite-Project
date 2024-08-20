@@ -167,19 +167,19 @@ namespace Management.Controllers
                 {
                     if (Url.IsLocalUrl(ReturnUrl))
                     {
-                        return Redirect("~/Index");
+                        return Redirect("/");
                     }
-                    return RedirectToAction("~/Index");
+                    return RedirectToAction("/");
                 }
                 else if (signin.IsNotAllowed)
                 {
                     ModelState.AddModelError("", "Your login failed!");
-                    return Redirect("~/Index");
+                    return Redirect("/");
                 }
                 else if (signin.IsLockedOut)
                 {
                     ModelState.AddModelError("", "User account locked out!");
-                    return Redirect("~/Index");
+                    return Redirect("/");
                 }
                 else if (signin.RequiresTwoFactor)
                 {
@@ -200,7 +200,7 @@ namespace Management.Controllers
                 }
                 var resultAddlogin = await _userManager.AddLoginAsync(user, loginInfo);
                 await _signInManager.SignInAsync(user, false);
-                return RedirectToAction("~/Index");
+                return RedirectToAction("/");
             }
             catch (Exception)
             {

@@ -1,10 +1,13 @@
+using Application.Categorys.CategoryTypes;
 using Application.Interfaces.Contexts;
 using Application.Services.Email;
 using Application.Services.Google;
 using Application.Services.Sms;
 using Application.Visitors.VisitorOnline;
 using Infrastructures.IdentityConfigs;
+using Infrastructures.MappingProfile;
 using Management.Hubs;
+using Management.MappingProfiles;
 using Management.Utilities.Middlewares;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
@@ -22,7 +25,6 @@ builder.Services.AddIdentityService(builder.Configuration);
 #endregion
 
 builder.Services.AddAuthorization();
-builder.Services.AddTransient<EmailService>();
 builder.Services.ConfigureApplicationCookie(option =>
 {
     option.ExpireTimeSpan = TimeSpan.FromMinutes(10);
@@ -38,13 +40,19 @@ builder.Services.AddAuthentication()
         options.ClientSecret = builder.Configuration["AuthenticationGoogle:ClientSecret"];
     });
 
+builder.Services.AddSignalR();
 
+builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
+
+builder.Services.AddTransient<EmailService>();
 builder.Services.AddTransient<SmsService>();
 builder.Services.AddTransient<GoogleRecaptcha>();
-
-builder.Services.AddSignalR();
 builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 builder.Services.AddTransient<IVisitorOnlineService, VisitorOnlineService>();
+builder.Services.AddTransient<ICategoryTypeService, CategoryTypeService>();
+
+builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
+builder.Services.AddAutoMapper(typeof(CategoryVmMappingProfile));
 
 var app = builder.Build();
 

@@ -17,3 +17,5 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Persistence\obj\Debug
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Persistence\obj\Debug\net7.0\Persistence.pdb
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Persistence\obj\Debug\net7.0\Persistence.genruntimeconfig.cache
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Persistence\obj\Debug\net7.0\ref\Persistence.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Persistence\bin\Debug\net7.0\Common.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Persistence\bin\Debug\net7.0\Common.pdb

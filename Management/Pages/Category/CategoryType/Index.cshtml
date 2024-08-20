@@ -1,0 +1,88 @@
+﻿@page
+@model Management.Pages.Category.CategoryType.IndexModel
+@{
+    ViewData["Title"] = "Category Index";
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Tables <small>News site categories</small></h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row" style="display: block;">
+            <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Table Category <small>Custom design</small></h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <a asp-page="Create" class="buttonNext btn btn-info">
+                        <i class="fa fa-plus"></i> Create New Category
+                    </a>
+                    <div class="x_content">
+                        <div class="table-responsive">
+                            <table class="table table-striped jambo_table bulk_action">
+                                <thead>
+                                    <tr class="headings">
+                                        <th class="column-title">Name </th>
+                                        <th class="column-title">Number of SubCategories </th>
+                                        <th class="column-title no-link last">
+                                            <span class="nobr">Action</span>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.catalogType.Data)
+                                    {
+                                        <tr class="even pointer">
+                                            <td class=" ">@item.Type</td>
+                                            <td class=" ">@item.SubTypeCount</td>
+                                            <td class=" last">
+                                                <div>
+                                                    <a class="buttonNext btn btn-warning" asp-page="Edit" asp-route-id="@item.Id">Edit</a>
+                                                    <a class="buttonNext btn btn-danger" asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                                                    <div class="btn-group" role="group">
+                                                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            More
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                            <a class="dropdown-item" asp-page="Create" asp-route-parentId="@item.Id">Add subcategory</a>
+                                                            <a class="dropdown-item" asp-page="Index" asp-route-parentId="@item.Id">List of subcategories</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

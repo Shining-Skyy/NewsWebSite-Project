@@ -1,0 +1,65 @@
+﻿@page
+@model Management.Pages.Category.CategoryType.DeleteModel
+@{
+    ViewData["Title"] = "Delete Category";
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Delete Category</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Are you sure you want to remove Category?</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br />
+                        @if (Model.Message != null)
+                        {
+                            @foreach (var item in Model.Message)
+                            {
+                                <div class="alert alert-info">
+                                    <p>@item</p>
+                                </div>
+                            }
+                        }
+                        <form asp-page="Delete" method="post">
+                            <input type="hidden" asp-for="categoryType.Id" />
+                            <div class="item form-group">
+                                <div>
+                                    <a asp-page="Index" class="buttonNext btn btn-secondary">NO</a>
+                                    <button type="submit" class="btn btn-danger">YES</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -22,35 +22,56 @@ namespace Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Users.User", b =>
+            modelBuilder.Entity("Domain.Categorys.CategoryType", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
 
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 8, 4, 2, 22, 9, 212, DateTimeKind.Local).AddTicks(9281));
+                        .HasDefaultValue(new DateTime(2024, 8, 18, 5, 32, 32, 834, DateTimeKind.Local).AddTicks(6901));
 
                     b.Property<bool>("IsRemove")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
+                    b.Property<int?>("ParentTypeId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("RemoveTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdateTime")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.HasIndex("ParentTypeId");
+
+                    b.ToTable("CategoryTypes");
+                });
+
+            modelBuilder.Entity("Domain.Categorys.CategoryType", b =>
+                {
+                    b.HasOne("Domain.Categorys.CategoryType", "ParentType")
+                        .WithMany("SubType")
+                        .HasForeignKey("ParentTypeId");
+
+                    b.Navigation("ParentType");
+                });
+
+            modelBuilder.Entity("Domain.Categorys.CategoryType", b =>
+                {
+                    b.Navigation("SubType");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,78 @@
+﻿@page
+@model Management.Pages.Category.CategoryType.EditModel
+@{
+    ViewData["Title"] = "Edit Category";
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Form Category</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Edit Category</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br />
+                        @if (Model.Message != null)
+                        {
+                            @foreach (var item in Model.Message)
+                            {
+                                <div class="alert alert-info">
+                                    <p>@item</p>
+                                </div>
+                            }
+                        }
+                        <form id="demo-form2" asp-page="Edit" method="post">
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="categoryType.Type">
+                                    <span class="required">Name: </span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    <input type="text" asp-for="categoryType.Type" required="required" class="form-control ">
+                                </div>
+                                <span asp-validation-for="categoryType.Type" class="text-danger"></span>
+                                <input type="hidden" asp-for="categoryType.ParentTypeId" />
+                            </div>
+
+                            <div class="item form-group">
+                                <div class="col-md-6 col-sm-6 offset-md-3">
+                                    <a asp-page="Index" class="buttonNext btn btn-secondary">Cancel</a>
+                                    <button type="submit" class="btn btn-success">Edit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

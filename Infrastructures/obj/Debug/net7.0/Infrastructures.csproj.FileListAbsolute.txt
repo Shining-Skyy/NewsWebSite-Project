@@ -17,3 +17,5 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\D
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Application.pdb
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Domain.pdb
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\obj\Debug\net7.0\Infrastructures.csproj.CopyComplete
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Common.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Infrastructures\bin\Debug\net7.0\Common.pdb

@@ -111,3 +111,6 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\AutoMapper.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\Common.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\NewsWebSite\bin\Debug\net7.0\Common.pdb

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/BYXizty1k87aWoicgAPE7KXUKOW04oSYwUT5kO0mKCGRJ5aZ1SW9Jj1BWSbQOy16PTetZVcZa2eLFbLGhQGrw==",
+  "dgSpecHash": "VAywPgJJrPlyTn8N1UUjS1EhfxliZQejvbIMfY8RxITtU0VdsDF2D6PC/phY9+gvCU1p3jszChPdejdBSG6F9w==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

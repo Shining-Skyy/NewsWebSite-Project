@@ -1,4 +1,5 @@
-﻿using Domain.Users;
+﻿using Domain.Categorys;
+using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,8 @@ namespace Application.Interfaces.Contexts
 {
     public interface IDataBaseContext
     {
+        DbSet<CategoryType> CategoryTypes { get; set; }
+
         int SaveChanges();
         int SaveChanges(bool acceptAllChangesOnSuccess);
         Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default);

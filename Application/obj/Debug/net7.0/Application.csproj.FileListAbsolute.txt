@@ -13,3 +13,5 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Application\obj\Debug
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Application\obj\Debug\net7.0\refint\Application.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Application\obj\Debug\net7.0\Application.pdb
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Application\obj\Debug\net7.0\ref\Application.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Application\bin\Debug\net7.0\Common.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Application\bin\Debug\net7.0\Common.pdb

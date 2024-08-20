@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gdQkw5LZOcaxAGs74mscthhruTxtKjsRn//q1gjZ4/vnrHAaW9OMxrNnN/GSVbMP5hmguPp1CavKfSqAP2k6sg==",
+  "dgSpecHash": "kfIc0MFgJ4RofLtGC0qA0MhyJyt+lAs8Lalflnf9zetD0SMpLqgZeWecwFgCu9EiTiLsRP9+6aEq1oGbv7igIg==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

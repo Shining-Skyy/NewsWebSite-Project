@@ -13,6 +13,7 @@ namespace Management.Pages
         private readonly ILogger<IndexModel> _logger;
         private readonly UserManager<User> userManager;
 
+        [BindProperty]
         public List<AccountDetailViewModel> model { get; set; } = new List<AccountDetailViewModel>();
 
         public IndexModel(ILogger<IndexModel> logger, UserManager<User> userManager)
