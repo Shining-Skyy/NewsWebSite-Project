@@ -108,7 +108,7 @@ namespace Management.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(!await VerifyGoogleRecaptcha())
+                if (!await VerifyGoogleRecaptcha())
                     return View(model);
 
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.IsPersistent, lockoutOnFailure: true);
@@ -124,7 +124,7 @@ namespace Management.Controllers
                 }
                 if (result.RequiresTwoFactor)
                 {
-                    return RedirectToAction("ToFactorLogin", new { model.Email, model.IsPersistent });
+                    return RedirectToAction("TowFactorLogin", new { model.Email, model.IsPersistent });
                 }
                 else
                 {
@@ -327,7 +327,6 @@ namespace Management.Controllers
             return View(model);
         }
 
-        [Authorize]
         public async Task<IActionResult> TowFactorLogin(string email, bool isPersistent)
         {
             var user = await _userManager.FindByEmailAsync(email);
@@ -342,47 +341,57 @@ namespace Management.Controllers
             {
                 await SendTwoFactorToken(user);
                 model.Provider = "Email";
+                TempData["Provider"] = model.Provider;
                 model.IsPersistent = isPersistent;
+                ViewBag.message = "Your two-factor login code has been sent to your email";
             }
             else if (providers.Contains("Phone"))
             {
-                string smsCode = await _userManager.GenerateTwoFactorTokenAsync(user, "Phone");
-                //await _smsService.Send(user.PhoneNumber, smsCode);
-                model.Provider = "Phone";
-                model.IsPersistent = isPersistent;
+                try
+                {
+                    string smsCode = await _userManager.GenerateTwoFactorTokenAsync(user, "Phone");
+                    await _smsService.Send(user.PhoneNumber, smsCode);
+                    model.Provider = "Phone";
+                    TempData["Provider"] = model.Provider;
+                    model.IsPersistent = isPersistent;
+                    ViewBag.message = "Your two-factor login code has been sent to your mobile";
+                }
+                catch (Exception)
+                {
+                    return View(model);
+                }
             }
             return View(model);
         }
 
-        [Authorize]
         [HttpPost]
         public async Task<IActionResult> TowFactorLogin(TwoFactorLoginViewModel model)
         {
-            if (ModelState.IsValid)
+
+            if (!await VerifyGoogleRecaptcha())
+                return View(model);
+
+            var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
+            if (user == null)
             {
-                var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
-                if (user == null)
-                {
-                    ModelState.AddModelError("", "The email entered is not valid!");
-                    return View();
-                }
-                var result = await _signInManager.TwoFactorSignInAsync(model.Provider, model.Code, model.IsPersistent, true);
-                if (result.Succeeded)
-                {
-                    return LocalRedirect("~/Index");
-                }
-                else if (result.IsLockedOut)
-                {
-                    ModelState.AddModelError("", "User account locked out!");
-                    return View();
-                }
-                else
-                {
-                    ModelState.AddModelError("", "The entered Code is not correct");
-                    return View();
-                }
+                ModelState.AddModelError("", "The email entered is not valid!");
+                return View();
             }
-            return View(model);
+            var result = await _signInManager.TwoFactorSignInAsync(TempData["Provider"].ToString(), model.Code, model.IsPersistent, true);
+            if (result.Succeeded)
+            {
+                return LocalRedirect("~/Index");
+            }
+            else if (result.IsLockedOut)
+            {
+                ModelState.AddModelError("", "User account locked out!");
+                return View();
+            }
+            else
+            {
+                ModelState.AddModelError("", "The entered Code is not correct");
+                return View();
+            }
         }
 
         [Authorize]
