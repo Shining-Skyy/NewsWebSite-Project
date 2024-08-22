@@ -1,4 +1,5 @@
 ﻿using Application.Categorys.CategoryTypes.Dtos;
+using Application.Categorys.GetMenuItem.Dto;
 using AutoMapper;
 using Domain.Categorys;
 using System;
@@ -17,6 +18,11 @@ namespace Infrastructures.MappingProfile
 
             CreateMap<CategoryType, CategoryTypeListDto>()
                 .ForMember(dest => dest.SubTypeCount, option => option.MapFrom(src => src.SubType.Count));
+
+            CreateMap<CategoryType, MenuItemDto>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Type))
+                .ForMember(dest => dest.ParentId, opt => opt.MapFrom(src => src.ParentTypeId))
+                .ForMember(dest => dest.SubMenu, opt => opt.MapFrom(src => src.SubType));
         }
     }
 }

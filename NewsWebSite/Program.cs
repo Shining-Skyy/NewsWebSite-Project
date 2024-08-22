@@ -1,3 +1,6 @@
+using Application.Categorys.GetMenuItem;
+using Application.Interfaces.Contexts;
+using Infrastructures.MappingProfile;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
 
@@ -10,6 +13,12 @@ builder.Services.AddControllersWithViews();
 string connection = builder.Configuration["ConnectionString:SqlServer"];
 builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(connection));
 #endregion
+
+builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
+
+builder.Services.AddTransient<IGetMenuItemService, GetMenuItemService>();
+
+builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 
 var app = builder.Build();
 
