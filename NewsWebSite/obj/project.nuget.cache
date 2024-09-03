@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jVmt7T30iUMgUn5ED2fyDAqNFPghrjCUIW2kuI6xosoEbUg4I0u4uYpyfN/QE3TBlTCHXaSpfxC7WUNCSDUJ+A==",
+  "dgSpecHash": "e32W0ixa6fHcnSb5kCGkuQVJP6UthJOT75XMu7tU9zdB20ERiGZWX8WuNpuDKMItszFGSh2AzU+OQlZrNGCzNQ==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\NewsWebSite.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,9 @@
     "C:\\Users\\Ebrahim\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\fluentvalidation\\10.0.0\\fluentvalidation.10.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.0.0\\fluentvalidation.aspnetcore.10.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.0.0\\fluentvalidation.dependencyinjectionextensions.10.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -142,6 +145,7 @@
     "C:\\Users\\Ebrahim\\.nuget\\packages\\nuget.projectmodel\\6.6.1\\nuget.projectmodel.6.6.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\nuget.protocol\\6.6.1\\nuget.protocol.6.6.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\nuget.versioning\\6.6.1\\nuget.versioning.6.6.1.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\restsharp\\106.12.0\\restsharp.106.12.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

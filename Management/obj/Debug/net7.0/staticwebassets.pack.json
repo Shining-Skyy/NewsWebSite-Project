@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Management.bundle.scp.css"
     },
     {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Sweetalert2\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\Sweetalert2\\sweetalert2.min.css"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Sweetalert2\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\Sweetalert2\\sweetalert2.min.js"
+    },
+    {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\build\\css\\custom.css",
       "PackagePath": "staticwebassets\\Theme\\build\\css\\custom.css"
     },
@@ -9255,6 +9263,18 @@
     {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\js\\CkEditor5\\MyCk5.js",
+      "PackagePath": "staticwebassets\\js\\CkEditor5\\MyCk5.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\js\\CkEditor5\\ckeditor.js",
+      "PackagePath": "staticwebassets\\js\\CkEditor5\\ckeditor.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\js\\CkEditor5\\ckeditor.js.map",
+      "PackagePath": "staticwebassets\\js\\CkEditor5\\ckeditor.js.map"
     },
     {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\js\\SignalROnlineVisitorService.js",

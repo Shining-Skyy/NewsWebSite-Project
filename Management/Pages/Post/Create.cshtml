@@ -1,0 +1,179 @@
+﻿@page
+@model Management.Pages.Post.CreateModel
+@{
+}
+
+<div class="right_col" role="main">
+
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Form Elements</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Form Design <small>different form elements</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+                <form id="createForm" class="form-horizontal form-label-left" asp-antiforgery="true" onsubmit="return sendDataToServer(event)">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="x_panel">
+                                <div class="x_content" style="display: block;">
+                                    <label>Tite :</label>
+                                    <input id="Titel" type="text" asp-for="Data.Titel" class="form-control parsley-success" required="">
+                                    <span asp-validation-for="Data.Titel" class="text-danger"></span><br />
+
+                                    <label>Post Description (20 chars min, 100 max) :</label>
+                                    <textarea id="PostDescription" asp-for="Data.PostDescription" class="form-control parsley-success" required=""></textarea>
+                                    <span asp-validation-for="Data.PostDescription" class="text-danger"></span><br />
+
+                                    <label>Time Required :</label> <br>
+                                    <input id="TimeRequired" type="number" asp-for="Data.TimeRequired" class="form-control parsley-success">
+                                    <span asp-validation-for="Data.TimeRequired" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="x_panel">
+                                <div class="x_content" style="display: block;">
+                                    <br>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3 col-sm-3 ">Select</label>
+                                        <div class="col-md-9 col-sm-9 ">
+                                            <select id="Categories" class="form-control" asp-items="@Model.Categories"></select>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label for="basicInput">Image </label>
+                                        <input id="Images" type="file" class="form-control" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="x_content" style="display: block;">
+                            <div class="x_content">
+                                <div class="form-group">
+                                    <textarea asp-for="Data.Content" class="form-control editor"></textarea>
+                                    <span asp-validation-for="Data.Content" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item form-group">
+                        <div class="col-md-6 col-sm-6">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/ckeditor5/ckeditor.js"></script>
+<script src="~/js/ckeditor5/myck5.js"></script>
+
+@section Scripts {
+    <link href="~/Sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <script src="~/Sweetalert2/sweetalert2.min.js"></script>
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function sendDataToServer(e) {
+            e.preventDefault();
+
+            var form = $("#createForm");
+            form.validate();
+            if (form.valid() == false) {
+                swal.fire(
+                    'Warning!',
+                    "The form information is not entered correctly!",
+                    'warning'
+                );
+                return false;
+            }
+
+            var data = new FormData();
+            //دریافت مقادیر از تکس باکس ها و....
+            data.append("Titel", $("#Titel").val());
+            data.append("PostDescription", $("#PostDescription").val());
+            data.append("TimeRequired", $("#TimeRequired").val());
+            data.append("Content", $("#Content").val());
+
+            data.append("CategoryTypeId", $('#Categories').find('option:selected').val());
+
+            //دریافت عکس های انتخاب شده توسط کاربر و قرار دادن عکس ها در متغیر data
+            var PostImages = document.getElementById("Images");
+
+            if (PostImages.files.length > 0) {
+                for (var i = 0; i < PostImages.files.length; i++) {
+                    data.append('Images-' + i, PostImages.files[i]);
+                }
+            }
+
+            var ajaxRequest = $.ajax({
+                type: "POST",
+                url: "create",
+                contentType: false,
+                processData: false,
+                data: data,
+                headers: { "RequestVerificationToken": $('input[name="__RequestVerificationToken"]').val() },
+                success: function (data) {
+                    if (data.isSuccess == true) {
+                        swal.fire(
+                            'Success!',
+                            'Post added successfully',
+                            'success'
+                        ).then(function (isConfirm) {
+                            window.location.href = "";
+                        });
+                    }
+                    else {
+                        swal.fire(
+                            'Warning!',
+                            "Data was not recorded",
+                            'warning'
+                        );
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+
+            ajaxRequest.done(function (xhr, textStatus) {
+                // Do other operation
+            });
+        }
+    </script>
+}

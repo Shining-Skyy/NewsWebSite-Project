@@ -167,9 +167,9 @@ namespace Management.Controllers
                 {
                     if (Url.IsLocalUrl(ReturnUrl))
                     {
-                        return Redirect("/");
+                        return Redirect("Login");
                     }
-                    return RedirectToAction("/");
+                    return RedirectToAction("Index", "Home");
                 }
                 else if (signin.IsNotAllowed)
                 {

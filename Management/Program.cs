@@ -1,9 +1,15 @@
 using Application.Categorys.CategoryTypes;
 using Application.Interfaces.Contexts;
+using Application.Posts.AddNewPost;
+using Application.Posts.AddNewPost.Dto;
+using Application.Posts.AddNewPost.Validator;
+using Application.Posts.PostServices;
 using Application.Services.Email;
 using Application.Services.Google;
 using Application.Services.Sms;
 using Application.Visitors.VisitorOnline;
+using FluentValidation;
+using Infrastructures.ExternalApi.ImageServer;
 using Infrastructures.IdentityConfigs;
 using Infrastructures.MappingProfile;
 using Management.Hubs;
@@ -50,9 +56,14 @@ builder.Services.AddTransient<GoogleRecaptcha>();
 builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 builder.Services.AddTransient<IVisitorOnlineService, VisitorOnlineService>();
 builder.Services.AddTransient<ICategoryTypeService, CategoryTypeService>();
+builder.Services.AddTransient<IAddNewPostService, AddNewPostService>();
+builder.Services.AddTransient<IPostService, PostService>();
+builder.Services.AddTransient<IImageUploadService, ImageUploadService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 builder.Services.AddAutoMapper(typeof(CategoryVmMappingProfile));
+
+builder.Services.AddTransient<IValidator<AddNewPostDto>, AddNewPostDtoValidator>();
 
 var app = builder.Build();
 

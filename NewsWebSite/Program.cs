@@ -1,5 +1,6 @@
 using Application.Categorys.GetMenuItem;
 using Application.Interfaces.Contexts;
+using Application.Posts.AddNewPost;
 using Infrastructures.MappingProfile;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(con
 builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
 
 builder.Services.AddTransient<IGetMenuItemService, GetMenuItemService>();
+builder.Services.AddTransient<IAddNewPostService, AddNewPostService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 

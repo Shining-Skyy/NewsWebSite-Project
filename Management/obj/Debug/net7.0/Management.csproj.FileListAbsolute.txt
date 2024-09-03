@@ -298,3 +298,7 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\AutoMapper.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\Common.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\Common.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\FluentValidation.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\Management\bin\Debug\net7.0\RestSharp.dll

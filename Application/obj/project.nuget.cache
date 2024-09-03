@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kfIc0MFgJ4RofLtGC0qA0MhyJyt+lAs8Lalflnf9zetD0SMpLqgZeWecwFgCu9EiTiLsRP9+6aEq1oGbv7igIg==",
+  "dgSpecHash": "BKAeIsHNjgpNh1u66TkEHcXGfEyHi5KXGcszuCd9b04SiGUgVL5ZZTGuyqQRznAISqHQYj5Sfgj7xjubxeY1kw==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,9 @@
     "C:\\Users\\Ebrahim\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\fluentvalidation\\10.0.0\\fluentvalidation.10.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.0.0\\fluentvalidation.aspnetcore.10.0.0.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.0.0\\fluentvalidation.dependencyinjectionextensions.10.0.0.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.20\\microsoft.aspnetcore.cryptography.internal.7.0.20.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.20\\microsoft.aspnetcore.cryptography.keyderivation.7.0.20.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.20\\microsoft.entityframeworkcore.7.0.20.nupkg.sha512",

@@ -1,4 +1,5 @@
 ﻿using Domain.Categorys;
+using Domain.Posts;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -12,6 +13,7 @@ namespace Application.Interfaces.Contexts
     public interface IDataBaseContext
     {
         DbSet<CategoryType> CategoryTypes { get; set; }
+        DbSet<Post> Posts { get; set; }
 
         int SaveChanges();
         int SaveChanges(bool acceptAllChangesOnSuccess);

@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.Contexts;
 using Domain.Attributes;
 using Domain.Categorys;
+using Domain.Posts;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,6 +20,7 @@ namespace Persistence.Contexts
         }
 
         public DbSet<CategoryType> CategoryTypes { get; set; }
+        public DbSet<Post> Posts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
