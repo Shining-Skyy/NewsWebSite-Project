@@ -1,6 +1,11 @@
 using Application.Categorys.GetMenuItem;
 using Application.Interfaces.Contexts;
 using Application.Posts.AddNewPost;
+using Application.Posts.GetPostPDP;
+using Application.Posts.GetPostPLP;
+using Application.Posts.PostServices;
+using Application.UriComposer;
+using Infrastructures.ExternalApi.ImageServer;
 using Infrastructures.MappingProfile;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
@@ -18,7 +23,9 @@ builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(con
 builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
 
 builder.Services.AddTransient<IGetMenuItemService, GetMenuItemService>();
-builder.Services.AddTransient<IAddNewPostService, AddNewPostService>();
+builder.Services.AddTransient<IUriComposerService, UriComposerService>();
+builder.Services.AddTransient<IGetPostPLPService, GetPostPLPService>();
+builder.Services.AddTransient<IGetPostPDPService, GetPostPDPService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 

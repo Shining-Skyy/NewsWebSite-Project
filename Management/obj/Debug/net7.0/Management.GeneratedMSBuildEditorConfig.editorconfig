@@ -44,6 +44,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Program/Web/Asp.Net core/Projject/News/NewsWebSite-Test/Management/Pages/Post/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Program/Web/Asp.Net core/Projject/News/NewsWebSite-Test/Management/Pages/Post/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Program/Web/Asp.Net core/Projject/News/NewsWebSite-Test/Management/Pages/Post/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Program/Web/Asp.Net core/Projject/News/NewsWebSite-Test/Management/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

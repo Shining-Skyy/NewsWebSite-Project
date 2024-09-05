@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons", "Commons", "{B33D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{A30A284F-9BFB-4479-8665-5286DF368B09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFile", "StaticFile\StaticFile.csproj", "{836C52CD-C231-46DF-A49B-614157805366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticFile", "StaticFile\StaticFile.csproj", "{836C52CD-C231-46DF-A49B-614157805366}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

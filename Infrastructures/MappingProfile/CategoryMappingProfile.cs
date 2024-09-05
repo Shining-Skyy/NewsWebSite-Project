@@ -1,6 +1,7 @@
 ﻿using Application.Categorys.CategoryTypes.Dtos;
 using Application.Categorys.GetMenuItem.Dto;
 using Application.Posts.AddNewPost.Dto;
+using Application.Posts.PostServices.Dto;
 using AutoMapper;
 using Domain.Categorys;
 using Domain.Posts;
@@ -25,11 +26,6 @@ namespace Infrastructures.MappingProfile
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Type))
                 .ForMember(dest => dest.ParentId, opt => opt.MapFrom(src => src.ParentTypeId))
                 .ForMember(dest => dest.SubMenu, opt => opt.MapFrom(src => src.SubType));
-
-            CreateMap<Post, AddNewPostDto>()
-                .ForMember(dest => dest.Images, opt => opt.MapFrom(src => src.PostImages)).ReverseMap();
-
-            CreateMap<PostImage, AddNewPostImageDto>().ReverseMap();
         }
     }
 }

@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Management.Pages.Post
 {
-    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly IAddNewPostService addNewPostService;
@@ -41,37 +40,35 @@ namespace Management.Pages.Post
 
         public IActionResult OnPost()
         {
-            var user = _userManager.FindByNameAsync(User.Identity.Name).Result;
-
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                for (int i = 0; i < Request.Form.Files.Count; i++)
-                {
-                    var file = Request.Form.Files[i];
-                    Files.Add(file);
-                }
-                List<AddNewPostImageDto> images = new List<AddNewPostImageDto>();
-                if (Files.Count > 0)
-                {
-                    //Upload
-                    var result = uploadService.Upload(Files);
-                    foreach (var item in result)
-                    {
-                        images.Add(new AddNewPostImageDto { Src = item });
-                    }
-                }
-                Data.Images = images;
-
-
-                Data.UserId = user.Id;
-
-                var resultService = addNewPostService.Execute(Data);
-
-                return new JsonResult(resultService);
+                var allErrors = ModelState.Values.SelectMany(v => v.Errors);
+                return new JsonResult(new BaseDto<int>(0, allErrors.Select(p => p.ErrorMessage).ToList(), false));
             }
 
-            var allErrors = ModelState.Values.SelectMany(v => v.Errors);
-            return new JsonResult(new BaseDto<int>(0, allErrors.Select(p => p.ErrorMessage).ToList(), false));
+            for (int i = 0; i < Request.Form.Files.Count; i++)
+            {
+                var file = Request.Form.Files[i];
+                Files.Add(file);
+            }
+
+            List<AddNewPostImageDto> images = new List<AddNewPostImageDto>();
+            if (Files.Count > 0)
+            {
+                //Upload 
+                var result = uploadService.Upload(Files);
+                foreach (var item in result)
+                {
+                    images.Add(new AddNewPostImageDto { Src = item });
+                }
+            }
+            Data.Images = images;
+            var user = _userManager.GetUserAsync(User).Result;
+            Data.UserId = user.Id;
+
+            var resultService = addNewPostService.Execute(Data);
+
+            return new JsonResult(resultService);
         }
     }
 }

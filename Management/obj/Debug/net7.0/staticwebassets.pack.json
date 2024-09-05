@@ -157,6 +157,10 @@
       "PackagePath": "staticwebassets\\Theme\\production\\login.html"
     },
     {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\production\\media_gallery.html",
+      "PackagePath": "staticwebassets\\Theme\\production\\media_gallery.html"
+    },
+    {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\production\\page_403.html",
       "PackagePath": "staticwebassets\\Theme\\production\\page_403.html"
     },
@@ -2975,6 +2979,26 @@
     {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\vendors\\dropzone\\dist\\readme.md",
       "PackagePath": "staticwebassets\\Theme\\vendors\\dropzone\\dist\\readme.md"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\vendors\\fastclick\\.bower.json",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\fastclick\\.bower.json"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\vendors\\fastclick\\LICENSE",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\fastclick"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\vendors\\fastclick\\README.md",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\fastclick\\README.md"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\vendors\\fastclick\\bower.json",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\fastclick\\bower.json"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\vendors\\fastclick\\lib\\fastclick.js",
+      "PackagePath": "staticwebassets\\Theme\\vendors\\fastclick\\lib\\fastclick.js"
     },
     {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Theme\\vendors\\font-awesome\\.bower.json",

@@ -3,10 +3,12 @@ using Application.Interfaces.Contexts;
 using Application.Posts.AddNewPost;
 using Application.Posts.AddNewPost.Dto;
 using Application.Posts.AddNewPost.Validator;
+using Application.Posts.GetPostPLP;
 using Application.Posts.PostServices;
 using Application.Services.Email;
 using Application.Services.Google;
 using Application.Services.Sms;
+using Application.UriComposer;
 using Application.Visitors.VisitorOnline;
 using FluentValidation;
 using Infrastructures.ExternalApi.ImageServer;
@@ -59,9 +61,11 @@ builder.Services.AddTransient<ICategoryTypeService, CategoryTypeService>();
 builder.Services.AddTransient<IAddNewPostService, AddNewPostService>();
 builder.Services.AddTransient<IPostService, PostService>();
 builder.Services.AddTransient<IImageUploadService, ImageUploadService>();
+builder.Services.AddTransient<IUriComposerService, UriComposerService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
-builder.Services.AddAutoMapper(typeof(CategoryVmMappingProfile));
+builder.Services.AddAutoMapper(typeof(ManagementVmMappingProfile));
+builder.Services.AddAutoMapper(typeof(PostMappingProfile));
 
 builder.Services.AddTransient<IValidator<AddNewPostDto>, AddNewPostDtoValidator>();
 

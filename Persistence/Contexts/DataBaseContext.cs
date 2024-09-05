@@ -35,6 +35,7 @@ namespace Persistence.Contexts
                 }
             }
             modelBuilder.Entity<CategoryType>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
+            modelBuilder.Entity<Post>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
         }
 
         public override int SaveChanges()

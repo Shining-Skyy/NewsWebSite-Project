@@ -1,0 +1,110 @@
+﻿@page
+@model Management.Pages.Post.EditModel
+@{
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Form Post</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <form id="demo-form2" asp-page="Edit" method="post">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Edit Category</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <br />
+                            @if (Model.Message != null)
+                            {
+                                @foreach (var item in Model.Message)
+                                {
+                                    <div class="alert alert-info">
+                                        <p>@item</p>
+                                    </div>
+                                }
+                            }
+
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="PostViewModel.Titel">
+                                    <span class="required">Titel: </span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    <input type="text" asp-for="PostViewModel.Titel" required="required" class="form-control ">
+                                </div>
+                                <span asp-validation-for="PostViewModel.Titel" class="text-danger"></span>
+                            </div>
+
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="PostViewModel.PostDescription">
+                                    <span class="required">Post Description: </span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    <textarea asp-for="PostViewModel.PostDescription" class="form-control " required=""></textarea>
+                                </div>
+                                <span asp-validation-for="PostViewModel.PostDescription" class="text-danger"></span>
+                            </div>
+
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="PostViewModel.TimeRequired">
+                                    <span class="required">Time Required: </span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    <input type="number" asp-for="PostViewModel.TimeRequired" class="form-control ">
+                                </div>
+                                <span asp-validation-for="PostViewModel.TimeRequired" class="text-danger"></span>
+                            </div>
+
+                            <div class="x_content" style="display: block;">
+                                <label class="x_content" asp-for="PostViewModel.TimeRequired">
+                                    <span class="required">Post Content: </span>
+                                </label>
+                                <div class="x_content">
+                                    <textarea id="Content" asp-for="PostViewModel.Content" class="form-control editor"></textarea>
+                                </div>
+                                <span asp-validation-for="PostViewModel.TimeRequired" class="text-danger"></span>
+                            </div>
+                            <input type="hidden" asp-for="PostViewModel.Id" />
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">
+                            <a asp-page="Index" class="buttonNext btn btn-secondary">Cancel</a>
+                            <button type="submit" class="btn btn-success">Edit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/ckeditor5/ckeditor.js"></script>
+    <script src="~/js/ckeditor5/myck5.js"></script>
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
