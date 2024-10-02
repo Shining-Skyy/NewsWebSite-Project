@@ -1,12 +1,15 @@
 using Application.Posts.PostServices;
 using Application.Posts.PostServices.Dto;
 using AutoMapper;
+using Management.Utilities;
 using Management.ViewModels.Post;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Post
 {
+    [Authorize]
     public class DeleteModel : PageModel
     {
         private readonly IPostService service;
@@ -31,7 +34,7 @@ namespace Management.Pages.Post
 
         public IActionResult OnPost()
         {
-            var result = service.Remove(PostViewModel.Id);
+            var result = service.Remove(PostViewModel.Id, ClaimUtility.GetUserId(User));
             Message = result.Message;
             if (result.IsSuccess)
                 return RedirectToPage("index");

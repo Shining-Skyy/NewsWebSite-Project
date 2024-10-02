@@ -14,6 +14,7 @@ namespace Application.Interfaces.Contexts
     {
         DbSet<CategoryType> CategoryTypes { get; set; }
         DbSet<Post> Posts { get; set; }
+        DbSet<PostFavorite> PostFavorites { get; set; }
 
         int SaveChanges();
         int SaveChanges(bool acceptAllChangesOnSuccess);

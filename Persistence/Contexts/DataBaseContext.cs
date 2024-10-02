@@ -21,6 +21,7 @@ namespace Persistence.Contexts
 
         public DbSet<CategoryType> CategoryTypes { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<PostFavorite> PostFavorites { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,6 +37,7 @@ namespace Persistence.Contexts
             }
             modelBuilder.Entity<CategoryType>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
             modelBuilder.Entity<Post>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
+            modelBuilder.Entity<PostFavorite>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
         }
 
         public override int SaveChanges()

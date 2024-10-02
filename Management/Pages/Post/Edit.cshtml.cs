@@ -3,11 +3,13 @@ using Application.Posts.PostServices.Dto;
 using AutoMapper;
 using Domain.Posts;
 using Management.ViewModels.Post;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Post
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly IPostService service;

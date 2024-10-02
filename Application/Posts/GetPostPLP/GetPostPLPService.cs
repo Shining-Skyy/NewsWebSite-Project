@@ -19,18 +19,46 @@ namespace Application.Posts.GetPostPLP
             this.uriComposer = uriComposer;
         }
 
-        public PaginatedItemsDto<PostPLPDto> Execute(int page, int pageSize)
+        public PaginatedItemsDto<PostPLPDto> Execute(PostPLPRequestDto request)
         {
             int rowCount = 0;
-            var data = context.Posts.Include(p => p.PostImages).OrderByDescending(p => p.Id)
-                .PagedResult(page, pageSize, out rowCount).Select(p => new PostPLPDto
+            var query = context.Posts.Include(p => p.PostImages).Include(p => p.CategoryType).AsQueryable();
+
+            //if (request.CategoryTypeId != null)
+            //{
+            //    query = query.Where(p => p.CategoryTypeId == request.CategoryTypeId);
+            //}
+
+            //if (!string.IsNullOrEmpty(request.SearchKey))
+            //{
+            //    query = query.Where(p => p.Titel.Contains(request.SearchKey) || p.Content.Contains(request.SearchKey));
+            //}
+
+            //if (request.SortType == SortType.MostVisited)
+            //{
+            //    query = query.OrderByDescending(p => p.VisitCount);
+            //}
+
+            //if (request.SortType == SortType.MostPopular)
+            //{
+            //    query = query.Include(p => p.PostFavourites)
+            //        .OrderByDescending(p => p.PostFavourites.Count());
+            //}
+
+            //if (request.SortType == SortType.newest)
+            //{
+            //    query = query.OrderByDescending(p => p.Id);
+            //}
+
+            var data = query.PagedResult(request.page, request.pageSize, out rowCount).ToList()
+                .Select(p => new PostPLPDto()
                 {
                     Id = p.Id,
                     Titel = p.Titel,
                     Type = p.CategoryType.Type,
                     Image = uriComposer.ComposeImageUri(p.PostImages.FirstOrDefault().Src),
                 }).ToList();
-            return new PaginatedItemsDto<PostPLPDto>(page, pageSize, rowCount, data);
+            return new PaginatedItemsDto<PostPLPDto>(request.page, request.pageSize, rowCount, data);
         }
     }
 }

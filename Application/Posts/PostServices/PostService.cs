@@ -42,24 +42,32 @@ namespace Application.Posts.PostServices
 
         public BaseDto<PostDto> Edit(PostDto postDto)
         {
-            var model = context.Posts.SingleOrDefault(p => p.Id == postDto.Id);
+            var model = context.Posts.Where(p => p.UserId == postDto.UserId).SingleOrDefault(p => p.Id == postDto.Id);
             mapper.Map(postDto, model);
             context.SaveChanges();
             return new BaseDto<PostDto>(mapper.Map<PostDto>(model), new List<string> { $"Edited successfully" }, true);
         }
 
-        public BaseDto Remove(int Id)
+        public BaseDto Remove(int Id, string UserId)
         {
             var data = context.Posts.Find(Id);
-            context.Posts.Remove(data);
-            context.SaveChanges();
-            return new BaseDto(new List<string> { $"Item deleted successfully" }, true);
+            if (data.UserId == UserId)
+            {
+                context.Posts.Remove(data);
+                context.SaveChanges();
+                return new BaseDto(new List<string> { $"Item deleted successfully" }, true);
+            }
+            else
+            {
+                return new BaseDto(new List<string> { $"The deletion failed" }, false);
+            }
         }
 
-        public PaginatedItemsDto<PostListDto> GetPostList(int page, int pageSize)
+        public PaginatedItemsDto<PostListDto> GetPostList(string UserId, int page, int pageSize)
         {
             int rowCount = 0;
-            var data = context.Posts.Include(p => p.PostImages).ToPaged(page, pageSize).OrderByDescending(p => p.Id)
+            var data = context.Posts.Include(p => p.PostImages).ToPaged(page, pageSize)
+                .OrderByDescending(p => p.Id).Where(p => p.UserId == UserId)
                 .Select(p => new PostListDto
                 {
                     Id = p.Id,

@@ -3,6 +3,7 @@ using Application.Interfaces.Contexts;
 using Application.Posts.AddNewPost;
 using Application.Posts.AddNewPost.Dto;
 using Application.Posts.AddNewPost.Validator;
+using Application.Posts.FavoritePostService;
 using Application.Posts.GetPostPLP;
 using Application.Posts.PostServices;
 using Application.Services.Email;
@@ -10,6 +11,7 @@ using Application.Services.Google;
 using Application.Services.Sms;
 using Application.UriComposer;
 using Application.Visitors.VisitorOnline;
+using Domain.Users;
 using FluentValidation;
 using Infrastructures.ExternalApi.ImageServer;
 using Infrastructures.IdentityConfigs;
@@ -17,7 +19,9 @@ using Infrastructures.MappingProfile;
 using Management.Hubs;
 using Management.MappingProfiles;
 using Management.Utilities.Middlewares;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,6 +43,15 @@ builder.Services.ConfigureApplicationCookie(option =>
     option.LoginPath = "/Account/Login";
     option.AccessDeniedPath = "/Account/AccesDenied";
     option.SlidingExpiration = true;
+});
+string pathToDirctory = "C:\\Users\\Ebrahim\\AppData\\Roaming\\Microsoft\\UserSecrets\\KEY";
+builder.Services.AddDataProtection()
+    .PersistKeysToFileSystem(new DirectoryInfo(pathToDirctory))
+    .SetApplicationName("SharedCookieApp");
+
+builder.Services.ConfigureApplicationCookie(options => {
+    options.Cookie.Name = ".AspNet.SharedCookie";
+    options.Cookie.Path = "/";
 });
 
 builder.Services.AddAuthentication()
@@ -62,6 +75,7 @@ builder.Services.AddTransient<IAddNewPostService, AddNewPostService>();
 builder.Services.AddTransient<IPostService, PostService>();
 builder.Services.AddTransient<IImageUploadService, ImageUploadService>();
 builder.Services.AddTransient<IUriComposerService, UriComposerService>();
+builder.Services.AddTransient<IFavoritePostService, FavoritePostService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 builder.Services.AddAutoMapper(typeof(ManagementVmMappingProfile));

@@ -33,7 +33,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 2, 20, 57, 0, 568, DateTimeKind.Local).AddTicks(5297));
+                        .HasDefaultValue(new DateTime(2024, 9, 30, 1, 7, 53, 860, DateTimeKind.Local).AddTicks(3927));
 
                     b.Property<bool>("IsRemove")
                         .ValueGeneratedOnAdd()
@@ -78,7 +78,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 2, 20, 57, 0, 569, DateTimeKind.Local).AddTicks(481));
+                        .HasDefaultValue(new DateTime(2024, 9, 30, 1, 7, 53, 860, DateTimeKind.Local).AddTicks(8419));
 
                     b.Property<bool>("IsRemove")
                         .ValueGeneratedOnAdd()
@@ -113,6 +113,44 @@ namespace Persistence.Migrations
                     b.ToTable("Posts");
                 });
 
+            modelBuilder.Entity("Domain.Posts.PostFavorite", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("InsertTime")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2024, 9, 30, 1, 7, 53, 861, DateTimeKind.Local).AddTicks(2299));
+
+                    b.Property<bool>("IsRemove")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("RemoveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("PostFavorites");
+                });
+
             modelBuilder.Entity("Domain.Posts.PostImage", b =>
                 {
                     b.Property<int>("Id")
@@ -124,7 +162,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 2, 20, 57, 0, 569, DateTimeKind.Local).AddTicks(4791));
+                        .HasDefaultValue(new DateTime(2024, 9, 30, 1, 7, 53, 861, DateTimeKind.Local).AddTicks(5358));
 
                     b.Property<bool>("IsRemove")
                         .ValueGeneratedOnAdd()
@@ -171,6 +209,17 @@ namespace Persistence.Migrations
                     b.Navigation("CategoryType");
                 });
 
+            modelBuilder.Entity("Domain.Posts.PostFavorite", b =>
+                {
+                    b.HasOne("Domain.Posts.Post", "Post")
+                        .WithMany("PostFavourites")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
+                });
+
             modelBuilder.Entity("Domain.Posts.PostImage", b =>
                 {
                     b.HasOne("Domain.Posts.Post", "Post")
@@ -189,6 +238,8 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Posts.Post", b =>
                 {
+                    b.Navigation("PostFavourites");
+
                     b.Navigation("PostImages");
                 });
 #pragma warning restore 612, 618

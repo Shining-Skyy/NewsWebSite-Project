@@ -22,5 +22,6 @@ namespace Domain.Posts
         public CategoryType CategoryType { get; set; }
 
         public ICollection<PostImage> PostImages { get; set; }
+        public ICollection<PostFavorite> PostFavourites { get; set; }
     }
 }

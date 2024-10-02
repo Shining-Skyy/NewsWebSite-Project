@@ -33,8 +33,9 @@
                 <div class="navigation-top">
                     <div class="d-sm-flex justify-content-between text-center">
                         <p class="like-info">
-                            <span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
-                            people like this
+                            <a style="color:red" class="align-middle" asp-controller="Post" asp-action="AddFavorite" asp-route-PostId="@Model.Id">
+                                <i class="fa fa-heart"></i>
+                            </a> Add to your favorites
                         </p>
                         <div class="col-sm-4 text-center my-2 my-sm-0">
                             <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->

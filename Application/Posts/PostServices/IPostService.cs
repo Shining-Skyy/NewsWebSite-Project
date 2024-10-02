@@ -1,5 +1,6 @@
 ﻿using Application.Dtos;
 using Application.Posts.PostServices.Dto;
+using Domain.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace Application.Posts.PostServices
     public interface IPostService
     {
         List<ListCategoryTypeDto> GetCategoryType();
-        PaginatedItemsDto<PostListDto> GetPostList(int page, int pageSize);
+        PaginatedItemsDto<PostListDto> GetPostList(string UserId, int page, int pageSize);
         BaseDto<PostDto> FindById(int Id);
         BaseDto<PostDto> Edit(PostDto postDto);
-        BaseDto Remove(int Id);
+        BaseDto Remove(int Id,string UserId);
     }
 }

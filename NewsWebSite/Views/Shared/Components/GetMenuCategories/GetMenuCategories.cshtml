@@ -6,8 +6,9 @@
 
 <nav>
     <ul id="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">about</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="https://localhost:44315/Account/Register">Login</a></li>
+        <li><a href="/Home/About">about</a></li>
         @foreach (var item in Model.Where(p => p.ParentId == null))
         {
             <li>

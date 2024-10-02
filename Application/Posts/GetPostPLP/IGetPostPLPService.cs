@@ -11,6 +11,6 @@ namespace Application.Posts.GetPostPLP
 {
     public interface IGetPostPLPService
     {
-        PaginatedItemsDto<PostPLPDto> Execute(int page, int pageSize);
+        PaginatedItemsDto<PostPLPDto> Execute(PostPLPRequestDto request);
     }
 }
