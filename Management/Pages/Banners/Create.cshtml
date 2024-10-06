@@ -1,0 +1,97 @@
+﻿@page
+@model Management.Pages.Banners.CreateModel
+@{
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Form Elements</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Form Design <small>different form elements</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+                <form asp-page="Create" class="form-horizontal form-label-left" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="x_panel">
+                                <div class="x_content" style="display: block;">
+                                    <label>Name :</label>
+                                    <input type="text" asp-for="Data.Name" class="form-control parsley-success" required="">
+                                    <span asp-validation-for="Data.Name" class="text-danger"></span><br />
+
+                                    <label>Banner Link :</label>
+                                    <textarea asp-for="Data.Link" class="form-control parsley-success" required=""></textarea>
+                                    <span asp-validation-for="Data.Link" class="text-danger"></span><br />
+
+                                    <label>Banner priority :</label> <br>
+                                    <input type="number" asp-for="Data.Priority" class="form-control parsley-success">
+                                    <span asp-validation-for="Data.Priority" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="x_panel">
+                                <div class="x_content" style="display: block;">
+                                    <br>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3 col-sm-3 ">Position</label>
+                                        <div class="col-md-9 col-sm-9 ">
+                                            <select id="Categories" class="form-control" asp-items="@Html.GetEnumSelectList<Domain.Banners.Position>()"></select>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <fieldset class="form-group">
+                                            <br />
+                                            <label for="basicInput">Image </label>
+                                            <input type="file" asp-for="BannerImage" class="form-control">
+                                            <span asp-validation-for="BannerImage" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div>
+                                        <br />
+                                        <label>be active? :</label> <br>
+                                        <input type="checkbox" asp-for="Data.IsActive" class="form-control parsley-success">
+                                        <span asp-validation-for="Data.IsActive" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item form-group">
+                        <div class="col-md-6 col-sm-6">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

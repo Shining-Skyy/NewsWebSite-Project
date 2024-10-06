@@ -1,4 +1,17 @@
-﻿<!-- Trending Area Start -->
+﻿@using Application.HomePageService.Dto;
+@using Domain.Banners;
+@model HomePageDto;
+
+@{
+    var sliders = Model.Banners.Where(p => p.Position == Position.Slider).ToList();
+    var Line_1 = Model.Banners.Where(p => p.Position == Position.Line_1).ToList();
+    var Line_2 = Model.Banners.Where(p => p.Position == Position.Line_2).FirstOrDefault();
+    var Line_3 = Model.Banners.Where(p => p.Position == Position.Line_3).FirstOrDefault();
+    var Line_4 = Model.Banners.Where(p => p.Position == Position.Line_4).ToList();
+    var Line_5 = Model.Banners.Where(p => p.Position == Position.Line_5).FirstOrDefault();
+}
+
+<!-- Trending Area Start -->
 <div class="trending-area fix pt-25 gray-bg">
     <div class="container">
         <div class="trending-main">
@@ -9,40 +22,17 @@
                         <!-- Single -->
                         <div class="single-slider">
                             <div class="trending-top mb-30">
-                                <div class="trend-top-img">
-                                    <img src="~/theme/assets/img/trending/trending_top2.jpg" alt="">
-                                    <div class="trend-top-cap">
-                                        <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
-                                        <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Anna Lora Stuns In White At Her Australian Premiere</a></h2>
-                                        <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by Alice cloe   -   Jun 19, 2020</p>
+                                @foreach (var item in sliders)
+                                {
+                                    <div class="trend-top-img">
+                                        <img src=@item.Image alt="">
+                                        <div class="trend-top-cap">
+                                            <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
+                                            <h2><a href=@item.Link data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Anna Lora Stuns In White At Her Australian Premiere</a></h2>
+                                            <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by Alice cloe   -   Jun 19, 2020</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single -->
-                        <div class="single-slider">
-                            <div class="trending-top mb-30">
-                                <div class="trend-top-img">
-                                    <img src="~/theme/assets/img/trending/trending_top02.jpg" alt="">
-                                    <div class="trend-top-cap">
-                                        <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
-                                        <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Anna Lora Stuns In White At Her Australian Premiere</a></h2>
-                                        <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by Alice cloe   -   Jun 19, 2020</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single -->
-                        <div class="single-slider">
-                            <div class="trending-top mb-30">
-                                <div class="trend-top-img">
-                                    <img src="~/theme/assets/img/trending/trending_top03.jpg" alt="">
-                                    <div class="trend-top-cap">
-                                        <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
-                                        <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Anna Lora Stuns In White At Her Australian Premiere</a></h2>
-                                        <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by Alice cloe   -   Jun 19, 2020</p>
-                                    </div>
-                                </div>
+                                }
                             </div>
                         </div>
                     </div>
@@ -53,31 +43,18 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-6 col-sm-6">
                             <div class="trending-top mb-30">
-                                <div class="trend-top-img">
-                                    <img src="~/theme/assets/img/trending/trending_top3.jpg" alt="">
-                                    <div class="trend-top-cap trend-top-cap2">
-                                        <span class="bgb">FASHION</span>
-                                        <h2>
-                                            <a href="latest_news.html">
-                                                Secretart for Economic Air
-                                                plane that looks like
-                                            </a>
-                                        </h2>
-                                        <p>by Alice cloe   -   Jun 19, 2020</p>
+                                @foreach (var item in Line_1.Take(2))
+                                {
+                                    <div class="trend-top-img">
+                                        <img src=@item.Image alt="">
+                                        <div class="trend-top-cap trend-top-cap2">
+                                            <span class="bgg">TECH </span>
+                                            <h2><a href=@item.Link>Secretart for Economic Air plane that looks like</a></h2>
+                                            <p>by Alice cloe   -   Jun 19, 2020</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-6 col-sm-6">
-                            <div class="trending-top mb-30">
-                                <div class="trend-top-img">
-                                    <img src="~/theme/assets/img/trending/trending_top4.jpg" alt="">
-                                    <div class="trend-top-cap trend-top-cap2">
-                                        <span class="bgg">TECH </span>
-                                        <h2><a href="latest_news.html">Secretart for Economic Air plane that looks like</a></h2>
-                                        <p>by Alice cloe   -   Jun 19, 2020</p>
-                                    </div>
-                                </div>
+                                    <br />
+                                }
                             </div>
                         </div>
                     </div>
@@ -507,9 +484,12 @@
                     </div>
                 </div>
                 <!-- Banner -->
-                <div class="banner-one mt-20 mb-30">
-                    <img src="~/theme/assets/img/gallery/body_card1.png" alt="">
-                </div>
+                @if (Line_2 != null)
+                {
+                    <div class="banner-one mt-20 mb-30">
+                        <img src=@Line_2.Image alt="">
+                    </div>
+                }
             </div>
             <div class="col-lg-4">
                 <!-- Flow Socail -->
@@ -559,42 +539,19 @@
                     <div class="small-tittle mb-20">
                         <h4>Most Recent</h4>
                     </div>
-                    <!-- Details -->
-                    <div class="most-recent mb-40">
-                        <div class="most-recent-img">
-                            <img src="~/theme/assets/img/gallery/most_recent.png" alt="">
-                            <div class="most-recent-cap">
-                                <span class="bgbeg">Vogue</span>
-                                <h4>
-                                    <a href="latest_news.html">
-                                        What to Wear: 9+ Cute Work <br>
-                                        Outfits to Wear This.
-                                    </a>
-                                </h4>
+                    <!-- Single -->
+                    @foreach (var item in Model.MostVisited.Take(3))
+                    {
+                        <div class="most-recent-single">
+                            <div class="most-recent-images">
+                                <img src=@item.Image style="width: 100%; display: block;">
+                            </div>
+                            <div class="most-recent-capt">
+                                <h4><a href="latest_news.html">@item.Titel</a></h4>
                                 <p>Jhon  |  2 hours ago</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- Single -->
-                    <div class="most-recent-single">
-                        <div class="most-recent-images">
-                            <img src="~/theme/assets/img/gallery/most_recent1.png" alt="">
-                        </div>
-                        <div class="most-recent-capt">
-                            <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                            <p>Jhon  |  2 hours ago</p>
-                        </div>
-                    </div>
-                    <!-- Single -->
-                    <div class="most-recent-single">
-                        <div class="most-recent-images">
-                            <img src="~/theme/assets/img/gallery/most_recent2.png" alt="">
-                        </div>
-                        <div class="most-recent-capt">
-                            <h4><a href="latest_news.html">Most Beautiful Things to Do in Sidney with Your BF</a></h4>
-                            <p>Jhon  |  3 hours ago</p>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
@@ -607,11 +564,14 @@
         <div class="weekly2-wrapper">
             <div class="row">
                 <!-- Banner -->
-                <div class="col-lg-3">
-                    <div class="home-banner2 d-none d-lg-block">
-                        <img src="~/theme/assets/img/gallery/body_card2.png" alt="">
+                @if (Line_3 != null)
+                {
+                    <div class="col-lg-3">
+                        <div class="home-banner2 d-none d-lg-block">
+                            <img src=@Line_3.Image alt="">
+                        </div>
                     </div>
-                </div>
+                }
                 <div class="col-lg-9">
                     <div class="slider-wrapper">
                         <!-- section Tittle -->
@@ -627,48 +587,22 @@
                             <div class="col-lg-12">
                                 <div class="weekly2-news-active d-flex">
                                     <!-- Single -->
-                                    <div class="weekly2-single">
-                                        <div class="weekly2-img">
-                                            <img src="~/theme/assets/img/gallery/weeklyNews1.png" alt="">
+                                    @foreach (var item in Model.MostPopular.Take(4))
+                                    {
+                                        <div class="weekly2-single">
+                                            <div class="weekly2-img">
+                                                <img src=@item.Image alt="">
+                                            </div>
+                                            <div class="weekly2-caption">
+                                                <h4><a href="#">@item.Titel</a></h4>
+                                                <p>Jhon  |  2 hours ago</p>
+                                            </div>
                                         </div>
-                                        <div class="weekly2-caption">
-                                            <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
-                                            <p>Jhon  |  2 hours ago</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single -->
-                                    <div class="weekly2-single">
-                                        <div class="weekly2-img">
-                                            <img src="~/theme/assets/img/gallery/weeklyNews2.png" alt="">
-                                        </div>
-                                        <div class="weekly2-caption">
-                                            <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
-                                            <p>Jhon  |  2 hours ago</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single -->
-                                    <div class="weekly2-single">
-                                        <div class="weekly2-img">
-                                            <img src="~/theme/assets/img/gallery/weeklyNews3.png" alt="">
-                                        </div>
-                                        <div class="weekly2-caption">
-                                            <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
-                                            <p>Jhon  |  2 hours ago</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single -->
-                                    <div class="weekly2-single">
-                                        <div class="weekly2-img">
-                                            <img src="~/theme/assets/img/gallery/weeklyNews2.png" alt="">
-                                        </div>
-                                        <div class="weekly2-caption">
-                                            <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
-                                            <p>Jhon  |  2 hours ago</p>
-                                        </div>
-                                    </div>
+                                    }
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -692,50 +626,19 @@
                 <div class="col-12">
                     <div class="recent-active dot-style d-flex dot-style">
                         <!-- Single -->
-                        <div class="single-recent">
-                            <div class="what-img">
-                                <img src="~/theme/assets/img/gallery/tranding1.png" alt="">
-                            </div>
-                            <div class="what-cap">
-                                <h4><a href="#"> <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4></a></h4>
-                                <P>Jun 19, 2020</P>
-                                <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
+                        @foreach (var item in Model.newest.Take(4))
+                        {
+                            <div class="single-recent">
+                                <div class="what-img">
+                                    <img src=@item.Image alt="">
+                                </div>
+                                <div class="what-cap">
 
+                                    <P>Jun 19, 2020</P>
+                                    <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Single -->
-                        <div class="single-recent">
-                            <div class="what-img">
-                                <img src="~/theme/assets/img/gallery/tranding2.png" alt="">
-                            </div>
-                            <div class="what-cap">
-                                <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4>
-                                <P>Jun 19, 2020</P>
-                                <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
-                            </div>
-                        </div>
-                        <!-- Single -->
-                        <div class="single-recent">
-                            <div class="what-img">
-                                <img src="~/theme/assets/img/gallery/tranding1.png" alt="">
-                            </div>
-                            <div class="what-cap">
-                                <h4><a href="latest_news.html"> <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4></a></h4>
-                                <P>Jun 19, 2020</P>
-                                <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
-                            </div>
-                        </div>
-                        <!-- Single -->
-                        <div class="single-recent">
-                            <div class="what-img">
-                                <img src="~/theme/assets/img/gallery/tranding2.png" alt="">
-                            </div>
-                            <div class="what-cap">
-                                <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4>
-                                <P>Jun 19, 2020</P>
-                                <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
-                            </div>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>
@@ -754,51 +657,18 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="weekly3-news-active dot-style d-flex">
-                                    <div class="weekly3-single">
-                                        <div class="weekly3-img">
-                                            <img src="~/theme/assets/img/gallery/weekly2News1.png" alt="">
+                                    @foreach (var item in Line_4.Take(5))
+                                    {
+                                        <div class="weekly3-single">
+                                            <div class="weekly3-img">
+                                                <img src=@item.Image alt="">
+                                            </div>
+                                            <div class="weekly3-caption">
+                                                <h4><a href=@item.Link>What to Expect From the 2020 Oscar Nomin ations</a></h4>
+                                                <p>19 Jan 2020</p>
+                                            </div>
                                         </div>
-                                        <div class="weekly3-caption">
-                                            <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4>
-                                            <p>19 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                    <div class="weekly3-single">
-                                        <div class="weekly3-img">
-                                            <img src="~/theme/assets/img/gallery/weekly2News2.png" alt="">
-                                        </div>
-                                        <div class="weekly3-caption">
-                                            <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4>
-                                            <p>19 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                    <div class="weekly3-single">
-                                        <div class="weekly3-img">
-                                            <img src="~/theme/assets/img/gallery/weekly2News3.png" alt="">
-                                        </div>
-                                        <div class="weekly3-caption">
-                                            <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4>
-                                            <p>19 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                    <div class="weekly3-single">
-                                        <div class="weekly3-img">
-                                            <img src="~/theme/assets/img/gallery/weekly2News4.png" alt="">
-                                        </div>
-                                        <div class="weekly3-caption">
-                                            <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4>
-                                            <p>19 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                    <div class="weekly3-single">
-                                        <div class="weekly3-img">
-                                            <img src="~/theme/assets/img/gallery/weekly2News2.png" alt="">
-                                        </div>
-                                        <div class="weekly3-caption">
-                                            <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin ations</a></h4>
-                                            <p>19 Jan 2020</p>
-                                        </div>
-                                    </div>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -814,9 +684,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-10">
-                <div class="banner-one">
-                    <img src="~/theme/assets/img/gallery/body_card3.png" alt="">
-                </div>
+                @if (Line_5 != null)
+                {
+                    <div class="banner-one">
+                        <img src=@Line_5.Image alt="">
+                    </div>
+                }
             </div>
         </div>
     </div>

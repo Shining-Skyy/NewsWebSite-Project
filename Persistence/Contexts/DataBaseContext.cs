@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces.Contexts;
 using Domain.Attributes;
+using Domain.Banners;
 using Domain.Categorys;
 using Domain.Posts;
 using Domain.Users;
@@ -22,6 +23,7 @@ namespace Persistence.Contexts
         public DbSet<CategoryType> CategoryTypes { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostFavorite> PostFavorites { get; set; }
+        public DbSet<Banner> Banners { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

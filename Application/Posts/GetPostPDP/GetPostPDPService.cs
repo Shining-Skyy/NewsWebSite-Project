@@ -24,6 +24,9 @@ namespace Application.Posts.GetPostPDP
                 .Include(p => p.PostImages)
                 .SingleOrDefault(p => p.Id == Id);
 
+            post.VisitCount += 1;
+            context.SaveChanges();
+
             var similarPost = context.Posts
                 .Include(p => p.PostImages)
                 .Where(p => p.CategoryTypeId == post.CategoryTypeId)

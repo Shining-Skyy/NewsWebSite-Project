@@ -11,7 +11,6 @@ namespace Application.Posts.GetPostPLP.Dto
         public int Id { get; set; }
         public string Titel { get; set; }
         public string PostDescription { get; set; }
-        public string AuthorName { get; set; }
         public string Image { get; set; }
         public string Type { get; set; }
     }

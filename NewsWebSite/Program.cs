@@ -1,4 +1,5 @@
 using Application.Categorys.GetMenuItem;
+using Application.HomePageService;
 using Application.Interfaces.Contexts;
 using Application.Posts.AddNewPost;
 using Application.Posts.FavoritePostService;
@@ -51,6 +52,7 @@ builder.Services.AddTransient<IUriComposerService, UriComposerService>();
 builder.Services.AddTransient<IGetPostPLPService, GetPostPLPService>();
 builder.Services.AddTransient<IGetPostPDPService, GetPostPDPService>();
 builder.Services.AddTransient<IFavoritePostService, FavoritePostService>();
+builder.Services.AddTransient<IHomePageService, HomePageService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 

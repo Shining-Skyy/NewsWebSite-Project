@@ -16,7 +16,8 @@
                 <ul class="submenu">
                     @foreach (var sub in item.SubMenu)
                     {
-                        <li><a href="blog.html">@sub.Name</a></li>
+                        string link = $"/Post?CategoryTypeId={sub.Id}";
+                        <li><a href=@link>@sub.Name</a></li>
                     }
                 </ul>
             </li>

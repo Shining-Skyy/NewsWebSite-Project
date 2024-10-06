@@ -1,3 +1,4 @@
+using Application.Banners;
 using Application.Categorys.CategoryTypes;
 using Application.Interfaces.Contexts;
 using Application.Posts.AddNewPost;
@@ -49,7 +50,8 @@ builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(new DirectoryInfo(pathToDirctory))
     .SetApplicationName("SharedCookieApp");
 
-builder.Services.ConfigureApplicationCookie(options => {
+builder.Services.ConfigureApplicationCookie(options =>
+{
     options.Cookie.Name = ".AspNet.SharedCookie";
     options.Cookie.Path = "/";
 });
@@ -76,6 +78,7 @@ builder.Services.AddTransient<IPostService, PostService>();
 builder.Services.AddTransient<IImageUploadService, ImageUploadService>();
 builder.Services.AddTransient<IUriComposerService, UriComposerService>();
 builder.Services.AddTransient<IFavoritePostService, FavoritePostService>();
+builder.Services.AddTransient<IBannersService, BannersService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 builder.Services.AddAutoMapper(typeof(ManagementVmMappingProfile));

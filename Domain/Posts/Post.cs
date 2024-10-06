@@ -17,7 +17,7 @@ namespace Domain.Posts
         public string Content { get; set; }
         public int TimeRequired { get; set; }
         public string UserId { get; set; }
-
+        public int VisitCount { get; set; }
         public int CategoryTypeId { get; set; }
         public CategoryType CategoryType { get; set; }
 

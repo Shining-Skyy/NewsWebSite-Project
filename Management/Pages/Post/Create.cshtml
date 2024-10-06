@@ -4,7 +4,6 @@
 }
 
 <div class="right_col" role="main">
-
     <div class="">
         <div class="page-title">
             <div class="title_left">
@@ -36,7 +35,7 @@
                     <div class="clearfix"></div>
                 </div>
 
-                <form id="createForm" class="form-horizontal form-label-left" asp-antiforgery="true" onsubmit="return sendDataToServer(event)">
+                <form id="createForm" class="form-horizontal form-label-left" asp-antiforgery="true" onsubmit="return sendDataToServer(event)" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6 ">
                             <div class="x_panel">
