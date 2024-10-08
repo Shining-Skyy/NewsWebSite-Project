@@ -17,9 +17,7 @@ using FluentValidation;
 using Infrastructures.ExternalApi.ImageServer;
 using Infrastructures.IdentityConfigs;
 using Infrastructures.MappingProfile;
-using Management.Hubs;
 using Management.MappingProfiles;
-using Management.Utilities.Middlewares;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -66,11 +64,11 @@ builder.Services.AddAuthentication()
 builder.Services.AddSignalR();
 
 builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
+builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 
 builder.Services.AddTransient<EmailService>();
 builder.Services.AddTransient<SmsService>();
 builder.Services.AddTransient<GoogleRecaptcha>();
-builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 builder.Services.AddTransient<IVisitorOnlineService, VisitorOnlineService>();
 builder.Services.AddTransient<ICategoryTypeService, CategoryTypeService>();
 builder.Services.AddTransient<IAddNewPostService, AddNewPostService>();
@@ -95,7 +93,6 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-app.UseSetVisitorId();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -110,7 +107,5 @@ app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.MapHub<OnlineVisitorHub>("/chatHub");
 
 app.Run();

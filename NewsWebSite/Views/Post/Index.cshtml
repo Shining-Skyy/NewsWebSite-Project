@@ -38,21 +38,45 @@
                         }
                     </article>
 
+                    @{
+                        var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+                        var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+                    }
+
                     <nav class="blog-pagination justify-content-center d-flex">
                         <ul class="pagination">
                             <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Previous">
+                                <a asp-action="Index" asp-route-CategoryTypeId="@Context.Request.Query["CategoryTypeId"]"
+                                   asp-route-pageIndex="@(Model.PageIndex - 1)" class="page-link @prevDisabled" aria-label="Previous">
                                     <i class="ti-angle-left"></i>
                                 </a>
                             </li>
+                            @foreach (var item in Model.Pager.Pages)
+                            {
+                                if (item == Model.PageIndex)
+                                {
+                                    <li class="page-item active">
+                                        <a asp-action="Index"
+                                   asp-route-CategoryTypeId="@Context.Request.Query["CategoryTypeId"]"
+                                   asp-route-pageIndex="@item" class="page-link">
+                                            @item
+                                        </a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="page-item">
+                                        <a asp-action="Index"
+                                   asp-route-CategoryTypeId="@Context.Request.Query["CategoryTypeId"]"
+                                   asp-route-pageIndex="@item" class="page-link">
+                                            @item
+                                        </a>
+                                    </li>
+                                }
+                            }
                             <li class="page-item">
-                                <a href="#" class="page-link">1</a>
-                            </li>
-                            <li class="page-item active">
-                                <a href="#" class="page-link">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Next">
+                                <a asp-action="Index" asp-route-CategoryTypeId="@Context.Request.Query["CategoryTypeId"]"
+                                   asp-route-pageIndex="@(Model.PageIndex + 1)" class="page-link @nextDisabled" aria-label="Next">
                                     <i class="ti-angle-right"></i>
                                 </a>
                             </li>

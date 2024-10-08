@@ -9301,10 +9301,6 @@
       "PackagePath": "staticwebassets\\js\\CkEditor5\\ckeditor.js.map"
     },
     {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\js\\SignalROnlineVisitorService.js",
-      "PackagePath": "staticwebassets\\js\\SignalROnlineVisitorService.js"
-    },
-    {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -9535,14 +9531,6 @@
     {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js",
-      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js"
-    },
-    {
-      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
-      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Management.Microsoft.AspNetCore.StaticWebAssets.props",

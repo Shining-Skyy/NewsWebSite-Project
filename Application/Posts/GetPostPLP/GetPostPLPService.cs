@@ -50,7 +50,7 @@ namespace Application.Posts.GetPostPLP
                 query = query.OrderBy(p => p.Id);
             }
 
-            var data = query.PagedResult(request.page, request.pageSize, out rowCount).ToList()
+            var data = query.PagedResult(request.pageIndex, request.pageSize, out rowCount).ToList()
                 .Select(p => new PostPLPDto()
                 {
                     Id = p.Id,
@@ -58,7 +58,7 @@ namespace Application.Posts.GetPostPLP
                     Type = p.CategoryType.Type,
                     Image = uriComposer.ComposeImageUri(p.PostImages.FirstOrDefault().Src),
                 }).ToList();
-            return new PaginatedItemsDto<PostPLPDto>(request.page, request.pageSize, rowCount, data);
+            return new PaginatedItemsDto<PostPLPDto>(request.pageIndex, request.pageSize, rowCount, data);
         }
     }
 }

@@ -7,11 +7,14 @@ using Application.Posts.GetPostPDP;
 using Application.Posts.GetPostPLP;
 using Application.Posts.PostServices;
 using Application.UriComposer;
+using Application.Visitors.VisitorOnline;
 using Infrastructures.ExternalApi.ImageServer;
 using Infrastructures.IdentityConfigs;
 using Infrastructures.MappingProfile;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
+using NewsWebSite.Hubs;
+using NewsWebSite.Utilities.Middlewares;
 using Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,8 +48,12 @@ builder.Services.ConfigureApplicationCookie(options => {
     options.Cookie.Path = "/";
 });
 
-builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
+builder.Services.AddSignalR();
 
+builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
+builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
+
+builder.Services.AddTransient<IVisitorOnlineService, VisitorOnlineService>();
 builder.Services.AddTransient<IGetMenuItemService, GetMenuItemService>();
 builder.Services.AddTransient<IUriComposerService, UriComposerService>();
 builder.Services.AddTransient<IGetPostPLPService, GetPostPLPService>();
@@ -66,6 +73,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSetVisitorId();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -77,5 +86,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapHub<OnlineVisitorHub>("/chathub");
 
 app.Run();

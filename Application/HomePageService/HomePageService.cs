@@ -33,21 +33,21 @@ namespace Application.HomePageService
 
             var MostVisited = getPostPLPService.Execute(new PostPLPRequestDto
             {
-                page = 1,
+                pageIndex = 1,
                 pageSize = 20,
                 SortType = SortType.MostVisited
             }).Data.ToList();
 
             var MostPopular = getPostPLPService.Execute(new PostPLPRequestDto
             {
-                page = 1,
+                pageIndex = 1,
                 pageSize = 20,
                 SortType = SortType.MostPopular
             }).Data.ToList();
 
             var newest = getPostPLPService.Execute(new PostPLPRequestDto
             {
-                page = 1,
+                pageIndex = 1,
                 pageSize = 20,
                 SortType = SortType.newest
             }).Data.ToList();

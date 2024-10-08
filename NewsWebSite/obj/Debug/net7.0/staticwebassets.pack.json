@@ -1009,6 +1009,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\js\\SignalROnlineVisitorService.js",
+      "PackagePath": "staticwebassets\\js\\SignalROnlineVisitorService.js"
+    },
+    {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -1239,6 +1243,22 @@
     {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js.map",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js.map"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js.map"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.NewsWebSite.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p3Xgf7b3pMEpn5H4PGjS9kmro55c4T0f4/YNBUo5LUs=",
+  "Hash": "5A29D7xdUitJ2HBhIq3L87gJtN9etNlcHuPgj/cj548=",
   "Source": "Management",
   "BasePath": "_content/Management",
   "Mode": "Default",
@@ -134,23 +134,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\CkEditor5\\MyCk5.js"
-    },
-    {
-      "Identity": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\js\\SignalROnlineVisitorService.js",
-      "SourceId": "Management",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\",
-      "BasePath": "_content/Management",
-      "RelativePath": "js/SignalROnlineVisitorService.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\SignalROnlineVisitorService.js"
     },
     {
       "Identity": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\js\\site.js",
@@ -1137,40 +1120,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js",
-      "SourceId": "Management",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\",
-      "BasePath": "_content/Management",
-      "RelativePath": "lib/microsoft/signalr/dist/browser/signalr.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js"
-    },
-    {
-      "Identity": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
-      "SourceId": "Management",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\",
-      "BasePath": "_content/Management",
-      "RelativePath": "lib/microsoft/signalr/dist/browser/signalr.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Identity": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\wwwroot\\Sweetalert2\\sweetalert2.min.css",
