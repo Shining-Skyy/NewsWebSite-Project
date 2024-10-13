@@ -1,4 +1,5 @@
-﻿using Domain.Users;
+﻿using Domain.Roles;
+using Domain.Users;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -20,8 +21,8 @@ namespace Infrastructures.IdentityConfigs
             string connection = configuration["ConnectionString:SqlServer"];
             services.AddDbContext<IdentityDataBaseContext>(option => option.UseSqlServer(connection));
 
-            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<IdentityDataBaseContext>()
-                .AddDefaultTokenProviders().AddRoles<IdentityRole>().AddErrorDescriber<CustomIdentityError>();
+            services.AddIdentity<User, Role>().AddEntityFrameworkStores<IdentityDataBaseContext>()
+                .AddDefaultTokenProviders().AddRoles<Role>().AddErrorDescriber<CustomIdentityError>();
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -35,7 +36,6 @@ namespace Infrastructures.IdentityConfigs
                 options.Lockout.MaxFailedAccessAttempts = 5;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
             });
-
 
             return services;
         }

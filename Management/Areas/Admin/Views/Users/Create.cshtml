@@ -1,0 +1,86 @@
+﻿@model Management.Areas.Admin.Models.Dtos.Users.RegisterUserDto
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Form Elements</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Form Design <small>different form elements</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+                <form asp-action="Create" method="post">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="x_panel">
+                                <div class="x_content" style="display: block;">
+                                    <label>Full Name :</label>
+                                    <input type="text" asp-for="FullName" class="form-control parsley-success" required="">
+                                    <span asp-validation-for="FullName" class="text-danger"></span><br />
+
+                                    <label>Email :</label>
+                                    <input type="text" asp-for="Email" class="form-control parsley-success" required="">
+                                    <span asp-validation-for="Email" class="text-danger"></span><br />
+
+                                    <label>Phone Number :</label> <br>
+                                    <input type="number" asp-for="PhoneNumber" class="form-control parsley-success">
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="x_panel">
+                                <div class="x_content" style="display: block;">
+                                    <br>
+                                    <div>
+                                        <label>Password :</label>
+                                        <input asp-for="Password" type="password" class="form-control" required="" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                        <br />
+                                        <label>Confirm Password :</label>
+                                        <input asp-for="ConfirmPassword" type="password" class="form-control" required="" />
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item form-group">
+                        <div class="col-md-6 col-sm-6">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Management.Areas.Admin.Models.Dtos.Users.UserListDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="main_container">
+    <!-- page content -->
+    <div class="right_col" role="main" style="min-height: 948px;">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Tables <small>Some examples to get you started</small></h3>
+                </div>
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row" style="display: block;">
+                <div class="clearfix"></div>
+                <div class="col-md-12 col-sm-12  ">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Table design <small>Custom design</small></h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Settings 1</a>
+                                        <a class="dropdown-item" href="#">Settings 2</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="x_content">
+
+                            <div class="dt-buttons">
+                                <a asp-action="Create" class="btn btn-round btn-success">
+                                    <span>Create</span>
+                                </a>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped jambo_table bulk_action">
+                                    <thead>
+                                        <tr class="headings">
+
+                                            <th class="column-title" style="display: table-cell;">Id</th>
+                                            <th class="column-title" style="display: table-cell;">FullName</th>
+                                            <th class="column-title" style="display: table-cell;">Email</th>
+                                            <th class="column-title" style="display: table-cell;">Email Confirmed </th>
+                                            <th class="column-title" style="display: table-cell;">Phone Number </th>
+                                            <th class="column-title" style="display: table-cell;">Phone Confirmed </th>
+                                            <th class="column-title" style="display: table-cell;">TwoFactor Enabled </th>
+                                            <th class="column-title" style="display: table-cell;">Action </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr class="even pointer">
+
+                                                <td class=" ">@item.Id</td>
+                                                <td class=" ">@item.FullName </td>
+                                                <td class=" ">@item.Email </td>
+                                                <td class=" ">@item.EmailConfirmed </td>
+                                                <td class=" ">@item.PhoneNumber </td>
+                                                <td class=" ">@item.PhoneConfirmed </td>
+                                                <td class=" ">@item.TwoFactorEnabled </td>
+                                                <td class=" ">
+                                                    <div class="btn-group" role="group">
+                                                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            More
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                            <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                                            <a class="dropdown-item" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                                            <div class="divider"></div>
+                                                            <a class="dropdown-item" asp-action="UserRoles" asp-route-id="@item.Id">Roles</a>
+                                                            <a class="dropdown-item" asp-action="AddUserRole" asp-route-id="@item.Id">Add Role</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

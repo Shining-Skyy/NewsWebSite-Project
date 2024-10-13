@@ -1,4 +1,6 @@
-﻿using Domain.Users;
+﻿using Application.Interfaces.Contexts;
+using Domain.Roles;
+using Domain.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Persistence.Contexts
 {
-    public class IdentityDataBaseContext : IdentityDbContext<User>
+    public class IdentityDataBaseContext : IdentityDbContext<User, Role, string>, IIdentityDatabaseContext
     {
         public IdentityDataBaseContext(DbContextOptions<IdentityDataBaseContext> options) : base(options)
         {

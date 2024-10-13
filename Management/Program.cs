@@ -64,6 +64,7 @@ builder.Services.AddAuthentication()
 builder.Services.AddSignalR();
 
 builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
+builder.Services.AddScoped<IIdentityDatabaseContext, IdentityDataBaseContext>();
 builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 
 builder.Services.AddTransient<EmailService>();
@@ -103,6 +104,11 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+app.MapControllerRoute(
+  name: "areas",
+  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+);
 
 app.MapControllerRoute(
     name: "default",
