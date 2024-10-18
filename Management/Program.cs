@@ -35,7 +35,13 @@ builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(con
 builder.Services.AddIdentityService(builder.Configuration);
 #endregion
 
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(option =>
+{
+    option.AddPolicy("AdminUsers", policy =>
+    {
+        policy.RequireRole("Admin");
+    });
+});
 builder.Services.ConfigureApplicationCookie(option =>
 {
     option.ExpireTimeSpan = TimeSpan.FromMinutes(10);

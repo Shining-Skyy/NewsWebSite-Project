@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Favorites
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Author")]
     public class IndexModel : PageModel
     {
         private readonly IFavoritePostService service;

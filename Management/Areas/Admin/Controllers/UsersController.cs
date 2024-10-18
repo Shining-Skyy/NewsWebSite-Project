@@ -2,6 +2,7 @@
 using Domain.Users;
 using Management.Areas.Admin.Models.Dtos.Roles;
 using Management.Areas.Admin.Models.Dtos.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,7 +10,8 @@ using System.Data;
 
 namespace Management.Areas.Admin.Controllers
 {
-    [Area(nameof(Admin))]
+    [Authorize(Roles = "Admin")]
+    [Area("Admin")]
     public class UsersController : Controller
     {
         private readonly UserManager<User> _userManager;

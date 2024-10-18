@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Author")]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;

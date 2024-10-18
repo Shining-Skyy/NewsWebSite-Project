@@ -3,11 +3,13 @@ using Application.Categorys.CategoryTypes.Dtos;
 using AutoMapper;
 using Domain.Categorys;
 using Management.ViewModels.Category;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Category.CategoryType
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel : PageModel
     {
         private readonly ICategoryTypeService service;

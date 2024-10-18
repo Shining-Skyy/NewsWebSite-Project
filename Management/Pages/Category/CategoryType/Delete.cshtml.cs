@@ -1,11 +1,13 @@
 using Application.Categorys.CategoryTypes;
 using AutoMapper;
 using Management.ViewModels.Category;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Category.CategoryType
 {
+    [Authorize(Roles = "Admin")]
     public class DeleteModel : PageModel
     {
         private readonly ICategoryTypeService service;

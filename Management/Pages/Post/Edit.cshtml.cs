@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Post
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Author")]
     public class EditModel : PageModel
     {
         private readonly IPostService service;

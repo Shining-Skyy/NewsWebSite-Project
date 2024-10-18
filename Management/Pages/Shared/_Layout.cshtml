@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService _auth;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -68,47 +70,50 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="menu_section">
-                            <h3>Personal</h3>
-                            <ul class="nav side-menu">
-                                <li>
-                                    <a><i class="fa fa-tasks"></i> Category <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="~/Category/CategoryType/Index">Category List</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a><i class="fa fa-photo"></i> Banner <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="~/Banners/Index">Banner List</a></li>
-                                        <li><a href="~/Banners/Create">New Banner</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a><i class="fa fa-user"></i> Online User <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="~/OnlineUsers/Index">Online User list</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="menu_section">
-                            <h3>super personal</h3>
-                            <ul class="nav side-menu">
-                                <li>
-                                    <a><i class="fa fa-users"></i> User Management <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="~/Admin/Users/Index">Users List</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a><i class="fa fa-arrows-alt"></i> Role Management <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="~/Admin/Roles/Index">Roles List</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        @if (_auth.AuthorizeAsync(User, "AdminUsers").Result.Succeeded)
+                        {
+                            <div class="menu_section">
+                                <h3>Personal</h3>
+                                <ul class="nav side-menu">
+                                    <li>
+                                        <a><i class="fa fa-tasks"></i> Category <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="~/Category/CategoryType/Index">Category List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a><i class="fa fa-photo"></i> Banner <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="~/Banners/Index">Banner List</a></li>
+                                            <li><a href="~/Banners/Create">New Banner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a><i class="fa fa-user"></i> Online User <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="~/OnlineUsers/Index">Online User list</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="menu_section">
+                                <h3>super personal</h3>
+                                <ul class="nav side-menu">
+                                    <li>
+                                        <a><i class="fa fa-users"></i> User Management <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="~/Admin/Users/Index">Users List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a><i class="fa fa-arrows-alt"></i> Role Management <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="~/Admin/Roles/Index">Roles List</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
 
                     </div>
                     <!-- /sidebar menu -->

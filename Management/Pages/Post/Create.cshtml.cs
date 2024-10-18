@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Management.Pages.Post
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Author")]
     public class CreateModel : PageModel
     {
         private readonly IAddNewPostService addNewPostService;

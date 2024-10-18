@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Post
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Author")]
     public class DeleteModel : PageModel
     {
         private readonly IPostService service;

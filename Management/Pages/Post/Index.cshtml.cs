@@ -10,7 +10,7 @@ using System.Security.Claims;
 
 namespace Management.Pages.Post
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Author")]
     public class IndexModel : PageModel
     {
         private readonly IPostService service;
