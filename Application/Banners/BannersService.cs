@@ -4,8 +4,6 @@ using Application.Interfaces.Contexts;
 using Application.UriComposer;
 using Common;
 using Domain.Banners;
-using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace Application.Banners
 {

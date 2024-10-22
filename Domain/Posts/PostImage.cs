@@ -9,6 +9,6 @@ namespace Domain.Posts
         public string Src { get; set; }
 
         public int PostId { get; set; }
-        public Post Post { get; set; }
+        public virtual Post Post { get; set; }
     }
 }

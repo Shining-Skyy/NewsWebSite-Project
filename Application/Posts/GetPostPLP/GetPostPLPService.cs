@@ -1,8 +1,6 @@
 ﻿using Application.Dtos;
 using Application.Interfaces.Contexts;
 using Application.Posts.GetPostPLP.Dto;
-using Application.Posts.PostServices;
-using Application.Posts.PostServices.Dto;
 using Application.UriComposer;
 using Common;
 using Microsoft.EntityFrameworkCore;

@@ -1,14 +1,12 @@
 using Application.Categorys.GetMenuItem;
+using Application.Comments;
 using Application.HomePageService;
 using Application.Interfaces.Contexts;
-using Application.Posts.AddNewPost;
 using Application.Posts.FavoritePostService;
 using Application.Posts.GetPostPDP;
 using Application.Posts.GetPostPLP;
-using Application.Posts.PostServices;
 using Application.UriComposer;
 using Application.Visitors.VisitorOnline;
-using Infrastructures.ExternalApi.ImageServer;
 using Infrastructures.IdentityConfigs;
 using Infrastructures.MappingProfile;
 using Microsoft.AspNetCore.DataProtection;
@@ -43,7 +41,8 @@ builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(new DirectoryInfo(pathToDirctory))
     .SetApplicationName("SharedCookieApp");
 
-builder.Services.ConfigureApplicationCookie(options => {
+builder.Services.ConfigureApplicationCookie(options =>
+{
     options.Cookie.Name = ".AspNet.SharedCookie";
     options.Cookie.Path = "/";
 });
@@ -51,6 +50,7 @@ builder.Services.ConfigureApplicationCookie(options => {
 builder.Services.AddSignalR();
 
 builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
+builder.Services.AddScoped<IIdentityDatabaseContext, IdentityDataBaseContext>();
 builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 
 builder.Services.AddTransient<IVisitorOnlineService, VisitorOnlineService>();
@@ -60,8 +60,12 @@ builder.Services.AddTransient<IGetPostPLPService, GetPostPLPService>();
 builder.Services.AddTransient<IGetPostPDPService, GetPostPDPService>();
 builder.Services.AddTransient<IFavoritePostService, FavoritePostService>();
 builder.Services.AddTransient<IHomePageService, HomePageService>();
+builder.Services.AddTransient<ICommentsService, CommentsService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
+builder.Services.AddAutoMapper(typeof(CommentMappingProfile));
+
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -82,6 +86,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

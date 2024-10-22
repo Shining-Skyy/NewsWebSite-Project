@@ -4,11 +4,6 @@ using Application.Interfaces.Contexts;
 using AutoMapper;
 using Common;
 using Domain.Categorys;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Categorys.CategoryTypes
 {

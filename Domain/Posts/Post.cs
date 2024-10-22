@@ -1,10 +1,5 @@
 ﻿using Domain.Attributes;
 using Domain.Categorys;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Posts
 {
@@ -18,10 +13,11 @@ namespace Domain.Posts
         public int TimeRequired { get; set; }
         public string UserId { get; set; }
         public int VisitCount { get; set; }
-        public int CategoryTypeId { get; set; }
-        public CategoryType CategoryType { get; set; }
 
-        public ICollection<PostImage> PostImages { get; set; }
-        public ICollection<PostFavorite> PostFavourites { get; set; }
+        public int CategoryTypeId { get; set; }
+        public virtual CategoryType CategoryType { get; set; }
+
+        public virtual ICollection<PostImage> PostImages { get; set; }
+        public virtual ICollection<PostFavorite> PostFavourites { get; set; }
     }
 }

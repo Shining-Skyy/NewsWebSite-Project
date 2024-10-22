@@ -1,7 +1,6 @@
 using Application.Categorys.CategoryTypes;
 using Application.Categorys.CategoryTypes.Dtos;
 using AutoMapper;
-using Domain.Categorys;
 using Management.ViewModels.Category;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

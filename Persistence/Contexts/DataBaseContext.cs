@@ -2,15 +2,9 @@
 using Domain.Attributes;
 using Domain.Banners;
 using Domain.Categorys;
+using Domain.Comments;
 using Domain.Posts;
-using Domain.Users;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistence.Contexts
 {
@@ -24,6 +18,7 @@ namespace Persistence.Contexts
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostFavorite> PostFavorites { get; set; }
         public DbSet<Banner> Banners { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,6 +35,10 @@ namespace Persistence.Contexts
             modelBuilder.Entity<CategoryType>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
             modelBuilder.Entity<Post>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
             modelBuilder.Entity<PostFavorite>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
+            modelBuilder.Entity<Banner>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
+            modelBuilder.Entity<Banner>().HasQueryFilter(m => EF.Property<bool>(m, "IsActive") == true);
+            modelBuilder.Entity<Comment>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
+            modelBuilder.Entity<Comment>().HasQueryFilter(m => EF.Property<bool>(m, "IsActive") == true);
         }
 
         public override int SaveChanges()

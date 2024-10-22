@@ -1,10 +1,8 @@
 using Application.Dtos;
 using Application.Posts.FavoritePostService;
 using Application.Posts.FavoritePostService.Dto;
-using Application.Posts.PostServices.Dto;
 using Management.Utilities;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Favorites

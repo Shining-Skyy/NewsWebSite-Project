@@ -3,10 +3,7 @@ using Application.Posts.PostServices;
 using Application.Posts.PostServices.Dto;
 using Management.Utilities;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Drawing.Printing;
-using System.Security.Claims;
 
 namespace Management.Pages.Post
 {

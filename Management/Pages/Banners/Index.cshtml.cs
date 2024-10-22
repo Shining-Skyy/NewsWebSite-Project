@@ -1,9 +1,7 @@
 using Application.Banners;
 using Application.Banners.Dto;
 using Application.Dtos;
-using Application.Posts.PostServices.Dto;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Banners

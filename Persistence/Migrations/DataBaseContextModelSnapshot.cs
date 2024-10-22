@@ -67,7 +67,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 10, 3, 3, 21, 26, 309, DateTimeKind.Local).AddTicks(5829));
+                        .HasDefaultValue(new DateTime(2024, 10, 18, 9, 58, 39, 565, DateTimeKind.Local).AddTicks(2483));
 
                     b.Property<bool>("IsRemove")
                         .ValueGeneratedOnAdd()
@@ -94,6 +94,56 @@ namespace Persistence.Migrations
                     b.ToTable("CategoryTypes");
                 });
 
+            modelBuilder.Entity("Domain.Comments.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("InsertTime")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2024, 10, 18, 9, 58, 39, 565, DateTimeKind.Local).AddTicks(7878));
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRemove")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int?>("ParentTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("RemoveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentTypeId");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("Domain.Posts.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -112,7 +162,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 10, 3, 3, 21, 26, 310, DateTimeKind.Local).AddTicks(3788));
+                        .HasDefaultValue(new DateTime(2024, 10, 18, 9, 58, 39, 566, DateTimeKind.Local).AddTicks(4412));
 
                     b.Property<bool>("IsRemove")
                         .ValueGeneratedOnAdd()
@@ -161,7 +211,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 10, 3, 3, 21, 26, 310, DateTimeKind.Local).AddTicks(8235));
+                        .HasDefaultValue(new DateTime(2024, 10, 18, 9, 58, 39, 566, DateTimeKind.Local).AddTicks(9736));
 
                     b.Property<bool>("IsRemove")
                         .ValueGeneratedOnAdd()
@@ -199,7 +249,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 10, 3, 3, 21, 26, 311, DateTimeKind.Local).AddTicks(1433));
+                        .HasDefaultValue(new DateTime(2024, 10, 18, 9, 58, 39, 567, DateTimeKind.Local).AddTicks(3419));
 
                     b.Property<bool>("IsRemove")
                         .ValueGeneratedOnAdd()
@@ -233,6 +283,23 @@ namespace Persistence.Migrations
                         .HasForeignKey("ParentTypeId");
 
                     b.Navigation("ParentType");
+                });
+
+            modelBuilder.Entity("Domain.Comments.Comment", b =>
+                {
+                    b.HasOne("Domain.Comments.Comment", "ParentType")
+                        .WithMany("SubType")
+                        .HasForeignKey("ParentTypeId");
+
+                    b.HasOne("Domain.Posts.Post", "Post")
+                        .WithMany()
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ParentType");
+
+                    b.Navigation("Post");
                 });
 
             modelBuilder.Entity("Domain.Posts.Post", b =>
@@ -269,6 +336,11 @@ namespace Persistence.Migrations
                 });
 
             modelBuilder.Entity("Domain.Categorys.CategoryType", b =>
+                {
+                    b.Navigation("SubType");
+                });
+
+            modelBuilder.Entity("Domain.Comments.Comment", b =>
                 {
                     b.Navigation("SubType");
                 });

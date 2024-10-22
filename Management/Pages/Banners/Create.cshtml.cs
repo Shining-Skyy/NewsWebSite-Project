@@ -1,4 +1,3 @@
-using Amazon.Runtime.Internal.Util;
 using Application.Banners;
 using Application.Banners.Dto;
 using Infrastructures.ExternalApi.ImageServer;

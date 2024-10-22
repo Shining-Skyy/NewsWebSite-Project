@@ -1,13 +1,8 @@
 ﻿using Domain.Banners;
 using Domain.Categorys;
+using Domain.Comments;
 using Domain.Posts;
-using Domain.Users;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Interfaces.Contexts
 {
@@ -17,6 +12,7 @@ namespace Application.Interfaces.Contexts
         DbSet<Post> Posts { get; set; }
         DbSet<PostFavorite> PostFavorites { get; set; }
         DbSet<Banner> Banners { get; set; }
+        DbSet<Comment> Comments { get; set; }
 
         int SaveChanges();
         int SaveChanges(bool acceptAllChangesOnSuccess);

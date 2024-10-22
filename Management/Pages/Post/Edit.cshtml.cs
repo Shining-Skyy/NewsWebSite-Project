@@ -1,7 +1,6 @@
 using Application.Posts.PostServices;
 using Application.Posts.PostServices.Dto;
 using AutoMapper;
-using Domain.Posts;
 using Management.ViewModels.Post;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

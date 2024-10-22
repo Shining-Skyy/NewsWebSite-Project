@@ -265,6 +265,26 @@
       "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\comment_3.png"
     },
     {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\comment\\user1.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\user1.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\comment\\user2.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\user2.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\comment\\user3.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\user3.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\comment\\user4.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\user4.png"
+    },
+    {
+      "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\comment\\user5.png",
+      "PackagePath": "staticwebassets\\Theme\\assets\\img\\comment\\user5.png"
+    },
+    {
       "Id": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\wwwroot\\Theme\\assets\\img\\elements\\a.jpg",
       "PackagePath": "staticwebassets\\Theme\\assets\\img\\elements\\a.jpg"
     },

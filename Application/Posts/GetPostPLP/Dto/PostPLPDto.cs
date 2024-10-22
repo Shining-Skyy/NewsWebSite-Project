@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.Posts.GetPostPLP.Dto
+﻿namespace Application.Posts.GetPostPLP.Dto
 {
     public class PostPLPDto
     {

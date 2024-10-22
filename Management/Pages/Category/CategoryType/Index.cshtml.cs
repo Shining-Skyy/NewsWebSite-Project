@@ -1,9 +1,7 @@
 using Application.Categorys.CategoryTypes;
 using Application.Categorys.CategoryTypes.Dtos;
 using Application.Dtos;
-using Management.ViewModels.Category;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Category.CategoryType

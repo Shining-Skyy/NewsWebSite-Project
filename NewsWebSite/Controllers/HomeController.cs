@@ -1,5 +1,4 @@
 ﻿using Application.HomePageService;
-using Application.HomePageService.Dto;
 using Microsoft.AspNetCore.Mvc;
 using NewsWebSite.Models;
 using System.Diagnostics;

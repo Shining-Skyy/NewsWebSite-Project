@@ -4,13 +4,9 @@ using Application.Services.Sms;
 using Domain.Users;
 using Management.ViewModels.Account;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.SqlServer.Server;
-using NuGet.Common;
 using System.Security.Claims;
-using System.Security.Policy;
 
 namespace Management.Controllers
 {

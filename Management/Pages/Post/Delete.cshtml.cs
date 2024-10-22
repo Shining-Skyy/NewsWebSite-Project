@@ -1,5 +1,4 @@
 using Application.Posts.PostServices;
-using Application.Posts.PostServices.Dto;
 using AutoMapper;
 using Management.Utilities;
 using Management.ViewModels.Post;

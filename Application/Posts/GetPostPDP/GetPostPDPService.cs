@@ -1,33 +1,36 @@
 ﻿using Application.Interfaces.Contexts;
 using Application.Posts.GetPostPDP.Dto;
 using Application.UriComposer;
-using Domain.Users;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Posts.GetPostPDP
 {
     public class GetPostPDPService : IGetPostPDPService
     {
-        private readonly IDataBaseContext context;
+        private readonly IDataBaseContext dataBaseContext;
+        private readonly IIdentityDatabaseContext identityDatabase;
         private readonly IUriComposerService uriComposer;
-        public GetPostPDPService(IDataBaseContext context, IUriComposerService uriComposer)
+        public GetPostPDPService(IDataBaseContext dataBaseContext, IUriComposerService uriComposer,
+            IIdentityDatabaseContext identityDatabase)
         {
-            this.context = context;
+            this.dataBaseContext = dataBaseContext;
             this.uriComposer = uriComposer;
+            this.identityDatabase = identityDatabase;
         }
 
         public PostPDPDto Execute(int Id)
         {
-            var post = context.Posts
+            var post = dataBaseContext.Posts
                 .Include(p => p.CategoryType)
                 .Include(p => p.PostImages)
                 .SingleOrDefault(p => p.Id == Id);
 
-            post.VisitCount += 1;
-            context.SaveChanges();
+            var user = identityDatabase.Users.Where(p => p.Id == post.UserId).FirstOrDefault();
 
-            var similarPost = context.Posts
+            post.VisitCount += 1;
+            dataBaseContext.SaveChanges();
+
+            var similarPost = dataBaseContext.Posts
                 .Include(p => p.PostImages)
                 .Where(p => p.CategoryTypeId == post.CategoryTypeId)
                 .Take(5).Select(p => new SimilarPostDto
@@ -46,6 +49,7 @@ namespace Application.Posts.GetPostPDP
                 Content = post.Content,
                 Type = post.CategoryType.Type,
                 Image = post.PostImages.Select(p => uriComposer.ComposeImageUri(p.Src)).ToList(),
+                NameAuthor = user.FullName,
                 similarPosts = similarPost,
             };
         }
