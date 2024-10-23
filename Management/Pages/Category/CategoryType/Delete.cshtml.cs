@@ -35,11 +35,14 @@ namespace Management.Pages.Category.CategoryType
         public IActionResult OnPost()
         {
             var result = service.Remove(categoryType.Id);
+
             Message = result.Message;
+
             if (result.IsSuccess)
             {
                 return RedirectToPage("Index");
             }
+
             return Page();
         }
     }

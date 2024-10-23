@@ -40,8 +40,10 @@ namespace Management.Pages.Category.CategoryType
         {
             var data = mapper.Map<CategoryTypeDto>(categoryType);
             var result = service.Edit(data);
+
             Message = result.Message;
             categoryType = mapper.Map<CategoryTypeViewModel>(result.Data);
+
             return Page();
         }
     }

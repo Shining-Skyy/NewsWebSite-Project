@@ -13,17 +13,25 @@ namespace NewsWebSite.Hubs
 
         public override Task OnConnectedAsync()
         {
+            // Retrieve the VisitorId from the HTTP request cookies
             string visitorId = Context.GetHttpContext().Request.Cookies["VisitorId"];
+
+            // Call the service to connect the user using the retrieved VisitorId
             service.ConnectUser(visitorId);
-            var count = service.GetCount();
+            service.GetCount();
+
             return base.OnConnectedAsync();
         }
 
         public override Task OnDisconnectedAsync(Exception? exception)
         {
+            // Retrieve the VisitorId from the HTTP request cookies again upon disconnection
             string visitorId = Context.GetHttpContext().Request.Cookies["VisitorId"];
+
+            // Call the service to disconnect the user using the retrieved VisitorId
             service.DisConnectUser(visitorId);
-            var count = service.GetCount();
+            service.GetCount();
+
             return base.OnDisconnectedAsync(exception);
         }
     }

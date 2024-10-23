@@ -20,22 +20,30 @@ namespace Application.Posts.GetPostPLP
         public PaginatedItemsDto<PostPLPDto> Execute(PostPLPRequestDto request)
         {
             int rowCount = 0;
-            var query = context.Posts.Include(p => p.PostImages).Include(p => p.CategoryType).AsQueryable();
+            var query = context.Posts
+                .Include(p => p.PostImages)
+                .Include(p => p.CategoryType)
+                .AsQueryable();
 
+            // Check if a specific CategoryTypeId is provided in the request
             if (request.CategoryTypeId != null)
             {
                 query = query.Where(p => p.CategoryTypeId == request.CategoryTypeId);
             }
 
+            // Check if a search key is provided in the request
             if (!string.IsNullOrEmpty(request.SearchKey))
             {
-                query = query.Where(p => p.Titel.Contains(request.SearchKey) || p.Content.Contains(request.SearchKey));
+                query = query.Where(p => p.Titel
+                .Contains(request.SearchKey) || p.Content.Contains(request.SearchKey));
             }
 
+            // Sort the query based on the specified SortType
             if (request.SortType == SortType.MostVisited)
             {
                 query = query.OrderByDescending(p => p.VisitCount);
             }
+
 
             if (request.SortType == SortType.MostPopular)
             {
@@ -48,14 +56,19 @@ namespace Application.Posts.GetPostPLP
                 query = query.OrderBy(p => p.Id);
             }
 
-            var data = query.PagedResult(request.pageIndex, request.pageSize, out rowCount).ToList()
+            // Execute the query and paginate the results
+            var data = query
+                .PagedResult(request.pageIndex, request.pageSize, out rowCount)
+                .ToList()
                 .Select(p => new PostPLPDto()
                 {
                     Id = p.Id,
                     Titel = p.Titel,
                     Type = p.CategoryType.Type,
                     Image = uriComposer.ComposeImageUri(p.PostImages.FirstOrDefault().Src),
-                }).ToList();
+                })
+                .ToList();
+
             return new PaginatedItemsDto<PostPLPDto>(request.pageIndex, request.pageSize, rowCount, data);
         }
     }

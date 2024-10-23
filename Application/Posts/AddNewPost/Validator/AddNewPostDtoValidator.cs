@@ -5,6 +5,7 @@ namespace Application.Posts.AddNewPost.Validator
 {
     public class AddNewPostDtoValidator : AbstractValidator<AddNewPostDto>
     {
+        // Constructor for the AddNewPostDtoValidator class
         public AddNewPostDtoValidator()
         {
             RuleFor(p => p.Titel).NotNull().Length(5, 60);

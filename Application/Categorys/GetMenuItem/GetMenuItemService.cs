@@ -17,7 +17,10 @@ namespace Application.Categorys.GetMenuItem
 
         public List<MenuItemDto> Execute()
         {
-            var categoryType = context.CategoryTypes.Include(p => p.ParentType).ToList();
+            var categoryType = context.CategoryTypes
+                .Include(p => p.ParentType)
+                .ToList();
+
             var data = mapper.Map<List<MenuItemDto>>(categoryType);
             return data;
         }

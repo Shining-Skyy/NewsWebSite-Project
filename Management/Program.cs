@@ -1,5 +1,6 @@
 using Application.Banners;
 using Application.Categorys.CategoryTypes;
+using Application.Comments;
 using Application.Interfaces.Contexts;
 using Application.Posts.AddNewPost;
 using Application.Posts.AddNewPost.Dto;
@@ -81,6 +82,7 @@ builder.Services.AddTransient<IImageUploadService, ImageUploadService>();
 builder.Services.AddTransient<IUriComposerService, UriComposerService>();
 builder.Services.AddTransient<IFavoritePostService, FavoritePostService>();
 builder.Services.AddTransient<IBannersService, BannersService>();
+builder.Services.AddTransient<ICommentsService, CommentsService>();
 
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 builder.Services.AddAutoMapper(typeof(ManagementVmMappingProfile));

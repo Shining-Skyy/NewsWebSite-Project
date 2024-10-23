@@ -20,7 +20,9 @@ namespace Application.HomePageService
 
         public HomePageDto GetData()
         {
-            var banners = context.Banners.Where(p => p.IsActive == true)
+            // Retrieve active banners from the database
+            var banners = context.Banners
+                .Where(p => p.IsActive == true)
                 .OrderBy(p => p.Priority)
                 .ThenByDescending(p => p.Id)
                 .Select(p => new BannerDto
@@ -29,28 +31,35 @@ namespace Application.HomePageService
                     Image = uriComposerService.ComposeImageUri(p.Image),
                     Link = p.Link,
                     Position = p.Position,
-                }).ToList();
+                })
+                .ToList();
 
+            // Fetch the most visited posts with pagination
             var MostVisited = getPostPLPService.Execute(new PostPLPRequestDto
             {
                 pageIndex = 1,
                 pageSize = 20,
                 SortType = SortType.MostVisited
-            }).Data.ToList();
+            }).Data
+            .ToList();
 
+            // Fetch the most popular posts with pagination
             var MostPopular = getPostPLPService.Execute(new PostPLPRequestDto
             {
                 pageIndex = 1,
                 pageSize = 20,
                 SortType = SortType.MostPopular
-            }).Data.ToList();
+            }).Data
+            .ToList();
 
+            // Fetch the newest posts with pagination
             var newest = getPostPLPService.Execute(new PostPLPRequestDto
             {
                 pageIndex = 1,
                 pageSize = 20,
                 SortType = SortType.newest
-            }).Data.ToList();
+            }).Data
+            .ToList();
 
             return new HomePageDto
             {

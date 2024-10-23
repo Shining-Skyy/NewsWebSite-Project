@@ -6,6 +6,9 @@ namespace Application.Comments
     public interface ICommentsService
     {
         BaseDto<CommentDto> Add(CommentDto commentDto);
-        List<CommentWithUserDto> GetList(int postId);
+        List<CommentWithUserDto> GetListWhithId(int postId);
+        PaginatedItemsDto<CommentListDto> GetList(int pageIndex, int pageSize);
+        bool ChangeStatus(int commentId);
+        BaseDto Remove(int Id);
     }
 }

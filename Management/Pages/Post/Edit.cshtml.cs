@@ -26,8 +26,11 @@ namespace Management.Pages.Post
         public void OnGet(int Id)
         {
             var model = service.FindById(Id);
+
             if (model.IsSuccess)
+                // Map the retrieved data to the PostViewModel
                 PostViewModel = mapper.Map<PostViewModel>(model.Data);
+
             Message = model.Message;
         }
 
@@ -35,7 +38,9 @@ namespace Management.Pages.Post
         {
             var model = mapper.Map<PostDto>(PostViewModel);
             var result = service.Edit(model);
+
             Message = result.Message;
+
             return RedirectToPage("Index");
         }
     }

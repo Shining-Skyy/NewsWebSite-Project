@@ -18,7 +18,9 @@ namespace Application.Posts.AddNewPost
 
         public BaseDto<int> Execute(AddNewPostDto dto)
         {
+            // Mapping the incoming DTO (Data Transfer Object) to the Post entity.
             var data = mapper.Map<Post>(dto);
+
             context.Posts.Add(data);
             context.SaveChanges();
 

@@ -16,6 +16,7 @@ namespace Domain.Comments
 
         public int? ParentTypeId { get; set; }
         public Comment ParentType { get; set; }
+
         public ICollection<Comment> SubType { get; set; }
     }
 }

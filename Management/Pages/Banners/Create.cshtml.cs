@@ -20,6 +20,7 @@ namespace Management.Pages.Banners
 
         [BindProperty]
         public BannerDto Data { get; set; }
+
         [BindProperty]
         public IFormFile BannerImage { get; set; }
 
@@ -29,12 +30,17 @@ namespace Management.Pages.Banners
 
         public IActionResult OnPost()
         {
-            var result = imageUploadService.Upload(new List<IFormFile> { BannerImage });
+            // Upload the banner image using the image upload service
+            var result = imageUploadService
+                .Upload(new List<IFormFile> { BannerImage });
+
+            // Check if any images were successfully uploaded
             if (result.Count > 0)
             {
                 Data.Image = result.FirstOrDefault();
                 banners.AddBanner(Data);
             }
+
             return RedirectToPage("Index");
         }
     }

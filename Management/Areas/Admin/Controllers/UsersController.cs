@@ -24,6 +24,7 @@ namespace Management.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            // Retrieve a list of users and map them to UserListDto objects
             var user = _userManager.Users.Select(p => new UserListDto()
             {
                 Id = p.Id,
@@ -46,8 +47,10 @@ namespace Management.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(RegisterUserDto register)
         {
+            // Check if the model state is valid
             if (!ModelState.IsValid)
             {
+                // Create a new User object with the provided registration details
                 User newUser = new User()
                 {
                     FullName = register.
@@ -61,6 +64,7 @@ namespace Management.Areas.Admin.Controllers
                     return RedirectToAction("Index", "user", new { area = "admin" });
                 }
 
+                // If there are errors, concatenate them into a message
                 string message = "";
                 foreach (var item in result.Errors.ToList())
                 {
@@ -76,8 +80,10 @@ namespace Management.Areas.Admin.Controllers
 
         public IActionResult Edit(string Id)
         {
+            // Find the user by ID asynchronously
             var user = _userManager.FindByIdAsync(Id).Result;
 
+            // Create an EditUserDto object to hold the user's current details
             EditUserDto userEdit = new EditUserDto()
             {
                 Id = user.Id,
@@ -93,6 +99,8 @@ namespace Management.Areas.Admin.Controllers
         public IActionResult Edit(EditUserDto userEdit)
         {
             var user = _userManager.FindByIdAsync(userEdit.Id).Result;
+
+            // Update the user's details with the edited information
             user.FullName = userEdit.FullName;
             user.PhoneNumber = userEdit.PhoneNumber;
             user.Email = userEdit.Email;
@@ -105,6 +113,7 @@ namespace Management.Areas.Admin.Controllers
                 return RedirectToAction("Index", "User", new { area = "Admin" });
             }
 
+            // If there are errors, concatenate them into a message
             string message = "";
             foreach (var item in result.Errors.ToList())
             {
@@ -118,11 +127,14 @@ namespace Management.Areas.Admin.Controllers
         public IActionResult Delete(string Id)
         {
             var user = _userManager.FindByIdAsync(Id).Result;
+
+            // Create a DeleteUserDto object to hold the user's details for deletion confirmation
             DeleteUserDto userDelete = new DeleteUserDto()
             {
                 FullName = user.FullName,
                 Id = user.Id,
             };
+
             return View(userDelete);
         }
 
@@ -139,6 +151,7 @@ namespace Management.Areas.Admin.Controllers
 
             }
 
+            // If there are errors, concatenate them into a message
             string message = "";
             foreach (var item in result.Errors.ToList())
             {
@@ -152,6 +165,8 @@ namespace Management.Areas.Admin.Controllers
         public IActionResult AddUserRole(string Id)
         {
             var user = _userManager.FindByIdAsync(Id).Result;
+
+            // Retrieve the list of roles and create SelectListItem objects for the view
             var roles = new List<SelectListItem>(
                 _roleManager.Roles.Select(p => new SelectListItem
                 {
@@ -172,18 +187,21 @@ namespace Management.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult AddUserRole(AddUserRoleDto newRole)
         {
-
+            // Find the user by ID asynchronously
             var user = _userManager.FindByIdAsync(newRole.Id).Result;
             if (user == null)
             {
                 return BadRequest();
             }
+
+            // Attempt to add the user to the specified role asynchronously
             var result = _userManager.AddToRoleAsync(user, newRole.Role).Result;
             if (result.Succeeded)
             {
                 return RedirectToAction("Index", "Users", new { area = "admin" });
             }
 
+            // If there are errors, concatenate them into a message
             string message = "";
             foreach (var item in result.Errors.ToList())
             {
@@ -197,8 +215,13 @@ namespace Management.Areas.Admin.Controllers
         public IActionResult UserRoles(string Id)
         {
             var user = _userManager.FindByIdAsync(Id).Result;
+
+            // Retrieve the roles assigned to the user asynchronously
             var roles = _userManager.GetRolesAsync(user).Result;
+
+            // Store user information in ViewBag for display in the view
             ViewBag.UserInfo = $"Name : {user.FullName} || Email : {user.Email}";
+
             return View(roles);
         }
     }

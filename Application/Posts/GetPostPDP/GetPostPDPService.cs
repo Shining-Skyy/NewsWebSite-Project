@@ -20,26 +20,32 @@ namespace Application.Posts.GetPostPDP
 
         public PostPDPDto Execute(int Id)
         {
+            // Retrieve the post from the database, including its category type and images
             var post = dataBaseContext.Posts
                 .Include(p => p.CategoryType)
                 .Include(p => p.PostImages)
                 .SingleOrDefault(p => p.Id == Id);
 
-            var user = identityDatabase.Users.Where(p => p.Id == post.UserId).FirstOrDefault();
+            var user = identityDatabase.Users
+                .Where(p => p.Id == post.UserId)
+                .FirstOrDefault();
 
             post.VisitCount += 1;
             dataBaseContext.SaveChanges();
 
+            // Retrieve similar posts based on the same category type
             var similarPost = dataBaseContext.Posts
                 .Include(p => p.PostImages)
                 .Where(p => p.CategoryTypeId == post.CategoryTypeId)
-                .Take(5).Select(p => new SimilarPostDto
+                .Take(5)
+                .Select(p => new SimilarPostDto
                 {
                     Id = p.Id,
                     Titel = p.Titel,
                     TimeRequired = p.TimeRequired,
                     Image = uriComposer.ComposeImageUri(p.PostImages.FirstOrDefault().Src)
-                }).ToList();
+                })
+                .ToList();
 
             return new PostPDPDto()
             {

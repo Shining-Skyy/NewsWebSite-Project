@@ -23,12 +23,15 @@ namespace Management.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            var rolse = _roleManager.Roles.Select(p => new RoleListDto
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description
-            }).ToList();
+            // Retrieve all roles from the role manager and project them into a list of RoleListDto objects
+            var rolse = _roleManager.Roles
+                .Select(p => new RoleListDto
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Description = p.Description
+                })
+                .ToList();
 
             return View(rolse);
         }
@@ -42,12 +45,14 @@ namespace Management.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(AddNewRoleDto newRole)
         {
+            // Create a new Role object using the data from the newRole DTO
             Role role = new Role()
             {
                 Description = newRole.Description,
                 Name = newRole.Name,
 
             };
+
             var result = _roleManager.CreateAsync(role).Result;
 
             if (result.Succeeded)
@@ -57,11 +62,11 @@ namespace Management.Areas.Admin.Controllers
             ViewBag.Errors = result.Errors.ToList();
 
             return View(newRole);
-
         }
 
         public IActionResult UserInRole(string Name)
         {
+            // Get the list of users associated with the specified role name asynchronously
             var usersInRole = _userManager.GetUsersInRoleAsync(Name).Result;
 
             return View(usersInRole.Select(p => new UserListDto

@@ -36,8 +36,11 @@ namespace NewsWebSite.Controllers
 
         public IActionResult Details(int Id)
         {
+            // Executes the method to retrieve a specific post based on its ID
             var dataPost = getPostPDP.Execute(Id);
-            var dataComment = commentsService.GetList(Id);
+
+            // Retrieves the list of comments associated with the post ID
+            var dataComment = commentsService.GetListWhithId(Id);
 
             MainPageModel.PostPDPDto = dataPost;
             MainPageModel.CommentListDtos = dataComment;

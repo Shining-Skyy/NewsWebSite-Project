@@ -1,0 +1,179 @@
+﻿@page
+@model Management.Pages.Comments.IndexModel
+@{
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Comment List</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Projects</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Settings 1</a>
+                                    <a class="dropdown-item" href="#">Settings 2</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+
+                        <p>Simple table with project listing with progress and editing options</p>
+
+                        <!-- start project list -->
+                        <table class="table table-striped projects">
+                            <thead>
+                                <tr>
+                                    <th style="width: 20%">Content</th>
+                                    <th style="width: 20%">Is Active</th>
+                                    <th style="width: 20%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.CommentDto.Data)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            <a>@item.Content</a>
+                                        </td>
+
+                                        <td>
+                                            <div class="">
+                                                <label>
+                                                    <input type="checkbox" disabled="disabled" asp-for="@item.IsActive" /> /
+                                                    @if (item.IsActive)
+                                                    {
+                                                        <b style="color:green">Active /</b>
+                                                    }
+                                                    else
+                                                    {
+                                                        <b style="color:red">InActive /</b>
+                                                    }
+                                                    <form asp-page="Index" method="post">
+                                                        <button type="submit" asp-route-Id="@item.Id">Click to change status</button>
+                                                    </form>
+
+                                                </label>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <a asp-page="Delete" asp-route-Id="@item.Id" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <!-- end project list -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="dataTables_info" id="html5-extension_info" role="status" aria-live="polite">
+
+                        Page @Model.CommentDto.PageIndex
+                        from
+                        @Model.CommentDto.Pager.TotalPages
+                    </div>
+                </div>
+                @{
+                    var prevDisabled = !Model.CommentDto.HasPreviousPage ? "disabled" : "";
+                    var nextDisabled = !Model.CommentDto.HasNextPage ? "disabled" : "";
+                }
+                <div class="col-md-7">
+                    <div>
+                        <ul class="pagination">
+                            <li class="paginate_button page-item">
+                                <a asp-page="Index"
+                                   asp-route-pageIndex="1"
+                                   aria-controls="html5-extension"
+                                   data-dt-idx="2" tabindex="0"
+                                   class="btn btn-round btn-secondary">
+                                    First Page
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item active">
+                                <a asp-page="Index" asp-route-parentid="@Request.Query["parentid"]"
+                                   asp-route-pageIndex="@(Model.CommentDto.PageIndex - 1)"
+                                   class="btn btn-default @prevDisabled">
+                                    <i class="fa fa-arrow-left"></i>
+                                </a>
+                            </li>
+                            @foreach (var item in Model.CommentDto.Pager.Pages)
+                            {
+                                if (item == Model.CommentDto.PageIndex)
+                                {
+                                    <li class="paginate_button page-item  active">
+                                        <a asp-page="Index" asp-route-parentid="@Request.Query["parentid"]"
+                                   asp-route-pageIndex="@item"
+                                   aria-controls="html5-extension"
+                                   data-dt-idx="2" tabindex="0"
+                                   class="page-link"> @item</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="paginate_button page-item ">
+                                        <a asp-page="Index" asp-route-parentid="@Request.Query["parentid"]"
+                                   asp-route-pageIndex="@item"
+                                   aria-controls="html5-extension"
+                                   data-dt-idx="2" tabindex="0"
+                                   class="page-link"> @item</a>
+                                    </li>
+                                }
+                            }
+                            <li class="paginate_button page-item ">
+                                <a asp-page="Index" asp-route-parentid="@Request.Query["parentid"]"
+                                   asp-route-pageIndex="@(Model.CommentDto.PageIndex + 1)"
+                                   class="btn btn-default @nextDisabled">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item">
+                                <a asp-page="Index" asp-route-parentid="@Request.Query["parentid"]"
+                                   asp-route-pageIndex="@Model.CommentDto.Pager.TotalPages"
+                                   class="btn btn-round btn-secondary"> Last Page</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

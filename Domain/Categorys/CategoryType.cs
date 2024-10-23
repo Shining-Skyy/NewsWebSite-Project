@@ -10,6 +10,7 @@ namespace Domain.Categorys
 
         public int? ParentTypeId { get; set; }
         public CategoryType ParentType { get; set; }
+
         public ICollection<CategoryType> SubType { get; set; }
     }
 }

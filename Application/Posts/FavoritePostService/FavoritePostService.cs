@@ -41,6 +41,7 @@ namespace Application.Posts.FavoritePostService
 
         public PaginatedItemsDto<FavoritePostDto> GetFavorite(string UserId, int page = 1, int pageSize = 10)
         {
+            // Query to get posts that are favorited by the user
             var model = context.Posts
                .Include(p => p.PostImages)
                .Include(p => p.PostFavourites)
@@ -49,14 +50,19 @@ namespace Application.Posts.FavoritePostService
                .AsQueryable();
 
             int rowCount = 0;
-            var data = model.PagedResult(page, pageSize, out rowCount)
+
+            // Get paginated results from the model
+            var data = model
+                .PagedResult(page, pageSize, out rowCount)
             .ToList()
             .Select(p => new FavoritePostDto
             {
                 Id = p.Id,
                 Titel = p.Titel,
                 Image = uriComposerService.ComposeImageUri(p.PostImages.FirstOrDefault().Src),
-            }).ToList();
+            })
+            .ToList();
+
             return new PaginatedItemsDto<FavoritePostDto>(page, pageSize, rowCount, data);
         }
     }

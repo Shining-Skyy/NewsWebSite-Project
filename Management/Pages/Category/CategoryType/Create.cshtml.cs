@@ -34,6 +34,7 @@ namespace Management.Pages.Category.CategoryType
             {
                 var model = mapper.Map<CategoryTypeDto>(categoryType);
                 var result = service.Add(model);
+
                 if (result.IsSuccess)
                 {
                     return RedirectToPage("index", new { parentid = categoryType.ParentTypeId });

@@ -18,6 +18,7 @@ namespace Application.Banners
             this.uriComposer = uriComposer;
         }
 
+        // Adding a new Banner object to the Banners collection in the context
         public void AddBanner(BannerDto banner)
         {
             context.Banners.Add(new Banner
@@ -36,7 +37,10 @@ namespace Application.Banners
         {
             int rowCount = 0;
 
-            var banners = context.Banners.PagedResult(pageIndex, pageSize, out rowCount).ToList()
+            // Retrieve a paginated result of banners from the context
+            var banners = context.Banners
+                .PagedResult(pageIndex, pageSize, out rowCount)
+                .ToList()
                 .Select(p => new BannerDto
                 {
                     Id = p.Id,
@@ -46,7 +50,9 @@ namespace Application.Banners
                     Name = p.Name,
                     Position = p.Position,
                     Priority = p.Priority,
-                }).ToList();
+                })
+                .ToList();
+
             return new PaginatedItemsDto<BannerDto>(pageIndex, pageSize, rowCount, banners);
         }
     }

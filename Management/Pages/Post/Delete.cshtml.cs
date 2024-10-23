@@ -26,17 +26,24 @@ namespace Management.Pages.Post
         public void OnGet(int Id)
         {
             var model = service.FindById(Id);
+
             if (model.IsSuccess)
+                // Map the retrieved data to the PostViewModel
                 PostViewModel = mapper.Map<PostViewModel>(model.Data);
+
             Message = model.Message;
         }
 
         public IActionResult OnPost()
         {
+            // Attempt to remove the post using its Id and the current user's Id
             var result = service.Remove(PostViewModel.Id, ClaimUtility.GetUserId(User));
+
             Message = result.Message;
+
             if (result.IsSuccess)
                 return RedirectToPage("index");
+
             return Page();
         }
     }

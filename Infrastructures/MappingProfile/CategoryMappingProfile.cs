@@ -1,27 +1,24 @@
 ﻿using Application.Categorys.CategoryTypes.Dtos;
 using Application.Categorys.GetMenuItem.Dto;
-using Application.Posts.AddNewPost.Dto;
-using Application.Posts.PostServices.Dto;
 using AutoMapper;
 using Domain.Categorys;
-using Domain.Posts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructures.MappingProfile
 {
     public class CategoryMappingProfile : Profile
     {
+        // Constructor for the CategoryMappingProfile class
         public CategoryMappingProfile()
         {
+            // Create a mapping between CategoryType and CategoryTypeDto
+            // ReverseMap allows for two-way mapping between the two types
             CreateMap<CategoryType, CategoryTypeDto>().ReverseMap();
 
+            // Create a mapping between CategoryType and CategoryTypeListDto
             CreateMap<CategoryType, CategoryTypeListDto>()
                 .ForMember(dest => dest.SubTypeCount, option => option.MapFrom(src => src.SubType.Count));
 
+            // Create a mapping between CategoryType and MenuItemDto
             CreateMap<CategoryType, MenuItemDto>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Type))
                 .ForMember(dest => dest.ParentId, opt => opt.MapFrom(src => src.ParentTypeId))

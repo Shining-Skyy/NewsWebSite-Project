@@ -14,6 +14,7 @@ namespace Persistence.Contexts
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Configuring the IdentityUser entity to use a custom table
             modelBuilder.Entity<IdentityUser<string>>().ToTable("Users", "identity");
             modelBuilder.Entity<IdentityRole<string>>().ToTable("Roles", "identity");
             modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims", "identity");
@@ -22,6 +23,7 @@ namespace Persistence.Contexts
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRoles", "identity");
             modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens", "identity");
 
+            // Defining a composite primary key for the Identity
             modelBuilder.Entity<IdentityUserLogin<string>>().HasKey(p => new { p.LoginProvider, p.ProviderKey });
             modelBuilder.Entity<IdentityUserRole<string>>().HasKey(p => new { p.UserId, p.RoleId });
             modelBuilder.Entity<IdentityUserToken<string>>().HasKey(p => new { p.UserId, p.LoginProvider, p.Name });
