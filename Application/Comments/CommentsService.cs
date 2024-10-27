@@ -4,7 +4,6 @@ using Application.Interfaces.Contexts;
 using AutoMapper;
 using Common;
 using Domain.Comments;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Application.Comments
 {
@@ -47,12 +46,24 @@ namespace Application.Comments
             return false;
         }
 
+        public BaseDto<CommentDto> Edit(CommentDto commentDto)
+        {
+            // Retrieving the existing comment type from the database using its ID
+            var data = context.Comments
+                .SingleOrDefault(p => p.Id == commentDto.Id);
+
+            mapper.Map(commentDto, data);
+            context.SaveChanges();
+
+            return new BaseDto<CommentDto>(mapper.Map<CommentDto>(data), new List<string> { $"Category edited successfully" }, true);
+        }
+
         public PaginatedItemsDto<CommentListDto> GetList(int pageIndex, int pageSize)
         {
             int rowsCount = 0;
 
             // Retrieve a paginated result of comments from the database
-            var data = context.Comments.PagedResult(pageIndex, pageSize, out rowsCount);
+            var data = context.Comments.Where(p => p.IsActive == true).PagedResult(pageIndex, pageSize, out rowsCount);
 
             // Map the retrieved data to a list of CommentListDto objects
             var result = mapper.ProjectTo<CommentListDto>(data).ToList();

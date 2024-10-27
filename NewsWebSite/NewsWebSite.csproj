@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
@@ -8,10 +8,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="wwwroot\Theme\vendors\**" />
-	  <Content Remove="wwwroot\Theme\vendors\**" />
-	  <EmbeddedResource Remove="wwwroot\Theme\vendors\**" />
-	  <None Remove="wwwroot\Theme\vendors\**" />
+		<Compile Remove="wwwroot\Theme\vendors\**" />
+		<Content Remove="wwwroot\Theme\vendors\**" />
+		<EmbeddedResource Remove="wwwroot\Theme\vendors\**" />
+		<None Remove="wwwroot\Theme\vendors\**" />
 	</ItemGroup>
 
 	<ItemGroup>

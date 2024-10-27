@@ -1,11 +1,13 @@
 using Application.Comments;
 using Application.Comments.Dto;
 using Application.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Management.Pages.Comments
 {
+    [Authorize(Roles = "Admin")]
     public class IndexModel : PageModel
     {
         private readonly ICommentsService commentsService;

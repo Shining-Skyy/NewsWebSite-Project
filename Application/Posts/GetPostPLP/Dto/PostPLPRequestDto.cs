@@ -5,7 +5,7 @@
         public int pageIndex { get; set; } = 1;
         public int pageSize { get; set; } = 2;
         public int? CategoryTypeId { get; set; }
-        public string SearchKey { get; set; }
+        public string? SearchKey { get; set; }
         public SortType SortType { get; set; }
     }
 
