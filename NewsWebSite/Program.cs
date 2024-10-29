@@ -47,6 +47,11 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.Cookie.Path = "/";
 });
 
+builder.Services.AddStackExchangeRedisCache(option =>
+{
+    option.Configuration = builder.Configuration["RedisCache:Configuration"];
+});
+
 builder.Services.AddSignalR();
 
 builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();

@@ -374,87 +374,6 @@
         }
       }
     },
-    "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\NewsWebSite.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\NewsWebSite.csproj",
-        "projectName": "NewsWebSite",
-        "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\NewsWebSite.csproj",
-        "packagesPath": "C:\\Users\\Ebrahim\\.nuget\\packages\\",
-        "outputPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Ebrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {
-              "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Infrastructures\\Infrastructures.csproj": {
-                "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Infrastructures\\Infrastructures.csproj"
-              },
-              "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj": {
-                "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.20, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[7.0.12, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -567,20 +486,11 @@
               "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Domain\\Domain.csproj": {
                 "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Domain\\Domain.csproj"
               },
-              "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Infrastructures\\Infrastructures.csproj": {
-                "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Infrastructures\\Infrastructures.csproj"
-              },
               "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\Management.csproj": {
                 "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Management\\Management.csproj"
               },
-              "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\NewsWebSite.csproj": {
-                "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\NewsWebSite.csproj"
-              },
               "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj": {
                 "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj"
-              },
-              "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\WebApi\\WebApi.csproj": {
-                "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\WebApi\\WebApi.csproj"
               }
             }
           }
@@ -636,92 +546,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\WebApi\\WebApi.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\WebApi\\WebApi.csproj",
-        "projectName": "WebApi",
-        "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\Ebrahim\\.nuget\\packages\\",
-        "outputPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\WebApi\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Ebrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {
-              "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Application\\Application.csproj": {
-                "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Application\\Application.csproj"
-              },
-              "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Infrastructures\\Infrastructures.csproj": {
-                "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Infrastructures\\Infrastructures.csproj"
-              },
-              "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj": {
-                "projectPath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\Persistence\\Persistence.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[7.0.20, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.20, )"
-            },
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.0-rc.2.22476.2, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

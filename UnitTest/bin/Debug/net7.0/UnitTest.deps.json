@@ -10,14 +10,11 @@
         "dependencies": {
           "Application": "1.0.0",
           "Domain": "1.0.0",
-          "Infrastructures": "1.0.0",
           "Management": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.20",
           "Microsoft.NET.Test.Sdk": "17.2.0",
           "Moq": "4.10.0",
-          "NewsWebSite": "1.0.0",
           "Persistence": "1.0.0",
-          "WebApi": "1.0.0",
           "coverlet.collector": "3.1.2",
           "xunit": "2.4.2",
           "xunit.runner.visualstudio": "2.4.5"
@@ -702,17 +699,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.20": {
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.35.0"
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
-            "assemblyVersion": "7.0.20.0",
-            "fileVersion": "7.0.2024.26907"
-          }
-        }
-      },
       "Microsoft.AspNetCore.Cryptography.Internal/7.0.20": {
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -753,17 +739,6 @@
           "lib/net7.0/Microsoft.AspNetCore.Identity.UI.dll": {
             "assemblyVersion": "7.0.20.0",
             "fileVersion": "7.0.2024.26907"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.OpenApi/7.0.0-rc.2.22476.2": {
-        "dependencies": {
-          "Microsoft.OpenApi": "1.2.3"
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.47602"
           }
         }
       },
@@ -1391,7 +1366,6 @@
           }
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0"
@@ -1652,14 +1626,6 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.OpenApi/1.2.3": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "assemblyVersion": "1.2.3.0",
-            "fileVersion": "1.2.3.0"
-          }
-        }
-      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
@@ -2346,44 +2312,6 @@
           "lib/net5.0/Snappier.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore/6.4.0": {
-        "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
-          "Swashbuckle.AspNetCore.Swagger": "6.4.0",
-          "Swashbuckle.AspNetCore.SwaggerGen": "6.4.0",
-          "Swashbuckle.AspNetCore.SwaggerUI": "6.4.0"
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/6.4.0": {
-        "dependencies": {
-          "Microsoft.OpenApi": "1.2.3"
-        },
-        "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "assemblyVersion": "6.4.0.0",
-            "fileVersion": "6.4.0.0"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/6.4.0": {
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "6.4.0"
-        },
-        "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "assemblyVersion": "6.4.0.0",
-            "fileVersion": "6.4.0.0"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/6.4.0": {
-        "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "assemblyVersion": "6.4.0.0",
-            "fileVersion": "6.4.0.0"
           }
         }
       },
@@ -3395,17 +3323,6 @@
           "Management.dll": {}
         }
       },
-      "NewsWebSite/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "13.0.1",
-          "Infrastructures": "1.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12",
-          "Persistence": "1.0.0"
-        },
-        "runtime": {
-          "NewsWebSite.dll": {}
-        }
-      },
       "Persistence/1.0.0": {
         "dependencies": {
           "Application": "1.0.0",
@@ -3416,20 +3333,6 @@
         },
         "runtime": {
           "Persistence.dll": {}
-        }
-      },
-      "WebApi/1.0.0": {
-        "dependencies": {
-          "Application": "1.0.0",
-          "Infrastructures": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.20",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.20",
-          "Microsoft.AspNetCore.OpenApi": "7.0.0-rc.2.22476.2",
-          "Persistence": "1.0.0",
-          "Swashbuckle.AspNetCore": "6.4.0"
-        },
-        "runtime": {
-          "WebApi.dll": {}
         }
       }
     }
@@ -3874,13 +3777,6 @@
       "path": "microsoft.aspnetcore.authentication.google/7.0.20",
       "hashPath": "microsoft.aspnetcore.authentication.google.7.0.20.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.20": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lIjUAxtqNv+bD+Bnlksu96/haMLfuXA7nASXUnvxXfFWA3YEov7pM5AtvlelvQCtwFvu1LR4SFryHvLur491Qg==",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/7.0.20",
-      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.7.0.20.nupkg.sha512"
-    },
     "Microsoft.AspNetCore.Cryptography.Internal/7.0.20": {
       "type": "package",
       "serviceable": true,
@@ -3908,13 +3804,6 @@
       "sha512": "sha512-WQ9YAh5/3HOi1hlbLpm0vICA3bn/C7AO0HnpBk9MkPouRIw0kayekSQmoezHCaxY1UO+i+imzQRhsHBv5ClgkQ==",
       "path": "microsoft.aspnetcore.identity.ui/7.0.20",
       "hashPath": "microsoft.aspnetcore.identity.ui.7.0.20.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.OpenApi/7.0.0-rc.2.22476.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-PamnEWfGSuxNS1xpWITsgTEqER719SjgvUt0uyeYQ/Ev4syRnqnSU0i0yKF+oiZdkGRPjMoJlrnhmnsH3Ml/Ug==",
-      "path": "microsoft.aspnetcore.openapi/7.0.0-rc.2.22476.2",
-      "hashPath": "microsoft.aspnetcore.openapi.7.0.0-rc.2.22476.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.11": {
       "type": "package",
@@ -4105,13 +3994,6 @@
       "path": "microsoft.entityframeworkcore.sqlserver/7.0.20",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.7.0.20.nupkg.sha512"
     },
-    "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
-      "path": "microsoft.extensions.apidescription.server/6.0.5",
-      "hashPath": "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512"
-    },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -4286,13 +4168,6 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
-    },
-    "Microsoft.OpenApi/1.2.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
-      "path": "microsoft.openapi/1.2.3",
-      "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
     },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
@@ -4629,34 +4504,6 @@
       "sha512": "sha512-rFtK2KEI9hIe8gtx3a0YDXdHOpedIf9wYCEYtBEmtlyiWVX3XlCNV03JrmmAi/Cdfn7dxK+k0sjjcLv4fpHnqA==",
       "path": "snappier/1.0.0",
       "hashPath": "snappier.1.0.0.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore/6.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-eUBr4TW0up6oKDA5Xwkul289uqSMgY0xGN4pnbOIBqCcN9VKGGaPvHX3vWaG/hvocfGDP+MGzMA0bBBKz2fkmQ==",
-      "path": "swashbuckle.aspnetcore/6.4.0",
-      "hashPath": "swashbuckle.aspnetcore.6.4.0.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.Swagger/6.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nl4SBgGM+cmthUcpwO/w1lUjevdDHAqRvfUoe4Xp/Uvuzt9mzGUwyFCqa3ODBAcZYBiFoKvrYwz0rabslJvSmQ==",
-      "path": "swashbuckle.aspnetcore.swagger/6.4.0",
-      "hashPath": "swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/6.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lXhcUBVqKrPFAQF7e/ZeDfb5PMgE8n5t6L5B6/BQSpiwxgHzmBcx8Msu42zLYFTvR5PIqE9Q9lZvSQAcwCxJjw==",
-      "path": "swashbuckle.aspnetcore.swaggergen/6.4.0",
-      "hashPath": "swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/6.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1Hh3atb3pi8c+v7n4/3N80Jj8RvLOXgWxzix6w3OZhB7zBGRwsy7FWr4e3hwgPweSBpwfElqj4V4nkjYabH9nQ==",
-      "path": "swashbuckle.aspnetcore.swaggerui/6.4.0",
-      "hashPath": "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
@@ -5404,17 +5251,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "NewsWebSite/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Persistence/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "WebApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
