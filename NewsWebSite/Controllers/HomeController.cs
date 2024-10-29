@@ -7,12 +7,10 @@ namespace NewsWebSite.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private readonly IHomePageService homePageService;
 
-        public HomeController(ILogger<HomeController> logger, IHomePageService homePageService)
+        public HomeController(IHomePageService homePageService)
         {
-            _logger = logger;
             this.homePageService = homePageService;
         }
 
