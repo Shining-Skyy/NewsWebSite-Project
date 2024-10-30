@@ -63,7 +63,7 @@ namespace Application.Comments
             int rowsCount = 0;
 
             // Retrieve a paginated result of comments from the database
-            var data = context.Comments.Where(p => p.IsActive == true).PagedResult(pageIndex, pageSize, out rowsCount);
+            var data = context.Comments.PagedResult(pageIndex, pageSize, out rowsCount);
 
             // Map the retrieved data to a list of CommentListDto objects
             var result = mapper.ProjectTo<CommentListDto>(data).ToList();
