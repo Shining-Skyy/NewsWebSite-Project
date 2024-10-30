@@ -19,6 +19,7 @@ using Infrastructures.MappingProfile;
 using Management.MappingProfiles;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
+using NLog.Web;
 using Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,11 +29,18 @@ builder.Services.AddRazorPages();
 
 #region ConnectionString
 string connection = builder.Configuration["ConnectionString:SqlServer"];
+// Register the database context with the SQL Server connection.
 builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(connection));
 
+// Add identity services for user authentication and management.
 builder.Services.AddIdentityService(builder.Configuration);
 #endregion
 
+// Clear default logging providers to use NLog.
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
+
+// Configure authorization policies.
 builder.Services.AddAuthorization(option =>
 {
     option.AddPolicy("AdminUsers", policy =>
@@ -40,6 +48,8 @@ builder.Services.AddAuthorization(option =>
         policy.RequireRole("Admin");
     });
 });
+
+// Configure application cookie settings.
 builder.Services.ConfigureApplicationCookie(option =>
 {
     option.ExpireTimeSpan = TimeSpan.FromMinutes(10);
@@ -47,17 +57,22 @@ builder.Services.ConfigureApplicationCookie(option =>
     option.AccessDeniedPath = "/Account/AccesDenied";
     option.SlidingExpiration = true;
 });
+
+// For cookie sharing between endpoints.
 string pathToDirctory = "C:\\Users\\Ebrahim\\AppData\\Roaming\\Microsoft\\UserSecrets\\KEY";
+// Configure data protection to persist keys to the file system.
 builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(new DirectoryInfo(pathToDirctory))
     .SetApplicationName("SharedCookieApp");
 
+// Configure shared cookie settings.
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.Name = ".AspNet.SharedCookie";
     options.Cookie.Path = "/";
 });
 
+// Configure Google authentication.
 builder.Services.AddAuthentication()
     .AddGoogle(options =>
     {
@@ -65,12 +80,13 @@ builder.Services.AddAuthentication()
         options.ClientSecret = builder.Configuration["AuthenticationGoogle:ClientSecret"];
     });
 
+// Add SignalR services for real-time web functionality.
 builder.Services.AddSignalR();
 
+// Register various services with dependency injection.
 builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
 builder.Services.AddScoped<IIdentityDatabaseContext, IdentityDataBaseContext>();
 builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
-
 builder.Services.AddTransient<EmailService>();
 builder.Services.AddTransient<SmsService>();
 builder.Services.AddTransient<GoogleRecaptcha>();
@@ -84,10 +100,12 @@ builder.Services.AddTransient<IFavoritePostService, FavoritePostService>();
 builder.Services.AddTransient<IBannersService, BannersService>();
 builder.Services.AddTransient<ICommentsService, CommentsService>();
 
+// Configure AutoMapper for object mapping.
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 builder.Services.AddAutoMapper(typeof(ManagementVmMappingProfile));
 builder.Services.AddAutoMapper(typeof(PostMappingProfile));
 
+// Register a validator for the AddNewPostDto.
 builder.Services.AddTransient<IValidator<AddNewPostDto>, AddNewPostDtoValidator>();
 
 var app = builder.Build();

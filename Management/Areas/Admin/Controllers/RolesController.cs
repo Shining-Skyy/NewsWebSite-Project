@@ -5,6 +5,7 @@ using Management.Areas.Admin.Models.Dtos.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using NLog;
 using System.Data;
 
 namespace Management.Areas.Admin.Controllers
@@ -15,6 +16,7 @@ namespace Management.Areas.Admin.Controllers
     {
         private readonly RoleManager<Role> _roleManager;
         private readonly UserManager<User> _userManager;
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         public RolesController(RoleManager<Role> roleManager, UserManager<User> userManager)
         {
             _roleManager = roleManager;
@@ -23,8 +25,10 @@ namespace Management.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            _logger.Info("Index action in Roles Controller called."); // Log when the Index action is invoked
+
             // Retrieve all roles from the role manager and project them into a list of RoleListDto objects
-            var rolse = _roleManager.Roles
+            var roles = _roleManager.Roles
                 .Select(p => new RoleListDto
                 {
                     Id = p.Id,
@@ -33,7 +37,8 @@ namespace Management.Areas.Admin.Controllers
                 })
                 .ToList();
 
-            return View(rolse);
+            _logger.Info($"Retrieved {roles.Count} roles."); // Log the number of roles retrieved
+            return View(roles);
         }
 
         [HttpGet]
@@ -50,13 +55,15 @@ namespace Management.Areas.Admin.Controllers
             {
                 Description = newRole.Description,
                 Name = newRole.Name,
-
             };
 
             var result = _roleManager.CreateAsync(role).Result;
 
             if (result.Succeeded)
             {
+                // Log successful creation of the role
+                _logger.Info("Role '{RoleName}' created successfully.", role.Name);
+
                 return RedirectToAction("Index", "Roles", new { area = "Admin" });
             };
             ViewBag.Errors = result.Errors.ToList();
@@ -68,6 +75,15 @@ namespace Management.Areas.Admin.Controllers
         {
             // Get the list of users associated with the specified role name asynchronously
             var usersInRole = _userManager.GetUsersInRoleAsync(Name).Result;
+
+            if (usersInRole == null || !usersInRole.Any())
+            {
+                _logger.Warn($"No users found for role name: {Name}");
+            }
+            else
+            {
+                _logger.Info($"Found {usersInRole.Count()} users for role name: {Name}");
+            }
 
             return View(usersInRole.Select(p => new UserListDto
             {

@@ -371,3 +371,7 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\UnitTest\bin\Debug\ne
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\UnitTest\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\UnitTest\bin\Debug\net7.0\Management.dll
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\UnitTest\bin\Debug\net7.0\Management.pdb
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\UnitTest\bin\Debug\net7.0\NLog.config
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\UnitTest\bin\Debug\net7.0\NLog.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\UnitTest\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\UnitTest\bin\Debug\net7.0\NLog.Web.AspNetCore.dll

@@ -36,7 +36,6 @@ namespace StaticFile.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error");
-                throw new Exception("upload image error", ex);
             }
         }
 

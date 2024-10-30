@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using NLog;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -17,6 +18,7 @@ namespace WebApi.Controllers
         private readonly IConfiguration configuration;
         private readonly SignInManager<User> signInManager;
         private readonly UserManager<User> userManager;
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         public AccountController(IConfiguration configuration, SignInManager<User> signInManager,
             UserManager<User> userManager)
         {
@@ -28,11 +30,15 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult Post(string email, string password)
         {
+            _logger.Info("Post method called with email: {Email}", email);
+
             // Attempt to sign in the user with the provided email and password
             var findUser = signInManager.PasswordSignInAsync(email, password, true, true).Result;
 
             if (findUser.Succeeded)
             {
+                _logger.Info("User signed in successfully for email: {Email}", email);
+
                 var user = userManager.FindByEmailAsync(email).Result;
 
                 // Create a JWT token for the authenticated user
@@ -44,6 +50,8 @@ namespace WebApi.Controllers
                     Data = data
                 });
             }
+
+            _logger.Warn("Failed sign-in attempt for email: {Email}", email);
 
             return Unauthorized();
         }

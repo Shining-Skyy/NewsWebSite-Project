@@ -117,3 +117,7 @@ E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\WebApi\bin\Debug\net7
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\WebApi\bin\Debug\net7.0\Infrastructures.pdb
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\WebApi\bin\Debug\net7.0\WebApi.xml
 E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\WebApi\bin\Debug\net7.0\NLog.config
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\WebApi\bin\Debug\net7.0\NLog.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\WebApi\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+E:\Program\Web\Asp.Net core\Projject\News\NewsWebSite-Test\WebApi\bin\Debug\net7.0\NLog.Web.AspNetCore.dll

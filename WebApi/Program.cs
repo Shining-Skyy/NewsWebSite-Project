@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using NLog.Web;
 using Persistence.Contexts;
 using System.Text;
 using WebApi.Validator;
@@ -24,6 +25,9 @@ builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(con
 
 builder.Services.AddIdentityService(builder.Configuration);
 #endregion
+
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -39,7 +39,7 @@ namespace Persistence.Contexts
             modelBuilder.Entity<CategoryType>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
             modelBuilder.Entity<Post>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
             modelBuilder.Entity<PostFavorite>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
-            //modelBuilder.Entity<Banner>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
+            modelBuilder.Entity<Banner>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
             modelBuilder.Entity<Comment>().HasQueryFilter(m => EF.Property<bool>(m, "IsRemove") == false);
         }
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0xu7KcV4wp4yTAZyuduMVA1vHjQwHw23AhS8P6R3xd2MdfdLIeRR7aO7R6q0NYaxR1tybFWoYCnFJ8KF4IViwg==",
+  "dgSpecHash": "coqA9PiehLEvse6TMg8o19JCHWjJcGzhRN9zTyWlXLKdRaTZTkvpfohmO+gVG52dea5EufZkiw4sVjzq2cCLAg==",
   "success": true,
   "projectFilePath": "E:\\Program\\Web\\Asp.Net core\\Projject\\News\\NewsWebSite-Test\\NewsWebSite\\NewsWebSite.csproj",
   "expectedPackageFiles": [
@@ -137,6 +137,9 @@
     "C:\\Users\\Ebrahim\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\nlog\\5.2.5\\nlog.5.2.5.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\nlog.extensions.logging\\5.3.5\\nlog.extensions.logging.5.3.5.nupkg.sha512",
+    "C:\\Users\\Ebrahim\\.nuget\\packages\\nlog.web.aspnetcore\\5.3.5\\nlog.web.aspnetcore.5.3.5.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\Ebrahim\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",

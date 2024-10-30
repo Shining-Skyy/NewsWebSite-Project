@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using NLog;
 using System.Data;
 
 namespace Management.Areas.Admin.Controllers
@@ -16,6 +17,7 @@ namespace Management.Areas.Admin.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<Role> _roleManager;
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         public UsersController(UserManager<User> userManager, RoleManager<Role> roleManager)
         {
             _userManager = userManager;
@@ -24,6 +26,8 @@ namespace Management.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            _logger.Info("Index action in Users Controller called."); // Log when the Index action is invoked
+
             // Retrieve a list of users and map them to UserListDto objects
             var user = _userManager.Users.Select(p => new UserListDto()
             {
@@ -61,6 +65,8 @@ namespace Management.Areas.Admin.Controllers
                 var result = _userManager.CreateAsync(newUser, register.Password).Result;
                 if (result.Succeeded)
                 {
+                    _logger.Info("User created successfully: {UserName}", newUser.UserName);
+
                     return RedirectToAction("Index", "user", new { area = "admin" });
                 }
 
@@ -100,6 +106,13 @@ namespace Management.Areas.Admin.Controllers
         {
             var user = _userManager.FindByIdAsync(userEdit.Id).Result;
 
+            if (user == null)
+            {
+                _logger.Warn($"User with Id: {userEdit.Id} not found.");
+                TempData["Message"] = "User not found.";
+                return View(userEdit);
+            }
+
             // Update the user's details with the edited information
             user.FullName = userEdit.FullName;
             user.PhoneNumber = userEdit.PhoneNumber;
@@ -110,6 +123,8 @@ namespace Management.Areas.Admin.Controllers
 
             if (result.Succeeded)
             {
+                _logger.Info($"User {user.UserName} updated successfully.");
+
                 return RedirectToAction("Index", "User", new { area = "Admin" });
             }
 
@@ -143,12 +158,20 @@ namespace Management.Areas.Admin.Controllers
         {
             var user = _userManager.FindByIdAsync(userDelete.Id).Result;
 
+            if (user == null)
+            {
+                _logger.Warn($"User with ID: {userDelete.Id} not found.");
+                TempData["Message"] = "User not found.";
+                return View(userDelete);
+            }
+
             var result = _userManager.DeleteAsync(user).Result;
 
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "User", new { area = "Admin" });
+                _logger.Info($"User with ID: {userDelete.Id} successfully deleted.");
 
+                return RedirectToAction("Index", "User", new { area = "Admin" });
             }
 
             // If there are errors, concatenate them into a message
@@ -165,6 +188,12 @@ namespace Management.Areas.Admin.Controllers
         public IActionResult AddUserRole(string Id)
         {
             var user = _userManager.FindByIdAsync(Id).Result;
+
+            if (user == null)
+            {
+                _logger.Warn($"User with Id: {Id} not found.");
+                return NotFound();
+            }
 
             // Retrieve the list of roles and create SelectListItem objects for the view
             var roles = new List<SelectListItem>(
@@ -189,8 +218,10 @@ namespace Management.Areas.Admin.Controllers
         {
             // Find the user by ID asynchronously
             var user = _userManager.FindByIdAsync(newRole.Id).Result;
+
             if (user == null)
             {
+                _logger.Warn($"User with ID '{newRole.Id}' not found.");
                 return BadRequest();
             }
 
@@ -198,6 +229,8 @@ namespace Management.Areas.Admin.Controllers
             var result = _userManager.AddToRoleAsync(user, newRole.Role).Result;
             if (result.Succeeded)
             {
+                _logger.Info($"User '{user.UserName}' successfully added to role '{newRole.Role}'.");
+
                 return RedirectToAction("Index", "Users", new { area = "admin" });
             }
 
@@ -216,8 +249,16 @@ namespace Management.Areas.Admin.Controllers
         {
             var user = _userManager.FindByIdAsync(Id).Result;
 
+            if (user == null)
+            {
+                _logger.Warn($"No user found with Id: {Id}");
+                return NotFound();
+            }
+
             // Retrieve the roles assigned to the user asynchronously
             var roles = _userManager.GetRolesAsync(user).Result;
+
+            _logger.Info($"Roles retrieved for user {user.FullName}: {string.Join(", ", roles)}");
 
             // Store user information in ViewBag for display in the view
             ViewBag.UserInfo = $"Name : {user.FullName} || Email : {user.Email}";

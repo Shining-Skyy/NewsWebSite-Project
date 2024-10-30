@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NewsWebSite.Models;
 using NewsWebSite.Utilities;
+using NLog;
 
 namespace NewsWebSite.Controllers
 {
@@ -16,7 +17,7 @@ namespace NewsWebSite.Controllers
         private readonly IGetPostPDPService getPostPDP;
         private readonly IFavoritePostService favoritePostService;
         private readonly ICommentsService commentsService;
-
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         public PostController(IGetPostPLPService getPostPLP, IGetPostPDPService getPostPDP,
             IFavoritePostService favoritePostService, ICommentsService commentsService)
         {
@@ -31,6 +32,15 @@ namespace NewsWebSite.Controllers
         public IActionResult Index(PostPLPRequestDto request)
         {
             var data = getPostPLP.Execute(request);
+            if (data == null)
+            {
+                _logger.Warn("No data returned for request: {@Request}", request);
+            }
+            else
+            {
+                _logger.Info("Data successfully retrieved for request: {@Request}", request);
+            }
+
             return View(data);
         }
 
@@ -38,9 +48,16 @@ namespace NewsWebSite.Controllers
         {
             // Executes the method to retrieve a specific post based on its ID
             var dataPost = getPostPDP.Execute(Id);
+            if (dataPost == null)
+            {
+                _logger.Warn($"No post found for Id: {Id}");
+                return NotFound(); // Return a 404 if the post is not found
+            }
 
             // Retrieves the list of comments associated with the post ID
             var dataComment = commentsService.GetListWhithId(Id);
+
+            _logger.Info($"Comments retrieved for post Id: {Id}, Count: {dataComment.Count}");
 
             MainPageModel.PostPDPDto = dataPost;
             MainPageModel.CommentListDtos = dataComment;
@@ -51,7 +68,16 @@ namespace NewsWebSite.Controllers
         [Authorize]
         public IActionResult AddFavorite(int PostId)
         {
-            favoritePostService.AddFavorite(ClaimUtility.GetUserId(User), PostId);
+            var userId = ClaimUtility.GetUserId(User);
+
+            // Log the entry into the method with user ID and PostId
+            _logger.Info($"User {userId} is attempting to add Post {PostId} to favorites.");
+
+            favoritePostService.AddFavorite(userId, PostId);
+
+            // Log successful addition of favorite
+            _logger.Info($"Post {PostId} has been added to favorites by user {userId}.");
+
             return Redirect("https://localhost:44315/Favorites/Index");
         }
     }
